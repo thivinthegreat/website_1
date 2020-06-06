@@ -1,0 +1,168 @@
+body {
+  margin: 0px;
+}
+
+#main-container .header {
+  width: 100%;
+  min-height: 60px;
+  display: block;
+  position: relative;
+}
+#main-container .header .left-content {
+  display: inline;
+  position: absolute;
+}
+#main-container .header .left-content img {
+  max-width: 400px;
+  min-height: 60px;
+}
+#main-container .header .right-content {
+  display: inline;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+#main-container .header .right-content .nav-items {
+  display: block;
+}
+#main-container .header .right-content .nav-items li {
+  display: inline;
+  margin-left: 15px;
+  font-family: roboto;
+  cursor: pointer;
+  font-weight: bold;
+}
+#main-container .section1 {
+  position: relative;
+  margin-top: 25px;
+  height: 520px;
+  width: 100%;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+#main-container .section1 .center-text {
+  position: absolute;
+  top: 6%;
+  left: 28%;
+  color: WHITE;
+  font-size: 3em;
+}
+#main-container .section1 .sec1-img {
+  position: absolute;
+  max-height: 155px;
+  max-width: 170px;
+  top: 31%;
+  left: 46%;
+}
+#main-container .section1 .mountain-img {
+  position: absolute;
+  max-height: 120px;
+  max-width: 125px;
+  top: 67%;
+  left: 47%;
+}
+#main-container .section1 .left-circle {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  bottom: -11px;
+  left: 139px;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border-radius: 50%;
+}
+#main-container .section1 .right-circle {
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  bottom: 40px;
+  right: 145px;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border-radius: 50%;
+}
+#main-container .section2 {
+  margin: 8% 5% 0% 8%;
+  display: block;
+  position: relative;
+  height: 500px;
+}
+#main-container .section2 h3 {
+  font-size: 33px;
+  font-family: calibra;
+}
+#main-container .section2 .left-session {
+  display: inline;
+  position: absolute;
+  max-width: 50%;
+}
+#main-container .section2 .left-session p {
+  font-size: 20px;
+}
+#main-container .section2 .right-session {
+  position: absolute;
+  display: inline;
+  left: 67%;
+  max-width: 50%;
+  max-height: 50%;
+  top: 0px;
+}
+#main-container .section2 img {
+  width: 320px;
+  height: 320px;
+}
+#main-container .section3 {
+  position: relative;
+  height: 654px;
+}
+#main-container .section3 .upper {
+  position: absolute;
+  height: 830px;
+  width: 100%;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
+}
+#main-container .section3 .upper .sec3-heading {
+  font-size: 2.5em;
+  color: white;
+}
+#main-container .section3 .upper .sec3-heading .sec3-main-heading {
+  position: absolute;
+  left: 47%;
+  top: 0%;
+}
+#main-container .section3 .upper .sec3-heading .sec3-sub-heading {
+  position: absolute;
+  left: 10%;
+  top: 11%;
+}
+#main-container .section3 .upper .sec3-content {
+  display: block;
+}
+#main-container .section3 .upper .sec3-content .sec3-img {
+  display: inline-block;
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+#main-container .section3 .upper .sec3-content .sec3-text {
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  color: white;
+  top: 30%;
+  font-size: 28px;
+  left: 50%;
+}
+#main-container .section3 .lower {
+  position: absolute;
+  top: 100%;
+  height: 520px;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #f34938, #d23174);
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
+}
+
+/*# sourceMappingURL=styles.css.map */
