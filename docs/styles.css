@@ -81,50 +81,49 @@ body {
   border-radius: 50%;
 }
 #main-container .section2 {
-  margin: 8% 5% 0% 8%;
+  margin: 8% 5% 4% 8%;
   display: block;
   position: relative;
-  height: 500px;
+  height: 455px;
 }
 #main-container .section2 h3 {
   font-size: 33px;
-  font-family: calibra;
+  font-family: "Montserrat";
+  margin-bottom: 2% !important;
 }
 #main-container .section2 .left-session {
   display: inline;
   position: absolute;
   max-width: 50%;
+  font-family: "Montserrat";
 }
 #main-container .section2 .left-session p {
-  font-size: 20px;
+  font-size: 18px;
 }
 #main-container .section2 .right-session {
   position: absolute;
   display: inline;
-  left: 67%;
+  left: 60%;
   max-width: 50%;
   max-height: 50%;
-  top: 0px;
+  top: 0%;
 }
 #main-container .section2 img {
-  width: 320px;
-  height: 320px;
+  width: 450px;
+  height: 450px;
 }
 #main-container .section3 {
   position: relative;
   height: 654px;
 }
-#main-container .section3 .upper {
-  position: absolute;
-  height: 830px;
+#main-container .section3 .sec3-backimg {
   width: 100%;
-  background-image: linear-gradient(to right, #d23174, #f34938);
-  border-top-left-radius: 35%;
-  border-top-right-radius: 35%;
+  max-height: 2150px;
 }
 #main-container .section3 .upper .sec3-heading {
-  font-size: 2.5em;
+  font-size: 185%;
   color: white;
+  font-family: "Montserrat";
 }
 #main-container .section3 .upper .sec3-heading .sec3-main-heading {
   position: absolute;
@@ -133,36 +132,53 @@ body {
 }
 #main-container .section3 .upper .sec3-heading .sec3-sub-heading {
   position: absolute;
-  left: 10%;
-  top: 11%;
+  left: 14%;
+  top: 9%;
 }
 #main-container .section3 .upper .sec3-content {
   display: block;
+  font-family: "Montserrat";
 }
 #main-container .section3 .upper .sec3-content .sec3-img {
   display: inline-block;
   width: 50%;
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 27%;
+  left: 12%;
+}
+#main-container .section3 .upper .sec3-content .sec3-img .atom-img {
+  max-width: 350px;
+  max-height: 350px;
 }
 #main-container .section3 .upper .sec3-content .sec3-text {
   display: inline-block;
   position: absolute;
-  width: 50%;
+  width: 37%;
   color: white;
   top: 30%;
-  font-size: 28px;
-  left: 50%;
+  font-size: 18px;
+  left: 48%;
+  text-align: justify;
+  line-height: 150%;
 }
 #main-container .section3 .lower {
   position: absolute;
-  top: 100%;
+  top: 92%;
   height: 520px;
   width: 100%;
-  background-image: linear-gradient(to bottom, #f34938, #d23174);
-  border-top-left-radius: 35%;
-  border-top-right-radius: 35%;
+}
+#main-container .section3 .lower .modules {
+  font-family: "Montserrat";
+  position: absolute;
+  left: 45%;
+  font-size: 185%;
+  color: white;
+}
+#main-container .section3 .lower img {
+  position: absolute;
+  top: 14%;
+  max-width: 650px;
+  left: 26%;
 }
 
 /*# sourceMappingURL=styles.css.map */
