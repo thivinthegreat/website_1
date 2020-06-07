@@ -94,7 +94,13 @@ body {
 
         svg path
         {
-            fill: url(#my-cool-gradient) #f34938;
+            fill: url(#my-cool-gradient1);
+        }
+
+        path { transition: fill 1s ease; }
+
+        svg path:hover {
+            fill: url(#my-cool-gradient2);
         }
 
         .sec1-img {

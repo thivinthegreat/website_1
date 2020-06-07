@@ -72,7 +72,13 @@ body {
   font-family: "Muli", sans-serif;
 }
 #main-container .section1 svg path {
-  fill: url(#my-cool-gradient) #f34938;
+  fill: url(#my-cool-gradient1);
+}
+#main-container .section1 path {
+  transition: fill 1s ease;
+}
+#main-container .section1 svg path:hover {
+  fill: url(#my-cool-gradient2);
 }
 #main-container .section1 .sec1-img {
   position: absolute;
