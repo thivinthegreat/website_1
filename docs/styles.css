@@ -1,0 +1,197 @@
+body {
+  margin: 0px;
+}
+
+#main-container .header {
+  width: 100%;
+  min-height: 60px;
+  display: block;
+  position: relative;
+}
+#main-container .header .left-content {
+  display: inline;
+  position: absolute;
+  margin: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1.3vw;
+  margin-top: 1.5vh;
+}
+#main-container .header .left-content img {
+  width: auto;
+  height: auto;
+}
+#main-container .header .logoText {
+  display: inline;
+  position: absolute;
+  margin: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 4.5vw;
+  margin-top: 1vh;
+}
+#main-container .header .logoText p {
+  font-family: "Lato", sans-serif;
+  font-size: 2.1vh;
+  color: #21215d;
+}
+#main-container .header .right-content {
+  display: inline;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+}
+#main-container .header .right-content .nav-items {
+  display: block;
+}
+#main-container .header .right-content .nav-items li {
+  display: inline;
+  margin-left: 15px;
+  font-family: "Muli", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+#main-container .section1 {
+  position: relative;
+  margin-top: 10px;
+  height: 900px;
+  width: 100%;
+}
+#main-container .section1 .center-text {
+  position: absolute;
+  top: 6%;
+  left: 28%;
+  color: WHITE;
+  font-size: 3vw;
+  font-family: "Muli", sans-serif;
+}
+#main-container .section1 svg path {
+  fill: url(#my-cool-gradient) #f34938;
+}
+#main-container .section1 .sec1-img {
+  position: absolute;
+  width: 14%;
+  height: 29%;
+  top: 25%;
+  left: 45%;
+}
+#main-container .section1 .mountain-img {
+  position: absolute;
+  max-height: 120px;
+  max-width: 125px;
+  top: 67%;
+  left: 47%;
+}
+#main-container .section1 .left-circle {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  bottom: 8%;
+  left: 18%;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border-radius: 50%;
+}
+#main-container .section1 .right-circle {
+  position: absolute;
+  height: 15vw;
+  width: 15vw;
+  bottom: 9vw;
+  right: 9vw;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border-radius: 50%;
+}
+#main-container .section2 {
+  margin: 0% 12% 0% 12%;
+  display: block;
+  position: relative;
+  height: 600px;
+  font-family: Muli;
+}
+#main-container .section2 h3 {
+  font-size: 5.6vh;
+  font-family: Muli;
+}
+#main-container .section2 .left-session {
+  display: inline;
+  position: absolute;
+  max-width: 50%;
+}
+#main-container .section2 .left-session p {
+  font-size: 20px;
+  text-align: justify;
+}
+#main-container .section2 .right-session {
+  position: absolute;
+  display: inline;
+  left: 67%;
+  max-width: 60%;
+  max-height: 60%;
+  top: -10px;
+}
+#main-container .section2 img {
+  width: 25vw;
+  height: 25vw;
+}
+#main-container .section3 {
+  margin-top: 20px;
+  position: relative;
+  height: 654px;
+}
+#main-container .section3 .sec3-backimg {
+  width: 100%;
+  max-height: 2150px;
+}
+#main-container .section3 .upper .sec3-heading {
+  font-size: 2.2vw;
+  color: white;
+  font-family: Muli;
+}
+#main-container .section3 .upper .sec3-heading .sec3-main-heading {
+  position: absolute;
+  left: 47%;
+  top: 0%;
+}
+#main-container .section3 .upper .sec3-heading .sec3-sub-heading {
+  position: absolute;
+  left: 14%;
+  top: 9%;
+}
+#main-container .section3 .upper .sec3-content {
+  display: block;
+  font-family: Muli;
+}
+#main-container .section3 .upper .sec3-content .sec3-img {
+  display: inline-block;
+  width: 50%;
+  position: absolute;
+  top: 27%;
+  left: 12%;
+}
+#main-container .section3 .upper .sec3-content .sec3-text {
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  color: white;
+  top: 30%;
+  font-size: 3.2vh;
+  left: 50%;
+}
+#main-container .section3 .lower {
+  position: absolute;
+  top: 100%;
+  height: 520px;
+  width: 100%;
+}
+#main-container .section3 .lower .modules {
+  font-family: "Muli";
+  position: absolute;
+  left: 45%;
+  font-size: 185%;
+  color: white;
+}
+#main-container .section3 .lower img {
+  position: absolute;
+  top: 14%;
+  max-width: 650px;
+  left: 26%;
+}
+
+/*# sourceMappingURL=styles.css.map */

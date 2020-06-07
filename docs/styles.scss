@@ -1,0 +1,245 @@
+body {
+    margin: 0px;
+}
+#main-container {
+    .header {
+        width: 100%;
+        min-height: 60px;
+        display: block;
+        position: relative;
+
+        .left-content {
+            display: inline;
+            position: absolute;
+            margin: 1vh;
+            margin-bottom: 1vh;
+            margin-left: 1.3vw;
+            margin-top: 1.5vh;
+
+            img {
+                // max-width: 400px;
+                // min-height: 60px;
+                width: auto;
+                height: auto;
+
+            }
+        }
+
+        .logoText{
+            display: inline;
+            position: absolute;
+            margin: 1vh;
+            margin-bottom: 1vh; 
+            margin-left: 4.5vw;
+            margin-top: 1vh;
+
+            p {
+                font-family: 'Lato', sans-serif;
+                font-size: 2.1vh;
+                color: rgb(33, 33, 93);
+            }
+        }
+        .right-content {
+            display: inline;
+            position: absolute;
+            right: 30px;
+            top: 15px;
+
+            .nav-items {
+                display: block;
+
+                li {
+                    display: inline;
+                    margin-left: 15px;
+                    font-family: 'Muli', sans-serif;;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .section1 {
+        position: relative;
+        margin-top: 10px;
+        height: 900px;
+        width: 100%;
+        // THIVIN -- Changing to PNG
+        // background-image: url("../asset_files/Base1.png") ;
+        // background-repeat: no-repeat;
+        // background-image: linear-gradient(to right, #d23174 , #f34938);
+        // border-bottom-left-radius: 50%;
+        // border-bottom-right-radius: 50%;
+
+        .center-text {
+            position: absolute;
+            top: 6%;
+            left: 28%;
+            color: WHITE;
+            font-size: 3vw;
+            font-family: 'Muli', sans-serif;
+        }
+
+        svg path
+        {
+            fill: url(#my-cool-gradient) #f34938;
+        }
+
+        .sec1-img {
+            position: absolute;
+            // max-height: 160%;
+            // max-width: 270px;
+            width: 14%;
+            height: 29%;
+            top: 25%;
+            left: 45%;
+        }
+
+        .mountain-img {
+            position: absolute;
+            max-height: 120px;
+            max-width: 125px;
+            top: 67%;
+            left: 47%;
+        }
+
+        .left-circle {
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            bottom: 8%;
+            left: 18%;
+            background-image: linear-gradient(to right, #d23174 , #f34938);
+            border-radius: 50%;
+        }
+
+        .right-circle {
+            position: absolute;
+            height: 15vw;
+            width: 15vw;
+            bottom: 9vw;
+            right: 9vw;
+            background-image: linear-gradient(to right, #d23174 , #f34938);
+            border-radius: 50%;
+        }
+    }
+
+    .section2 {
+        margin:0% 12% 0% 12%;
+        display: block;
+        position: relative;
+        height: 600px;
+        font-family: Muli;
+
+        h3 {
+            font-size: 5.6vh;
+            font-family: Muli;
+        }
+
+        .left-session {
+            display: inline;
+            position: absolute;
+            max-width: 50%;
+
+            p {
+                font-size: 20px;
+                text-align: justify;;
+            }
+        }
+
+        .right-session {
+            position: absolute;
+            display: inline;
+            left: 67%;
+            max-width: 60%;
+            max-height: 60%;
+            top: -10px;
+        }
+
+        img {
+            width: 25vw;
+            height: 25vw;
+        }
+    }
+
+    .section3 {
+        margin-top: 20px;
+        .sec3-backimg
+        {
+            width: 100%;
+            max-height: 2150px;
+        }
+        position: relative;
+        height: 654px;
+
+        .upper {
+
+            .sec3-heading {
+                font-size: 2.2vw;
+                color: white;
+                font-family: Muli;
+                
+
+
+                .sec3-main-heading {
+                    position: absolute;
+                    left: 47%;
+                    top: 0%;
+                }
+
+                .sec3-sub-heading {
+                    position: absolute;
+                    left: 14%;
+                    top: 9%;
+                }
+            }
+
+            .sec3-content {
+                display: block;
+                font-family: Muli;
+            
+
+
+                .sec3-img {
+                    display: inline-block;
+                    width: 50%;
+                    position: absolute;
+                    top: 27%;
+                    left: 12%;
+                }
+
+                .sec3-text {
+                    display: inline-block;
+                    position: absolute;
+                    width: 50%;
+                    color: white;
+                    top: 30%;
+                    font-size: 3.2vh;
+                    left: 50%;
+                }
+            }
+        }
+    
+        .lower {
+            position: absolute;
+            top: 100%;
+            height: 520px;
+            width: 100%;
+
+            .modules {
+                font-family: "Muli";
+                position: absolute;
+                left: 45%;
+                font-size: 185%;
+                color: white;
+            }
+
+            img {
+                position: absolute;
+                top: 14%;
+                max-width: 650px;
+                left: 26%;
+            }
+        }
+    }
+}
