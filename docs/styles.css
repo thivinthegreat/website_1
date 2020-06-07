@@ -52,7 +52,7 @@ body {
 #main-container .section1 {
   position: relative;
   margin-top: 10px;
-  height: 900px;
+  height: 118vh;
   width: 100%;
 }
 #main-container .section1 .center-text {
@@ -68,10 +68,10 @@ body {
 }
 #main-container .section1 .sec1-img {
   position: absolute;
-  width: 14%;
-  height: 29%;
-  top: 25%;
-  left: 45%;
+  width: 15vw;
+  height: 31vh;
+  top: 27vh;
+  left: 86vh;
 }
 #main-container .section1 .mountain-img {
   position: absolute;
@@ -82,10 +82,10 @@ body {
 }
 #main-container .section1 .left-circle {
   position: absolute;
-  height: 120px;
-  width: 120px;
-  bottom: 8%;
-  left: 18%;
+  height: 17vh;
+  width: 8vw;
+  top: 80vh;
+  left: 20vh;
   background-image: linear-gradient(to right, #d23174, #f34938);
   border-radius: 50%;
 }
@@ -93,8 +93,8 @@ body {
   position: absolute;
   height: 15vw;
   width: 15vw;
-  bottom: 9vw;
-  right: 9vw;
+  top: 50vh;
+  right: 16vh;
   background-image: linear-gradient(to right, #d23174, #f34938);
   border-radius: 50%;
 }
@@ -102,7 +102,7 @@ body {
   margin: 0% 12% 0% 12%;
   display: block;
   position: relative;
-  height: 600px;
+  height: 90vh;
   font-family: Muli;
 }
 #main-container .section2 h3 {
@@ -121,10 +121,8 @@ body {
 #main-container .section2 .right-session {
   position: absolute;
   display: inline;
-  left: 67%;
-  max-width: 60%;
-  max-height: 60%;
-  top: -10px;
+  left: 51vw;
+  top: 7vh;
 }
 #main-container .section2 img {
   width: 25vw;
@@ -132,12 +130,12 @@ body {
 }
 #main-container .section3 {
   margin-top: 20px;
+  height: 322vh;
   position: relative;
-  height: 654px;
 }
 #main-container .section3 .sec3-backimg {
   width: 100%;
-  max-height: 2150px;
+  max-height: 322vh;
 }
 #main-container .section3 .upper .sec3-heading {
   font-size: 2.2vw;
@@ -146,13 +144,13 @@ body {
 }
 #main-container .section3 .upper .sec3-heading .sec3-main-heading {
   position: absolute;
-  left: 47%;
-  top: 0%;
+  left: 48vw;
+  top: 0vh;
 }
 #main-container .section3 .upper .sec3-heading .sec3-sub-heading {
   position: absolute;
-  left: 14%;
-  top: 9%;
+  left: 18vw;
+  top: 10vh;
 }
 #main-container .section3 .upper .sec3-content {
   display: block;
@@ -162,22 +160,25 @@ body {
   display: inline-block;
   width: 50%;
   position: absolute;
-  top: 27%;
-  left: 12%;
+  top: 25vh;
+  left: 14vw;
+}
+#main-container .section3 .upper .sec3-content .sec3-img img {
+  min-height: 50vh;
 }
 #main-container .section3 .upper .sec3-content .sec3-text {
   display: inline-block;
   position: absolute;
   width: 50%;
   color: white;
-  top: 30%;
+  top: 27vh;
   font-size: 3.2vh;
-  left: 50%;
+  left: 51vw;
 }
 #main-container .section3 .lower {
   position: absolute;
-  top: 100%;
-  height: 520px;
+  top: 91vh;
+  height: 90vh;
   width: 100%;
 }
 #main-container .section3 .lower .modules {
