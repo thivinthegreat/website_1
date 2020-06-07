@@ -169,9 +169,14 @@ body {
         {
             width: 100%;
             max-height: 322vh;
+            position: absolute;
         }
 
         .upper {
+
+            position: absolute;
+            height: 90vh;
+            width: 100%;
 
             .sec3-heading {
                 font-size: 2.2vw;
@@ -195,13 +200,12 @@ body {
 
             .sec3-content {
                 display: block;
-                font-family: Muli;
-            
-
+                font-family: "Muli";
+                position: absolute;
 
                 .sec3-img {
                     display: inline-block;
-                    width: 50%;
+                    width: 50vw;
                     position: absolute;
                     top: 25vh;
                     left: 14vw;
@@ -214,7 +218,7 @@ body {
                 .sec3-text {
                     display: inline-block;
                     position: absolute;
-                    width: 50%;
+                    width: 50vw;
                     color: white;
                     top: 27vh;
                     font-size: 3.2vh;
