@@ -215,5 +215,41 @@ body {
   max-width: 47vw;
   left: 27vw;
 }
+#main-container .section4 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100vh;
+  width: 100%;
+}
+#main-container .section4 .heading {
+  padding-top: 2vh;
+  font-family: "Muli";
+  font-size: 3.6vh;
+  height: 10vh;
+  text-align: center;
+}
+#main-container .section4 .sec4row {
+  height: 45vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+}
+#main-container .section4 .list1 .shell {
+  width: 20vw;
+}
+#main-container .section4 .list2 .shell {
+  width: 25vw;
+}
+#main-container .section4 .shell {
+  height: 40vh;
+  background: aliceblue;
+}
 
 /*# sourceMappingURL=styles.css.map */
