@@ -215,7 +215,7 @@ body {
   max-width: 47vw;
   left: 27vw;
 }
-#main-container .section4 {
+#main-container .section4 .sec4-content {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -225,14 +225,14 @@ body {
   height: 100vh;
   width: 100%;
 }
-#main-container .section4 .heading {
+#main-container .section4 .sec4-content .heading {
   padding-top: 2vh;
   font-family: "Muli";
   font-size: 3.6vh;
   height: 10vh;
   text-align: center;
 }
-#main-container .section4 .sec4row {
+#main-container .section4 .sec4-content .sec4row {
   height: 45vh;
   display: flex;
   flex-direction: row;
@@ -240,16 +240,43 @@ body {
   justify-content: space-around;
   align-items: center;
   align-content: space-between;
+  padding-left: 6%;
+  padding-right: 6%;
 }
-#main-container .section4 .list1 .shell {
+#main-container .section4 .sec4-content .list1 .shell {
   width: 20vw;
 }
-#main-container .section4 .list2 .shell {
+#main-container .section4 .sec4-content .list2 .shell {
   width: 25vw;
 }
-#main-container .section4 .shell {
+#main-container .section4 .sec4-content .shell {
   height: 40vh;
   background: aliceblue;
+}
+#main-container .section5 {
+  margin-top: 10vh;
+}
+#main-container .section5 .sec5-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 120vh;
+  width: 100%;
+  position: relative;
+}
+#main-container .section5 .sec5-background {
+  height: 120vh;
+  width: 100%;
+  position: absolute;
+}
+#main-container .section5 .devops {
+  height: 24vh;
+  width: 22vw;
+  position: absolute;
+  left: 38vw;
 }
 
 /*# sourceMappingURL=styles.css.map */

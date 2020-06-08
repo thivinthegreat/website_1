@@ -268,50 +268,81 @@ body {
             }
         }
     }
-
     .section4 {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: stretch;
-        align-content: stretch;
-        height: 100vh;
-        width: 100%;
-
-        .heading {
-            padding-top: 2vh;
-            font-family: "Muli";
-            font-size: 3.6vh;
-            height: 10vh;
-            text-align: center;
-        }
-
-        .sec4row {
-            height: 45vh;
+        .sec4-content {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: nowrap;
-            justify-content: space-around;
-            align-items: center;
-            align-content: space-between;
-        }
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+            height: 100vh;
+            width: 100%;
 
-        .list1 {
+            .heading {
+                padding-top: 2vh;
+                font-family: "Muli";
+                font-size: 3.6vh;
+                height: 10vh;
+                text-align: center;
+            }
+
+            .sec4row {
+                height: 45vh;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items: center;
+                align-content: space-between;
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .list1 {
+                .shell {
+                    width: 20vw;
+                }
+            }
+
+            .list2 {
+                .shell {
+                    width: 25vw;
+                }
+            }
+
             .shell {
-                width: 20vw;
+                height: 40vh;
+                background: aliceblue;
             }
         }
+    }
 
-        .list2 {
-            .shell {
-                width: 25vw;
-            }
+    .section5{
+        margin-top: 10vh;
+        .sec5-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+            height: 120vh;
+            width: 100%;
+            position: relative;
         }
 
-        .shell {
-            height: 40vh;
-            background: aliceblue;
+        .sec5-background {
+            height: 120vh;
+            width: 100%;
+            position: absolute;
+        }
+
+        .devops {
+            height: 24vh;
+            width: 22vw;
+            position: absolute;
+            left: 38vw;
         }
     }
 }
