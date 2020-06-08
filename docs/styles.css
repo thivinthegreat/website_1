@@ -163,48 +163,65 @@ body {
   width: 100%;
 }
 #main-container .section3 .upper .sec3-heading {
-  font-size: 2.2vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 30vh;
+}
+#main-container .section3 .upper .sec3-heading .list {
+  font-size: 5.6vh;
   color: white;
-  font-family: Muli;
+  display: flex;
+  justify-content: center;
 }
 #main-container .section3 .upper .sec3-heading .sec3-main-heading {
-  position: absolute;
-  left: 48vw;
-  top: 0vh;
+  margin-bottom: 0vh;
+  margin-top: 7vh;
 }
 #main-container .section3 .upper .sec3-heading .sec3-sub-heading {
-  position: absolute;
-  left: 18vw;
-  top: 10vh;
+  margin-top: 3vh;
 }
 #main-container .section3 .upper .sec3-content {
-  display: block;
   font-family: "Muli";
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  height: 60vh;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 #main-container .section3 .upper .sec3-content .sec3-img {
-  display: inline-block;
+  display: flex;
+  height: 60vh;
   width: 50vw;
-  position: absolute;
-  top: 25vh;
-  left: 14vw;
+  align-items: center;
+  justify-content: flex-start;
 }
 #main-container .section3 .upper .sec3-content .sec3-img img {
   min-height: 50vh;
 }
 #main-container .section3 .upper .sec3-content .sec3-text {
-  display: inline-block;
-  position: absolute;
-  width: 40vw;
-  color: white;
-  top: 27vh;
+  height: 60vh;
+  width: 60vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 6vh;
+}
+#main-container .section3 .upper .sec3-content .sec3-text p {
   font-size: 3.2vh;
-  left: 51vw;
+  color: white;
 }
 #main-container .section3 .lower {
   position: absolute;
   top: 91vh;
-  height: 90vh;
+  height: 120vh;
   width: 100%;
 }
 #main-container .section3 .lower .modules {
