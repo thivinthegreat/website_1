@@ -112,34 +112,40 @@ body {
   border-radius: 50%;
 }
 #main-container .section2 {
-  margin: -7% 12% 0% 12%;
-  display: block;
-  position: relative;
   height: 90vh;
-  font-family: Muli;
+  width: 100%;
 }
-#main-container .section2 h3 {
+#main-container .section2 .sec2-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  height: 90vh;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+#main-container .section2 .sec2-container .list {
+  height: 90vh;
+  width: 90vw;
+}
+#main-container .section2 .sec2-container .left-session h3 {
   font-size: 5.6vh;
   font-family: Muli;
+  margin-bottom: 10vh;
 }
-#main-container .section2 .left-session {
-  display: inline;
-  position: absolute;
-  max-width: 50%;
+#main-container .section2 .sec2-container .left-session p {
+  font-size: 3.2vh;
 }
-#main-container .section2 .left-session p {
-  font-size: 20px;
-  text-align: justify;
+#main-container .section2 .sec2-container .right-session {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#main-container .section2 .right-session {
-  position: absolute;
-  display: inline;
-  left: 51vw;
-  top: 7vh;
-}
-#main-container .section2 img {
-  width: 25vw;
-  height: 25vw;
+#main-container .section2 .sec2-container img {
+  width: 32vw;
+  height: 65vh;
 }
 #main-container .section3 {
   margin-top: 20px;
