@@ -154,7 +154,7 @@ body {
             align-items: center;
             align-content: space-between;
             height: 90vh;
-            padding-left: 8%;
+            padding-left: 10%;
             padding-right: 6%;
 
             .list {
@@ -171,6 +171,7 @@ body {
         
                 p {
                     font-size: 3.2vh;
+                    font-family: "Muli";
                 }
             }
 
@@ -181,8 +182,7 @@ body {
             }
 
             img {
-                width: 32vw;
-                height: 65vh;
+                max-height: 65vh;
             }
         }
     }
