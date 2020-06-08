@@ -321,28 +321,95 @@ body {
     .section5{
         margin-top: 10vh;
         .sec5-container {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            align-items: stretch;
-            align-content: stretch;
-            height: 120vh;
+            height: 130vh;
             width: 100%;
             position: relative;
-        }
 
-        .sec5-background {
-            height: 120vh;
-            width: 100%;
-            position: absolute;
-        }
+            .sec5-background {
+                height: 130vh;
+                width: 100%;
+                position: absolute;
+            }
+    
+            .devops {
+                height: 24vh;
+                width: 22vw;
+                position: absolute;
+                left: 37vw;
+            }
 
-        .devops {
-            height: 24vh;
-            width: 22vw;
-            position: absolute;
-            left: 38vw;
-        }
+            .bottom-circle {
+                border-radius: 50%;
+                position: absolute;
+                bottom: -10vh;
+                left: -1vw;
+                background-image: linear-gradient(to right, #d23174 , #f34938);
+                height: 37vh;
+                width: 20vw;
+            }
+
+            .sec5-subcontent {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: stretch;
+                align-content: stretch;
+                height: 79vh;
+                width: 100%;
+                position: absolute;
+                top: 25vh;
+
+                .heading {
+                    font-family: "Muli";
+                    font-size: 3.6vh;
+                    height: 10vh;
+                    text-align: center;
+                    color: white;
+                }
+
+                .image {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: stretch;
+                    align-content: stretch;
+                    height: 35vh;
+                    padding-left: 7%;
+                    padding-right: 7%;
+                    margin-top: 2vh;
+
+                    div {
+                        background: aliceblue;
+                        height: 35vh;
+                    }
+                }
+
+                .content {
+                    height: 30vh;
+                    width: 100%;
+
+                    .details {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: space-around;
+                        align-items: center;
+                        align-content: space-between;
+                        padding-left: 6%;
+                        padding-right: 6%;
+                        height: 25vh;
+                        margin-top:  3vh;
+
+                        .list {
+                            height: 25vh;
+                            width: 20vw;
+                            background: aliceblue;
+                        }
+                    }
+                }
+            }
+        }        
     }
 }

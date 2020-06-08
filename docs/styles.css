@@ -257,26 +257,85 @@ body {
   margin-top: 10vh;
 }
 #main-container .section5 .sec5-container {
+  height: 130vh;
+  width: 100%;
+  position: relative;
+}
+#main-container .section5 .sec5-container .sec5-background {
+  height: 130vh;
+  width: 100%;
+  position: absolute;
+}
+#main-container .section5 .sec5-container .devops {
+  height: 24vh;
+  width: 22vw;
+  position: absolute;
+  left: 37vw;
+}
+#main-container .section5 .sec5-container .bottom-circle {
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10vh;
+  left: -1vw;
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  height: 37vh;
+  width: 20vw;
+}
+#main-container .section5 .sec5-container .sec5-subcontent {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
-  height: 120vh;
-  width: 100%;
-  position: relative;
-}
-#main-container .section5 .sec5-background {
-  height: 120vh;
+  height: 79vh;
   width: 100%;
   position: absolute;
+  top: 25vh;
 }
-#main-container .section5 .devops {
-  height: 24vh;
-  width: 22vw;
-  position: absolute;
-  left: 38vw;
+#main-container .section5 .sec5-container .sec5-subcontent .heading {
+  font-family: "Muli";
+  font-size: 3.6vh;
+  height: 10vh;
+  text-align: center;
+  color: white;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .image {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  height: 35vh;
+  padding-left: 7%;
+  padding-right: 7%;
+  margin-top: 2vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .image div {
+  background: aliceblue;
+  height: 35vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .content {
+  height: 30vh;
+  width: 100%;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .content .details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  padding-left: 6%;
+  padding-right: 6%;
+  height: 25vh;
+  margin-top: 3vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .content .details .list {
+  height: 25vh;
+  width: 20vw;
+  background: aliceblue;
 }
 
 /*# sourceMappingURL=styles.css.map */
