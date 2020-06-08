@@ -123,7 +123,7 @@ body {
   align-items: center;
   align-content: space-between;
   height: 90vh;
-  padding-left: 6%;
+  padding-left: 8%;
   padding-right: 6%;
 }
 #main-container .section2 .sec2-container .list {
@@ -148,7 +148,7 @@ body {
   height: 65vh;
 }
 #main-container .section3 {
-  margin-top: 20px;
+  margin-top: 30px;
   height: 222vh;
   position: relative;
 }
