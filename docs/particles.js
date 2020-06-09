@@ -14,8 +14,8 @@ var pJS = function(tag_id, params){
   params.particles.size.value = 10;
   params.particles.opacity.value = 0.5;
   params.interactivity.events.onhover.mode = "grab";
-  params.interactivity.modes.grab.distance = 100;
-  params.interactivity.events.onclick.mode = "repulse";
+  params.interactivity.modes.grab.distance = 200;
+  params.interactivity.events.onclick.mode = "grab";
 
   /* particles.js variables with default values */
   this.pJS = {
