@@ -421,6 +421,63 @@ body {
 #main-container .section6 .sec6-content .loadmore button:focus {
   outline: 0 !important;
 }
+#main-container .section7 .sec7-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100vh;
+  width: 100%;
+}
+#main-container .section7 .heading {
+  font-family: "Muli";
+  font-size: 3.6vh;
+  height: 10vh;
+  text-align: center;
+}
+#main-container .section7 .content {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  padding-right: 8%;
+  padding-left: 8%;
+}
+#main-container .section7 .send {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main-container .section7 .send .button {
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  height: 8vh;
+  font-size: 17px;
+  font-weight: bold;
+  width: 10vw;
+}
+#main-container .section7 .send button:focus {
+  outline: 0 !important;
+}
+#main-container .section8 {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+}
 
 #particles-js {
   width: 100%;
