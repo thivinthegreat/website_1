@@ -472,6 +472,9 @@ body {
   font-size: 3.6vh;
   height: 10vh;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #main-container .section6 .sec6-content .benifits {
   height: 75vh;
@@ -494,10 +497,31 @@ body {
   align-items: center;
   align-content: space-between;
 }
+#main-container .section6 .sec6-content .benifits .list .item:hover .hoverCircle {
+  position: absolute;
+  left: -1vw;
+  top: 2vh;
+  display: block;
+}
 #main-container .section6 .sec6-content .benifits .list .item {
   height: 32vh;
   width: 18vw;
-  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#main-container .section6 .sec6-content .benifits .list .item .sub-heading {
+  padding-top: 2vh;
+  font-size: 3vh;
+  text-align: center;
+}
+#main-container .section6 .sec6-content .benifits .list .item .image {
+  height: 20vh;
+  position: relative;
+}
+#main-container .section6 .sec6-content .benifits .list .item .hoverCircle {
+  display: none;
 }
 #main-container .section6 .sec6-content .loadmore {
   height: 15vh;

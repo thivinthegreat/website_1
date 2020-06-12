@@ -568,6 +568,9 @@ body {
                 font-size: 3.6vh;
                 height: 10vh;
                 text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .benifits {
@@ -591,10 +594,35 @@ body {
                     align-items: center;
                     align-content: space-between;
 
+                    .item:hover .hoverCircle {
+                        position: absolute;
+                        left: -1vw;
+                        top: 2vh;
+                        display: block;
+                    }
+
                     .item {
                         height: 32vh;
                         width: 18vw;
-                        background: aliceblue;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        align-items: center;
+
+                        .sub-heading {
+                            padding-top: 2vh;
+                            font-size: 3vh;
+                            text-align: center;
+                        }
+
+                        .image {
+                            height: 20vh;
+                            position: relative;
+                        }
+
+                        .hoverCircle {
+                            display:none;
+                        }
                     }
                 }
             }
