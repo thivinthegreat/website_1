@@ -8,122 +8,79 @@ body {
         scroll-behavior: smooth;
     }
 
-    .header {
-        width: 100%;
-        min-height: 60px;
-        display: block;
+    .section1 {
         position: relative;
+        height: 118vh;
+        width: 100%;
 
-        .left-content {
-            display: inline;
+        .content {
             position: absolute;
-            margin: 1vh;
-            margin-bottom: 1vh;
-            margin-left: 1.3vw;
-            margin-top: 1.5vh;
+            top: 0px;
+            left: 0px;
+            height: 102vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
 
-            img {
-                // max-width: 400px;
-                // min-height: 60px;
-                width: auto;
-                height: auto;
+            .navbar {
+                position: fixed; 
+                height: 10vh;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-content: stretch;
 
-            }
-        }
+                .nav-items {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    align-content: stretch;
 
-        .logoText{
-            display: inline;
-            position: absolute;
-            margin: 1vh;
-            margin-bottom: 1vh; 
-            margin-left: 4.5vw;
-            margin-top: 1vh;
-
-            p {
-                font-family: 'Lato', sans-serif;
-                font-size: 2.1vh;
-                color: rgb(33, 33, 93);
-            }
-        }
-        .right-content {
-            display: inline;
-            position: absolute;
-            right: 30px;
-            top: 15px;
-
-            .nav-items {
-                display: block;
-
-                li {
-                    display: inline;
-                    margin-left: 15px;
-                    font-family: 'Muli', sans-serif;
-                    cursor: pointer;
-                    font-weight: bold;
-                    
-                    a {
-                        text-decoration: none;
-                        color: black;
+                    li {
+                        display: inline;
+                        margin-left: 15px;
+                        font-family: 'Muli', sans-serif;
+                        cursor: pointer;
+                        font-weight: bold;
+                        
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
                     }
                 }
             }
-        }
-    }
 
-    .section1 {
-        position: relative;
-        margin-top: 10px;
-        height: 118vh;
-        width: 100%;
-        
-        // THIVIN -- Changing to PNG
-        // background-image: url("../asset_files/Base1.png") ;
-        // background-repeat: no-repeat;
-        // background-image: linear-gradient(to right, #d23174 , #f34938);
-        // border-bottom-left-radius: 50%;
-        // border-bottom-right-radius: 50%;
+            .heading {
+                height: 30vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 8vh;
+                padding-top: 4vh;
+            }
 
-        .center-text {
-            position: absolute;
-            top: 6%;
-            left: 28%;
-            color: WHITE;
-            font-size: 3vw;
-            font-family: 'Muli', sans-serif;
-        }
-
-        svg path
-        {
-            fill: url(#my-cool-gradient1);
-        }
-
-        path { transition: fill 1s ease; }
-
-        .sec1-img {
-            position: absolute;
-            // max-height: 160%;
-            // max-width: 270px;
-            width: 15vw;
-            height: 31vh;
-            top: 27vh;
-            left: 43vw;
-        }
-
-        .mountain-img {
-            position: absolute;
-            max-height: 120px;
-            max-width: 125px;
-            top: 67%;
-            left: 47%;
+            .icon {
+                height: 62vh;
+            }
         }
 
         .left-circle {
             position: absolute;
-            height: 17vh;
-            width: 8vw;
-            top: 80vh;
-            left: 20vh;
-            background-image: linear-gradient(to right, #d23174 , #f34938);
+            height: 14vh;
+            width: 7vw;
+            top: 105vh;
+            left: 25vh;
+            background-image: linear-gradient(to right, #d23174, #f34938);
             border-radius: 50%;
         }
 
@@ -131,9 +88,9 @@ body {
             position: absolute;
             height: 15vw;
             width: 15vw;
-            top: 50vh;
+            top: 80vh;
             right: 16vh;
-            background-image: linear-gradient(to right, #97134a , #f34938);
+            background-image: linear-gradient(to right, #97134a, #f34938);
             border-radius: 50%;
         }
     }
@@ -725,9 +682,9 @@ body {
 
 #particles-js {
     width: 100%;
-    height: 80vh;
+    height: 92vh;
     position: absolute;
-    top: 0;
+    top: 10vh;
 }
 
 #particles-js:hover {

@@ -5,97 +5,60 @@ body {
 #main-container .sub-container {
   scroll-behavior: smooth;
 }
-#main-container .header {
-  width: 100%;
-  min-height: 60px;
-  display: block;
-  position: relative;
-}
-#main-container .header .left-content {
-  display: inline;
-  position: absolute;
-  margin: 1vh;
-  margin-bottom: 1vh;
-  margin-left: 1.3vw;
-  margin-top: 1.5vh;
-}
-#main-container .header .left-content img {
-  width: auto;
-  height: auto;
-}
-#main-container .header .logoText {
-  display: inline;
-  position: absolute;
-  margin: 1vh;
-  margin-bottom: 1vh;
-  margin-left: 4.5vw;
-  margin-top: 1vh;
-}
-#main-container .header .logoText p {
-  font-family: "Lato", sans-serif;
-  font-size: 2.1vh;
-  color: #21215d;
-}
-#main-container .header .right-content {
-  display: inline;
-  position: absolute;
-  right: 30px;
-  top: 15px;
-}
-#main-container .header .right-content .nav-items {
-  display: block;
-}
-#main-container .header .right-content .nav-items li {
-  display: inline;
-  margin-left: 15px;
-  font-family: "Muli", sans-serif;
-  cursor: pointer;
-  font-weight: bold;
-}
-#main-container .header .right-content .nav-items li a {
-  text-decoration: none;
-  color: black;
-}
 #main-container .section1 {
   position: relative;
-  margin-top: 10px;
   height: 118vh;
   width: 100%;
 }
-#main-container .section1 .center-text {
+#main-container .section1 .content {
   position: absolute;
-  top: 6%;
-  left: 28%;
-  color: WHITE;
-  font-size: 3vw;
-  font-family: "Muli", sans-serif;
+  top: 0px;
+  left: 0px;
+  height: 102vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
 }
-#main-container .section1 svg path {
-  fill: url(#my-cool-gradient1);
+#main-container .section1 .content .navbar {
+  position: fixed;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
 }
-#main-container .section1 path {
-  transition: fill 1s ease;
+#main-container .section1 .content .navbar .nav-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
 }
-#main-container .section1 .sec1-img {
-  position: absolute;
-  width: 15vw;
-  height: 31vh;
-  top: 27vh;
-  left: 43vw;
+#main-container .section1 .content .heading {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 8vh;
+  padding-top: 4vh;
 }
-#main-container .section1 .mountain-img {
-  position: absolute;
-  max-height: 120px;
-  max-width: 125px;
-  top: 67%;
-  left: 47%;
+#main-container .section1 .content .icon {
+  height: 62vh;
 }
 #main-container .section1 .left-circle {
   position: absolute;
-  height: 17vh;
-  width: 8vw;
-  top: 80vh;
-  left: 20vh;
+  height: 14vh;
+  width: 7vw;
+  top: 105vh;
+  left: 25vh;
   background-image: linear-gradient(to right, #d23174, #f34938);
   border-radius: 50%;
 }
@@ -103,7 +66,7 @@ body {
   position: absolute;
   height: 15vw;
   width: 15vw;
-  top: 50vh;
+  top: 80vh;
   right: 16vh;
   background-image: linear-gradient(to right, #97134a, #f34938);
   border-radius: 50%;
@@ -606,9 +569,9 @@ body {
 
 #particles-js {
   width: 100%;
-  height: 80vh;
+  height: 92vh;
   position: absolute;
-  top: 0;
+  top: 10vh;
 }
 
 #particles-js:hover svg path {
