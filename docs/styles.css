@@ -286,6 +286,27 @@ body {
 #main-container .section4 .sec4-content .list2 .shell {
   width: 25vw;
 }
+#main-container .section4 .sec4-content .list1-sub1:hover .devops {
+  max-height: 16vh;
+}
+#main-container .section4 .sec4-content .list1-sub2:hover .inSpirit {
+  max-height: 16vh;
+}
+#main-container .section4 .sec4-content .list1-sub3:hover .shiftLeft {
+  max-height: 16vh;
+}
+#main-container .section4 .sec4-content .list1-sub4:hover .agile {
+  max-height: 16vh;
+}
+#main-container .section4 .sec4-content .list2-sub1:hover .accelerate {
+  max-height: 16vh;
+}
+#main-container .section4 .sec4-content .list2-sub2:hover .module {
+  max-height: 16vh;
+}
+#main-container .section4 .sec4-content .list2-sub3:hover .elk {
+  max-height: 16vh;
+}
 #main-container .section4 .sec4-content .shell {
   height: 55vh;
   display: flex;
@@ -352,6 +373,18 @@ body {
   position: absolute;
   top: 25vh;
 }
+#main-container .section5 .sec5-container .sec5-subcontent .sub-list1:hover .testing {
+  font-size: 3.2vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .sub-list2:hover .fixing {
+  font-size: 3.2vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .sub-list3:hover .autoTC {
+  font-size: 3.2vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .sub-list4:hover .ra {
+  font-size: 3.2vh;
+}
 #main-container .section5 .sec5-container .sec5-subcontent .heading {
   font-family: "Muli";
   font-size: 3.6vh;
@@ -373,6 +406,20 @@ body {
   padding-left: 7%;
   padding-right: 7%;
   margin-top: 2vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .image .img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  height: 35vh;
+  width: 100%;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .image .img-container img {
+  height: 35vh;
+  width: 20vw;
 }
 #main-container .section5 .sec5-container .sec5-subcontent .image div {
   background: aliceblue;

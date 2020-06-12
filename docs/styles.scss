@@ -348,6 +348,34 @@ body {
                 }
             }
 
+            .list1-sub1:hover .devops {
+                max-height: 16vh;
+            }
+
+            .list1-sub2:hover .inSpirit {
+                max-height: 16vh;
+            }
+
+            .list1-sub3:hover .shiftLeft {
+                max-height: 16vh;
+            }
+
+            .list1-sub4:hover .agile {
+                max-height: 16vh;
+            }
+
+            .list2-sub1:hover .accelerate {
+                max-height: 16vh;
+            }
+
+            .list2-sub2:hover .module {
+                max-height: 16vh;
+            }
+
+            .list2-sub3:hover .elk {
+                max-height: 16vh;
+            }
+
             .shell {
                 height: 55vh;
                 display: flex;
@@ -357,7 +385,7 @@ body {
 
                 .image {
                     display: flex;
-                    justify-content: center;
+                    justify-content: center;                 
                 }
 
                 img {
@@ -423,6 +451,22 @@ body {
                 position: absolute;
                 top: 25vh;
 
+                .sub-list1:hover .testing {
+                    font-size: 3.2vh;
+                }
+
+                .sub-list2:hover .fixing {
+                    font-size: 3.2vh;
+                }
+
+                .sub-list3:hover .autoTC {
+                    font-size: 3.2vh;
+                }
+
+                .sub-list4:hover .ra {
+                    font-size: 3.2vh;
+                }
+
                 .heading {
                     font-family: "Muli";
                     font-size: 3.6vh;
@@ -445,6 +489,22 @@ body {
                     padding-left: 7%;
                     padding-right: 7%;
                     margin-top: 2vh;
+
+                    .img-container {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        align-items: stretch;
+                        align-content: stretch;
+                        height: 35vh;
+                        width: 100%;
+
+                        img {
+                            height: 35vh;
+                            width: 20vw;
+                        }
+                    }
 
                     div {
                         background: aliceblue;
