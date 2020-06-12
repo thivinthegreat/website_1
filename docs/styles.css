@@ -105,7 +105,7 @@ body {
   width: 15vw;
   top: 50vh;
   right: 16vh;
-  background-image: linear-gradient(to right, #d23174, #f34938);
+  background-image: linear-gradient(to right, #97134a, #f34938);
   border-radius: 50%;
 }
 #main-container .section2 {
@@ -141,8 +141,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-#main-container .section2 .sec2-container img {
-  max-height: 65vh;
+#main-container .section2 .sec2-container svg {
+  max-height: 80%;
+  width: 80%;
 }
 #main-container .section3 {
   margin-top: 10vh;
@@ -197,11 +198,25 @@ body {
   display: flex;
   height: 60vh;
   width: 50vw;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
-#main-container .section3 .upper .sec3-content .sec3-img img {
-  min-height: 50vh;
+#main-container .section3 .upper .sec3-content .sec3-img svg {
+  max-height: 95%;
+  width: 95%;
+}
+#main-container .section3 .upper .sec3-content .sec3-img svg .rotate {
+  animation: rotate 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 #main-container .section3 .upper .sec3-content .sec3-text {
   height: 60vh;
@@ -241,7 +256,7 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
 }
 #main-container .section4 .sec4-content .heading {
@@ -250,9 +265,12 @@ body {
   font-size: 3.6vh;
   height: 10vh;
   text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 #main-container .section4 .sec4-content .sec4row {
-  height: 45vh;
+  height: 55vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -269,8 +287,30 @@ body {
   width: 25vw;
 }
 #main-container .section4 .sec4-content .shell {
-  height: 40vh;
-  background: aliceblue;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#main-container .section4 .sec4-content .shell .image {
+  display: flex;
+  justify-content: center;
+}
+#main-container .section4 .sec4-content .shell img {
+  max-height: 15vh;
+}
+#main-container .section4 .sec4-content .shell .sub-heading {
+  display: flex;
+  justify-content: center;
+  font-size: 3vh;
+  text-align: center;
+  padding-top: 3vh;
+}
+#main-container .section4 .sec4-content .shell .definition {
+  font-size: 2.8vh;
+  text-align: center;
+  padding-top: 3vh;
 }
 #main-container .section5 {
   margin-top: 10vh;
@@ -294,11 +334,11 @@ body {
 #main-container .section5 .sec5-container .bottom-circle {
   border-radius: 50%;
   position: absolute;
-  bottom: -10vh;
-  left: -1vw;
+  bottom: -3vh;
+  left: 4vw;
   background-image: linear-gradient(to right, #d23174, #f34938);
-  height: 37vh;
-  width: 20vw;
+  height: 21vh;
+  width: 11vw;
 }
 #main-container .section5 .sec5-container .sec5-subcontent {
   display: flex;
@@ -307,7 +347,7 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   align-content: stretch;
-  height: 79vh;
+  height: 83vh;
   width: 100%;
   position: absolute;
   top: 25vh;
@@ -318,10 +358,13 @@ body {
   height: 10vh;
   text-align: center;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 #main-container .section5 .sec5-container .sec5-subcontent .image {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: stretch;
@@ -336,7 +379,7 @@ body {
   height: 35vh;
 }
 #main-container .section5 .sec5-container .sec5-subcontent .content {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
 }
 #main-container .section5 .sec5-container .sec5-subcontent .content .details {
@@ -344,17 +387,28 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
-  align-items: center;
-  align-content: space-between;
+  align-items: flex-start;
   padding-left: 6%;
   padding-right: 6%;
-  height: 25vh;
-  margin-top: 3vh;
+  height: 40vh;
 }
 #main-container .section5 .sec5-container .sec5-subcontent .content .details .list {
-  height: 25vh;
+  height: 32vh;
   width: 20vw;
-  background: aliceblue;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .content .details .list .sub-heading {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-size: 3vh;
+  margin-top: 3vh;
+}
+#main-container .section5 .sec5-container .sec5-subcontent .content .details .list .description {
+  margin-top: 3vh;
+  color: white;
+  font-size: 2.8vh;
+  text-align: center;
 }
 #main-container .section6 .sec6-content {
   display: flex;
