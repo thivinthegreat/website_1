@@ -9,3 +9,11 @@ function showLess() {
     document.getElementById("btnLoadMore").style.display = "flex";
     document.getElementById("btnShowLess").style.display = "none";
 }
+
+function sendEmail() {
+    var name = document.getElementById("name").value;
+    var mailId = document.getElementById("mailId").value;
+    var phoneNumber = document.getElementById("phone").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("msg").value;
+}

@@ -251,9 +251,22 @@ body {
   position: relative;
 }
 
-#main-container .section3 .sec3-backimg {
+#main-container .section3 .sec3-img2 {
+  position: absolute;
+  top: 91vh;
+  height: 120vh;
   width: 100%;
-  max-height: 222vh;
+}
+
+#main-container .section3 .sec3-backimg1 {
+  width: 100%;
+  max-height: 110vh;
+  position: absolute;
+}
+
+#main-container .section3 .sec3-backimg2 {
+  width: 100%;
+  max-height: 125vh;
   position: absolute;
 }
 
@@ -273,15 +286,15 @@ body {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  height: 30vh;
+  height: 25vh;
   font-family: 'Exo', sans-serif;
 }
 
@@ -402,21 +415,52 @@ body {
   top: 91vh;
   height: 120vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
 }
 
 #main-container .section3 .lower .modules {
   font-family: 'Exo', sans-serif;
-  position: absolute;
-  left: 45vw;
   font-size: 185%;
   color: white;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#main-container .section3 .lower img {
-  position: absolute;
-  top: 9vh;
-  max-width: 47vw;
-  left: 27vw;
+#main-container .section3 .lower .modules-img {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #main-container .section4 .sec4-content {
