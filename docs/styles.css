@@ -767,6 +767,22 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+#main-container .section6 .height1 {
+  height: 85vh;
+}
+
+#main-container .section6 .height2 {
+  height: 107vh;
+}
+
+#main-container .section6 .benifits1 {
+  height: 75vh;
+}
+
+#main-container .section6 .benifits2 {
+  height: 107vh;
+}
+
 #main-container .section6 .sec6-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -785,7 +801,6 @@ body {
           align-items: stretch;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  height: 100vh;
   width: 100%;
 }
 
@@ -806,7 +821,6 @@ body {
 }
 
 #main-container .section6 .sec6-content .benifits {
-  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,7 +869,14 @@ body {
   display: block;
 }
 
-#main-container .section6 .sec6-content .benifits .list .item {
+#main-container .section6 .sec6-content .benifits .list .item2:hover .hoverCircle {
+  display: block;
+  position: absolute;
+  top: 0vh;
+  left: -1vw;
+}
+
+#main-container .section6 .sec6-content .benifits .list .content {
   height: 32vh;
   width: 18vw;
   display: -webkit-box;
@@ -872,23 +893,37 @@ body {
           align-items: center;
 }
 
-#main-container .section6 .sec6-content .benifits .list .item .sub-heading {
+#main-container .section6 .sec6-content .benifits .list .content .sub-heading {
   padding-top: 2vh;
   font-size: 3vh;
   text-align: center;
   font-family: 'Exo', sans-serif;
 }
 
-#main-container .section6 .sec6-content .benifits .list .item .image {
+#main-container .section6 .sec6-content .benifits .list .content .image {
   height: 20vh;
   position: relative;
 }
 
-#main-container .section6 .sec6-content .benifits .list .item .hoverCircle {
+#main-container .section6 .sec6-content .benifits .list .content .hoverCircle {
   display: none;
 }
 
-#main-container .section6 .sec6-content .loadmore {
+#main-container #hidden {
+  display: none;
+}
+
+#main-container #btnShowLess {
+  display: none;
+}
+
+#main-container #btnLoadMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-container .loadmore {
   height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -901,7 +936,7 @@ body {
           justify-content: center;
 }
 
-#main-container .section6 .sec6-content .loadmore .button {
+#main-container .loadmore .button {
   background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
   background-image: linear-gradient(to right, #d23174, #f34938);
   border: none;
@@ -917,7 +952,7 @@ body {
   width: 10vw;
 }
 
-#main-container .section6 .sec6-content .loadmore button:focus {
+#main-container .loadmore button:focus {
   outline: 0 !important;
 }
 

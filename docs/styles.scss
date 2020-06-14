@@ -567,6 +567,22 @@ body {
     }
 
     .section6 {
+        .height1 {
+            height: 85vh;
+        }
+
+        .height2 {
+            height: 107vh;
+        }
+
+        .benifits1 {
+            height: 75vh;
+        }
+
+        .benifits2 {
+            height: 107vh;
+        }
+
         .sec6-content {
             display: flex;
             flex-direction: column;
@@ -574,7 +590,7 @@ body {
             justify-content: flex-start;
             align-items: stretch;
             align-content: stretch;
-            height: 100vh;
+            
             width: 100%;
 
             .heading {
@@ -588,7 +604,6 @@ body {
             }
 
             .benifits {
-                height: 75vh;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -615,7 +630,14 @@ body {
                         display: block;
                     }
 
-                    .item {
+                    .item2:hover .hoverCircle {
+                        display: block;
+                        position: absolute;
+                        top: 0vh;
+                        left: -1vw;
+                    }
+
+                    .content {
                         height: 32vh;
                         width: 18vw;
                         display: flex;
@@ -641,32 +663,44 @@ body {
                     }
                 }
             }
+        }
+    }
 
-            .loadmore {
-                height: 15vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+    #hidden {
+        display: none;
+    }
 
-                .button {
-                    background-image: linear-gradient(to right, #d23174 , #f34938);
-                    border: none;
-                    color: white;
-                    padding: 12px;
-                    text-align: center;
-                    text-decoration: none;
-                    cursor: pointer;
-                    border-radius: 25px;
-                    height: 8vh;
-                    font-size: 17px;
-                    font-weight: bold;
-                    width: 10vw;
-                }
+    #btnShowLess {
+        display: none;
+    }
 
-                button:focus {
-                    outline: 0 !important;
-                }
-            }
+    #btnLoadMore {
+        display: flex;
+    }
+
+    .loadmore {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .button {
+            background-image: linear-gradient(to right, #d23174 , #f34938);
+            border: none;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 25px;
+            height: 8vh;
+            font-size: 17px;
+            font-weight: bold;
+            width: 10vw;
+        }
+
+        button:focus {
+            outline: 0 !important;
         }
     }
 
