@@ -461,6 +461,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+#main-container .section3 .lower .modules-img img {
+  max-height: 100vh;
+}
+
+#main-container .section3 .lower .modules-img .circleImg {
+  position: absolute;
 }
 
 #main-container .section4 .sec4-content {
@@ -751,10 +760,10 @@ body {
 #main-container .section5 .sec5-container .sec5-subcontent .image .img-container img {
   height: 35vh;
   width: 20vw;
+  width: 100%;
 }
 
 #main-container .section5 .sec5-container .sec5-subcontent .image div {
-  background: aliceblue;
   height: 35vh;
 }
 

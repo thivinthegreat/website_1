@@ -328,6 +328,15 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+
+                img {
+                    max-height: 100vh;
+                }
+
+                .circleImg {
+                    position: absolute;
+                }
             }
         }
     }
@@ -537,11 +546,11 @@ body {
                         img {
                             height: 35vh;
                             width: 20vw;
+                            width: 100%;
                         }
                     }
 
                     div {
-                        background: aliceblue;
                         height: 35vh;
                     }
                 }
