@@ -172,7 +172,7 @@ body {
   position: absolute;
   height: 14vh;
   width: 7vw;
-  top: 118vh;
+  top: 108vh;
   left: 25vh;
   background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
   background-image: linear-gradient(to right, #d23174, #f34938);
@@ -188,10 +188,6 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(#97134a), to(#f34938));
   background-image: linear-gradient(to right, #97134a, #f34938);
   border-radius: 50%;
-}
-
-#main-container .seperator {
-  height: 15vh;
 }
 
 #main-container .section2 {
@@ -229,7 +225,7 @@ body {
 
 #main-container .section2 .sec2-container .left-session h3 {
   font-size: 5.6vh;
-  font-family: Muli;
+  font-family: 'Exo', sans-serif;
   margin-bottom: 10vh;
   margin-top: 12vh;
 }

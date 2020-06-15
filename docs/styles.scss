@@ -121,7 +121,7 @@ body {
             position: absolute;
             height: 14vh;
             width: 7vw;
-            top: 118vh;
+            top: 108vh;
             left: 25vh;
             background-image: linear-gradient(to right, #d23174, #f34938);
             border-radius: 50%;
@@ -136,10 +136,6 @@ body {
             background-image: linear-gradient(to right, #97134a, #f34938);
             border-radius: 50%;
         }
-    }
-
-    .seperator {
-        height: 15vh;
     }
 
     .section2 {
@@ -166,7 +162,7 @@ body {
             .left-session {
                 h3 {
                     font-size: 5.6vh;
-                    font-family: Muli;
+                    font-family: 'Exo', sans-serif;
                     margin-bottom: 10vh;
                     margin-top: 12vh;
                 }
