@@ -137,6 +137,10 @@ body {
         }
     }
 
+    .seperator {
+        height: 5vh;
+    }
+
     .section2 {
         height: 90vh;
         width:  100%;
@@ -342,6 +346,10 @@ body {
 
                 svg {
                     height: 90vh;
+                }
+
+                img {
+                    position: absolute;
                 }
 
                 .circleImg {

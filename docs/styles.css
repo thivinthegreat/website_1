@@ -189,6 +189,10 @@ body {
   border-radius: 50%;
 }
 
+#main-container .seperator {
+  height: 5vh;
+}
+
 #main-container .section2 {
   height: 90vh;
   width: 100%;
@@ -479,6 +483,10 @@ body {
 
 #main-container .section3 .lower .modules-img svg {
   height: 90vh;
+}
+
+#main-container .section3 .lower .modules-img img {
+  position: absolute;
 }
 
 #main-container .section3 .lower .modules-img .circleImg {
