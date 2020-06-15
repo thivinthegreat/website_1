@@ -477,8 +477,8 @@ body {
   position: relative;
 }
 
-#main-container .section3 .lower .modules-img img {
-  max-height: 100vh;
+#main-container .section3 .lower .modules-img svg {
+  height: 90vh;
 }
 
 #main-container .section3 .lower .modules-img .circleImg {
