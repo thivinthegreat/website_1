@@ -835,23 +835,8 @@ body {
                     outline: none;
                     background: white;
                     font-size: 2vh;
+                    padding-left: 1vw;
                 }
-
-                input::-webkit-input-placeholder { padding: 1vw;}
-
-                textarea::-webkit-input-placeholder { padding: 1vw;}
-
-                input::-moz-placeholder { padding: 1vw;}
-
-                textarea::-moz-placeholder { padding: 1vw;}
-
-                input:-moz-placeholder { padding: 1vw;}
-
-                textarea:-moz-placeholder { padding: 1vw;}
-
-                input:-ms-input-placeholder { padding: 1vw;}
- 
-                textarea:-ms-input-placeholder { padding: 1vw;}
 
                 textarea {
                     width: 89%;
@@ -861,6 +846,7 @@ body {
                     outline: none;
                     background: white;
                     font-size: 2vh;
+                    padding-left: 1vw;
                 }
             }
 
