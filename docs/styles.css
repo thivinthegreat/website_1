@@ -171,7 +171,7 @@ body {
   position: absolute;
   height: 14vh;
   width: 7vw;
-  top: 110vh;
+  top: 118vh;
   left: 25vh;
   background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
   background-image: linear-gradient(to right, #d23174, #f34938);
