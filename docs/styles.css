@@ -483,10 +483,12 @@ body {
 
 #main-container .section3 .lower .modules-img svg {
   height: 90vh;
+  max-height: 90vh;
 }
 
 #main-container .section3 .lower .modules-img img {
   position: absolute;
+  max-height: 110vh;
 }
 
 #main-container .section3 .lower .modules-img .circleImg {

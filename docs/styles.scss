@@ -346,10 +346,12 @@ body {
 
                 svg {
                     height: 90vh;
+                    max-height: 90vh;
                 }
 
                 img {
                     position: absolute;
+                    max-height: 110vh;
                 }
 
                 .circleImg {
