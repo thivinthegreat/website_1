@@ -120,7 +120,7 @@ body {
             position: absolute;
             height: 14vh;
             width: 7vw;
-            top: 105vh;
+            top: 110vh;
             left: 25vh;
             background-image: linear-gradient(to right, #d23174, #f34938);
             border-radius: 50%;
@@ -138,7 +138,7 @@ body {
     }
 
     .seperator {
-        height: 5vh;
+        height: 15vh;
     }
 
     .section2 {
@@ -167,6 +167,7 @@ body {
                     font-size: 5.6vh;
                     font-family: Muli;
                     margin-bottom: 10vh;
+                    margin-top: 12vh;
                 }
 
                 // ul li::before {
