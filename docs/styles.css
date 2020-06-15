@@ -2,6 +2,11 @@ body {
   margin: 0px;
 }
 
+#main-container {
+  --text: white;
+  --background: transparent;
+}
+
 #main-container .sub-container {
   scroll-behavior: smooth;
 }
@@ -37,6 +42,13 @@ body {
       align-content: stretch;
 }
 
+#main-container .section1 .content .nav-scrolled {
+  --text: black;
+  --background: white;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
 #main-container .section1 .content .navbar {
   position: fixed;
   height: 10vh;
@@ -59,6 +71,7 @@ body {
       align-content: stretch;
   width: 100%;
   z-index: 10;
+  background: var(--background);
 }
 
 #main-container .section1 .content .navbar .logo {
@@ -73,7 +86,7 @@ body {
 }
 
 #main-container .section1 .content .navbar .logo .title {
-  color: white;
+  color: var(--text);
   padding-left: 0.5vw;
   font-size: 2.3vh;
   font-family: 'Exo', sans-serif;
@@ -116,7 +129,7 @@ body {
 }
 
 #main-container .section1 .content .navbar .right-content .nav-items li a {
-  color: white;
+  color: var(--text);
   text-decoration: none;
 }
 
