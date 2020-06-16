@@ -16,6 +16,8 @@ var pJS = function(tag_id, params){
   params.interactivity.events.onhover.mode = "grab";
   params.interactivity.modes.grab.distance = 200;
   params.interactivity.events.onclick.mode = "push";
+  params.interactivity.modes.push.particles_nb = 2;
+  params.particles.number.limit = 100;
 
   /* particles.js variables with default values */
   this.pJS = {
@@ -27,6 +29,7 @@ var pJS = function(tag_id, params){
     particles: {
       number: {
         value: 100,
+        limit: 100,
         density: {
           enable: true,
           value_area: 800
@@ -123,7 +126,7 @@ var pJS = function(tag_id, params){
           duration: 0.4
         },
         push:{
-          particles_nb: 4
+          particles_nb: 2
         },
         remove:{
           particles_nb: 2
@@ -759,6 +762,10 @@ var pJS = function(tag_id, params){
   pJS.fn.modes.pushParticles = function(nb, pos){
 
     pJS.tmp.pushing = true;
+
+    if((pJS.particles.array.length + nb) > pJS.particles.number.limit) {
+      pJS.fn.removeParticles((pJS.particles.array.length + nb)- pJS.particles.number.limit);
+    }
 
     for(var i = 0; i < nb; i++){
       pJS.particles.array.push(
