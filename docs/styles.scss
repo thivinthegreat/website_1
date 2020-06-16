@@ -399,11 +399,57 @@ body {
                 justify-content: center;
                 position: relative;
 
-                svg {
+                svg 
+                {
+
                     height: 90vh;
                     max-height: 90vh;
                     z-index: 2;
+
+                    .modulesSvgCircleBack
+                    {
+                        fill: white;
+
+                        &:hover
+                        {
+                            stroke-width: 11px;
+                            stroke-opacity: 0.5;
+                            stroke: rgb(248, 254, 255);
+                            cursor: pointer;
+                            transition: all 0.35s ease-in-out;
+
+                        }
+                    }
+
+                    .modulesSvgMainCircle
+                    {
+                        fill:white;
+                    }
+
+                    .modulesSvgCircleBack_Active
+                    {
+                        transition-duration: 300ms;
+                        transition: all 0.35s ease-in-out;
+                        fill: white;
+                        stroke-width: 11px;
+                        stroke-opacity: 0.5;
+                        stroke: rgb(255, 240, 240);
+                        cursor: pointer;
+                    }
+                    
+                    .moduleCenterCircle_heading
+                    {
+                        transition: ease-in;
+                        animation-name: fadein;
+                        animation-duration: 1s;
+                    }
+
+                    @keyframes fadein {
+                        from { opacity: 0; }
+                        to   { opacity: 1; }
+                    }
                 }
+
 
                 img {
                     position: absolute;
@@ -448,17 +494,24 @@ body {
                 align-content: space-between;
                 padding-left: 6%;
                 padding-right: 6%;
+                margin-top: 5vh;
             }
 
             .list1 {
                 .shell {
-                    width: 20vw;
+                    width: 18vw;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+                    border-radius: 2vh;
+
                 }
             }
 
             .list2 {
                 .shell {
-                    width: 25vw;
+                    width: 18vw;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+                    border-radius: 2vh;
+
                 }
             }
 
@@ -491,12 +544,13 @@ body {
             }
 
             .shell {
-                height: 53vh;
+                height: 50vh;
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
                 align-items: center;
+                padding-top: 3vh;
 
                 .image {
                     display: flex;
@@ -902,6 +956,7 @@ body {
                     justify-content: flex-start;
                     align-items: flex-start;
                     align-content: stretch;
+                    color: white;
 
                     input {
                         width: 1vw;
@@ -910,8 +965,8 @@ body {
                     }
 
                     a {
-                        text-decoration: none;
-                        color: #333333;
+                        text-decoration: underline;
+                        color: white;
                     }
                 }
 
@@ -935,6 +990,7 @@ body {
                     background: white;
                     font-size: 2vh;
                     padding-left: 1vw;
+                    padding-top: 1vh;
                 }
             }
 
