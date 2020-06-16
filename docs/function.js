@@ -18,7 +18,7 @@ function sendEmail() {
     var message = document.getElementById("msg").value;
 }
 
-const header = document.querySelector("header");
+const header = document.querySelector(".navbar");
 const sectionOne = document.querySelector(".firstSession");
 
 const sectionOneOptions = {

@@ -83,7 +83,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 4vw;
-  padding-top: 3vh;
+  padding-top: 2vh;
 }
 
 #main-container .section1 .content .navbar .logo .title {
@@ -93,11 +93,14 @@ body {
   font-family: 'Exo', sans-serif;
 }
 
+#main-container .section1 .content .navbar .logo img {
+  height: 7vh;
+}
+
 #main-container .section1 .content .navbar .right-content {
-  padding-top: 1.4vh;
   position: absolute;
-  left: 56vw;
-  width: 37vw;
+  left: 53vw;
+  width: 40vw;
 }
 
 #main-container .section1 .content .navbar .right-content .nav-items {
@@ -132,6 +135,7 @@ body {
 #main-container .section1 .content .navbar .right-content .nav-items li a {
   color: var(--text);
   text-decoration: none;
+  font-size: 2.3vh;
 }
 
 #main-container .section1 .content .heading {
@@ -152,7 +156,7 @@ body {
 }
 
 #main-container .section1 .content .icon {
-  height: 67vh;
+  height: 68vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,7 +169,7 @@ body {
 }
 
 #main-container .section1 .content .icon img {
-  min-height: 70vh;
+  max-height: 75vh;
 }
 
 #main-container .section1 .left-circle {
@@ -980,8 +984,16 @@ body {
   position: relative;
 }
 
+#main-container .section6 .sec6-content .benifits .list .content .image img {
+  max-height: 20vh;
+}
+
 #main-container .section6 .sec6-content .benifits .list .content .hoverCircle {
   display: none;
+}
+
+#main-container .section6 .sec6-content .benifits .list .content .hoverCircle img {
+  max-height: 19vh;
 }
 
 #main-container #hidden {

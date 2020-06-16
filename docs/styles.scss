@@ -53,7 +53,7 @@ body {
                     display: flex;
                     align-items: center;
                     padding-left: 4vw;
-                    padding-top: 3vh;
+                    padding-top: 2vh;
 
                     .title {
                         color: var(--text);
@@ -61,13 +61,16 @@ body {
                         font-size: 2.3vh;
                         font-family: 'Exo', sans-serif;
                     }
+
+                    img {
+                        height: 7vh;
+                    }
                 }
 
                 .right-content {
-                    padding-top: 1.4vh;
                     position: absolute;
-                    left: 56vw;
-                    width: 37vw;
+                    left: 53vw;
+                    width: 40vw;
 
                     .nav-items {
                         display: flex;
@@ -88,6 +91,7 @@ body {
                             a {
                                 color: var(--text);
                                 text-decoration: none;
+                                font-size: 2.3vh;
                             }
                         }
                     }
@@ -106,13 +110,13 @@ body {
             }
 
             .icon {
-                height: 67vh;
+                height: 68vh;
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
 
                 img {
-                    min-height: 70vh;
+                    max-height: 75vh;
                 }
             }
         }
@@ -705,10 +709,18 @@ body {
                         .image {
                             height: 20vh;
                             position: relative;
+
+                            img {
+                                max-height: 20vh;
+                            }
                         }
 
                         .hoverCircle {
                             display:none;
+
+                            img {
+                                max-height: 19vh;
+                            }
                         }
                     }
                 }
