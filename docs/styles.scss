@@ -405,6 +405,7 @@ body {
                     height: 90vh;
                     max-height: 90vh;
                     z-index: 2;
+                    padding-top: 7.2vh;
 
                     .modulesSvgCircleBack
                     {
@@ -572,7 +573,7 @@ body {
 
                 .definition {
                     font-family: 'Quicksand', sans-serif;
-                    font-size: 2.4vh;
+                    font-size: 2.2vh;
                     text-align: center;
                     padding-top: 3vh;
                     padding-right: 1vw;
@@ -764,6 +765,7 @@ body {
                 justify-content: center;
             }
 
+
             .benifits {
                 display: flex;
                 flex-direction: column;
@@ -789,6 +791,9 @@ body {
                         left: -1vw;
                         top: 2vh;
                         display: block;
+                        opacity: 1;
+                        animation: fade 1s;
+                        animation-duration: 0.8s;
                     }
 
                     .item2:hover .hoverCircle {
@@ -796,7 +801,58 @@ body {
                         position: absolute;
                         top: 0vh;
                         left: -1vw;
+                        opacity: 1;
+                        animation: fade 1s;
+                        animation-duration: 0.8s;
                     }
+
+                    .content:hover .sec6-definition {
+                        padding-top: 1vh;
+                        display: block;
+                        visibility: visible;
+                        text-align: justify;
+                        font-family: 'Quicksand', sans-serif;
+                        font-size: 2.3vh;
+                        opacity: 1;
+                        animation: fade 1s;
+                        animation-duration: 0.8s;
+                        animation-fill-mode: initial;
+                        transform: translate(0px, -45px);
+                    }
+                    
+                    @keyframes fade {
+                        0% {
+                            opacity: 0;
+                        }
+                    
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                    
+
+                    .content:hover .sub-heading {
+                        //display: none;
+                        //visibility: hidden;
+                       // opacity: 0;
+                       color: rgb(168, 24, 24);
+                       transform: translate(0px, -178px);
+                       transition-duration: 0.8s;
+                       opacity: 1;
+                       transition-property: all;
+                        //animation: fader 0.5s;
+                    }
+
+                    .content:hover .image
+                    {
+                        opacity: 1;
+                        animation: fade 1s;
+                        animation-duration: 0.5s;
+                    }
+
+
+
+
 
                     .content {
                         height: 32vh;
@@ -806,16 +862,48 @@ body {
                         flex-wrap: nowrap;
                         align-items: center;
 
+                        // &:hover
+                        // {
+                        //     translate: 55px;
+                        // }
+                        
+                        // &:hover .tooltiptext
+                        // {
+                        //     visibility: visible;
+                        // }
+                        /* Tooltip text */
+                        // .tooltiptext {
+                        // visibility: hidden;
+                        // width: 20vw;
+                        // background-color: black;
+                        // color: #fff;
+                        // text-align: center;
+                        // padding: 5px 0;
+                        // border-radius: 6px;
+                        
+                        // /* Position the tooltip text - see examples below! */
+                        // position: absolute;
+                        // z-index: 1;
+                        // }
+
+
                         .sub-heading {
                             padding-top: 2vh;
                             font-size: 3vh;
                             text-align: center;
                             font-family: 'Exo', sans-serif;
+                            display: block;
+                            opacity: 0.82;
+                        }
+
+                        .sec6-definition {
+                            display: none;
                         }
 
                         .image {
                             height: 20vh;
                             position: relative;
+                            opacity: 0.82;
 
                             img {
                                 max-height: 20vh;
