@@ -171,6 +171,7 @@ body {
 
 #main-container .section1 .content .icon img {
   max-height: 75vh;
+  min-height: 75vh;
 }
 
 #main-container .section1 .left-circle {
