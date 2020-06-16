@@ -98,6 +98,7 @@ body {
 }
 
 #main-container .section1 .content .navbar .right-content {
+  padding-top: 1vh;
   position: absolute;
   left: 53vw;
   width: 40vw;
