@@ -17,11 +17,17 @@ body {
         height: 118vh;
         width: 100%;
 
+        .bgImg {
+            max-height: 105vh;
+            min-height: 105vh;
+            width: 100%;
+        }
+
         .content {
             position: absolute;
             top: 0px;
             left: 0px;
-            height: 102vh;
+            height: 105vh;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -31,7 +37,7 @@ body {
             align-content: stretch;
 
             .nav-scrolled {
-                --text: black;
+                --text: #333333;
                 --background: white;
                 box-shadow: 0 3px 20px rgba(black, 0.2)
             }
@@ -48,12 +54,13 @@ body {
                 width: 100%;
                 z-index: 10;
                 background: var(--background);
+                display: flex;
+                align-items: center;
 
                 .logo {
                     display: flex;
                     align-items: center;
                     padding-left: 4vw;
-                    padding-top: 2vh;
 
                     .title {
                         color: var(--text);
@@ -62,16 +69,21 @@ body {
                         font-family: 'Exo', sans-serif;
                     }
 
-                    img {
+                    #color-img {
                         height: 7vh;
+                        display: block;
+                    }
+
+                    #white-img {
+                        height: 7vh;
+                        display: none;
                     }
                 }
 
                 .right-content {
-                    padding-top: 1vh;
                     position: absolute;
-                    left: 56vw;
-                    width: 38vw;
+                    left: 42vw;
+                    width: 54vw;
 
                     .nav-items {
                         display: flex;
@@ -81,6 +93,10 @@ body {
                         align-items: flex-start;
                         align-content: stretch;
                         padding-top: 0.5vh;
+
+                        ul {
+                            margin: 0;
+                        }
 
                         li {
                             display: inline;
@@ -111,21 +127,22 @@ body {
             }
 
             .icon {
-                height: 68vh;
+                height: 70vh;
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
 
                 img {
-                    max-height: 75vh;
-                    min-height: 75vh;
+                    max-height: 80vh;
+                    min-height: 80vh;
+                    z-index: 2;
                 }
             }
         }
 
         .left-circle {
             position: absolute;
-            height: 14vh;
+            height: 7vw;
             width: 7vw;
             top: 108vh;
             left: 25vh;
@@ -158,6 +175,7 @@ body {
             height: 90vh;
             padding-left: 10%;
             padding-right: 6%;
+            overflow-x: hidden;
 
             .list {
                 height: 90vh;
@@ -172,15 +190,6 @@ body {
                     margin-bottom: 10vh;
                     margin-top: 12vh;
                 }
-
-                // ul li::before {
-                //     content: "\2022";
-                //     color: #f34938;
-                //     font-weight: bold;
-                //     display: inline-block; 
-                //     width: 1em;
-                //     margin-left: -1em;
-                //   }
         
                 ul {
                     padding-left: 1.3vw;
@@ -225,6 +234,7 @@ body {
             width: 100%;
             max-height: 110vh;
             position: absolute;
+            min-height: 110vh;
         }
 
         .sec3-backimg2
@@ -247,7 +257,7 @@ body {
                 justify-content: center;
                 align-items: center;
                 align-content: stretch;
-                height: 25vh;
+                height: 21vh;
                 font-family: 'Exo', sans-serif;
 
                 .list {
@@ -264,6 +274,7 @@ body {
 
                 .sec3-sub-heading {
                     margin-top: 3vh;
+                    margin-bottom: 0;
                 }
             }
 
@@ -273,9 +284,9 @@ body {
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: space-around;
-                align-items: center;
+                align-items: flex-start;
                 align-content: space-between;
-                height: 60vh;
+                height: 65vh;
                 padding-left: 10%;
                 padding-right: 10%;
 
@@ -283,7 +294,7 @@ body {
                     display: flex;
                     height: 60vh;
                     width: 50vw;
-                    align-items: flex-start;
+                    align-items: flex-end;
                     justify-content: center;
 
                     svg {
@@ -309,10 +320,10 @@ body {
                     display: flex;
                     align-items: flex-start;
                     justify-content: center;
-                    padding-top: 6vh;
 
                     p {
-                        font-size: 3.2vh;
+                        margin: 0;
+                        font-size: 3vh;
                         color: white;
                     }
                 }
@@ -333,7 +344,7 @@ body {
 
             .modules {
                 font-family: 'Exo', sans-serif;
-                font-size: 185%;
+                font-size: 3.6vh;
                 color: white;
                 height: 20vh;
                 display: flex;
@@ -752,13 +763,13 @@ body {
             background-image: linear-gradient(to right, #d23174 , #f34938);
             border: none;
             color: white;
-            padding: 12px;
+            padding: 8px;
             text-align: center;
             text-decoration: none;
             cursor: pointer;
             border-radius: 25px;
             height: 8vh;
-            font-size: 17px;
+            font-size: 2.2vh;
             font-weight: bold;
             width: 10vw;
         }
@@ -880,13 +891,13 @@ body {
                 background-image: linear-gradient(to right, #d23174 , #f34938);
                 border: none;
                 color: white;
-                padding: 12px;
+                padding: 8px;
                 text-align: center;
                 text-decoration: none;
                 cursor: pointer;
                 border-radius: 25px;
                 height: 8vh;
-                font-size: 17px;
+                font-size: 2.2vh;
                 font-weight: bold;
                 width: 10vw;
             }

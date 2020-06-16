@@ -29,8 +29,13 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
             header.classList.add("nav-scrolled");
+            document.getElementById("color-img").style.display = "block";
+            document.getElementById("white-img").style.display = "none";
+
         } else {
             header.classList.remove("nav-scrolled");
+            document.getElementById("color-img").style.display = "none";
+            document.getElementById("white-img").style.display = "block";
         }
     })
 }, sectionOneOptions);
