@@ -41,3 +41,19 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
 }, sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
+
+function orientationLockFunction()
+{
+    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
+    {
+        alert("Device is in Potrait mode, Please change it to landscape mode");
+        screen.orientation = "landscape";
+    }   screen.rotate = 90;
+    
+}
+
+function orientationChangeDetect()
+{
+    if(window.innerHeight <  window.innerWidth*0.8)
+        alert("Device is in Potrait mode, Please change it to landscape mode");
+}
