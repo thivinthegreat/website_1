@@ -192,7 +192,7 @@ body {
           align-items: flex-end;
 }
 
-#main-container .section1 .content .icon img {
+#main-container .section1 .content .icon svg {
   max-height: 80vh;
   min-height: 80vh;
   z-index: 2;
