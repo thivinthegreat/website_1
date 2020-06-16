@@ -42,6 +42,14 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
 
 sectionOneObserver.observe(sectionOne);
 
+document.addEventListener("DOMContentLoaded", function() {
+    orientationLockFunction();
+  });
+
+window.addEventListener("orientationchange", function() {
+    orientationChangeDetect();
+  });
+
 function orientationLockFunction()
 {
     if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
