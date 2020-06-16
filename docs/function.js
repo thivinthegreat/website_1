@@ -113,7 +113,7 @@ window.setInterval(function(){
     if(i > modulesArray.length - 1) i=0;
     plusSlides(1);
 
-    }, 2000);
+    }, 5000);
 
 function changeModuleText(e)
 {
