@@ -216,9 +216,9 @@ body {
                 align-items: center;
             }
 
-            svg {
-                max-height: 80%;
-                width: 80%;
+            img {
+                max-height: 70%;
+                width: 70%;
             }
         }
     }
@@ -255,6 +255,10 @@ body {
             position: absolute;
             height: 90vh;
             width: 100%;
+
+            
+
+            
 
             .sec3-heading {
                 display: flex;
@@ -295,6 +299,9 @@ body {
                 height: 65vh;
                 padding-left: 10%;
                 padding-right: 10%;
+                position: relative;
+
+
 
                 .sec3-img {
                     display: flex;
@@ -337,9 +344,20 @@ body {
 
                     p {
                         margin: 0;
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                         color: white;
                     }
+
+                    .sec3-list
+                    {
+                        li 
+                        {
+                            color: white;
+                            font-size: 1.9vh;
+                            opacity: 1;
+                            transition: all linear 0.5s;
+                        }
+                     }
 
                     .learnMore {
                         width: 100%;
@@ -367,6 +385,7 @@ body {
                         }
                     }
                 }
+
             }
         }
     
@@ -844,7 +863,7 @@ body {
                 padding-left: 8%;
 
                 .list {
-                    height: 34vh;
+                    height: 74vh;
                     width: 100%;
                     display: flex;
                     flex-direction: row;
@@ -874,17 +893,17 @@ body {
                     }
 
                     .content:hover .sec6-definition {
-                        padding-top: 1vh;
+                        padding-top: 3vh;
                         display: block;
                         visibility: visible;
                         text-align: justify;
                         font-family: 'Quicksand', sans-serif;
-                        font-size: 2.3vh;
-                        opacity: 1;
-                        animation: fade 1s;
-                        animation-duration: 0.8s;
-                        animation-fill-mode: initial;
-                        transform: translate(0px, -45px);
+                        font-size: 2vh;
+                        // opacity: 1;
+                        // animation: fade 1s;
+                        // animation-duration: 0.8s;
+                        // animation-fill-mode: initial;
+                        
                     }
                     
                     @keyframes fade {
@@ -899,27 +918,44 @@ body {
                     
 
                     .content:hover .sub-heading {
-                        //display: none;
-                        //visibility: hidden;
-                       // opacity: 0;
+                        // display: none;
+                        // visibility: hidden;
+                    //    opacity: 0;
                        color: rgb(168, 24, 24);
-                       transform: translate(0px, -178px);
-                       transition-duration: 0.8s;
-                       opacity: 1;
+                       transform: translate(0px, -25vh);
+                       transition-duration: 0.9s;
+                       opacity: 0;
+                       height: 0vh;
+                       visibility: visible;
                        transition-property: all;
-                        //animation: fader 0.5s;
+                        animation: fader 0.5s;
+                        font-size: 2vh;
                     }
 
+
+
+                    @keyframes fader {
+                        0% {
+                            opacity: 1;
+                            visibility: visible;
+                            height: 1vh;
+                        }
+                    
+                        100% {
+                            opacity: 0;
+                            visibility: visible;
+                            display: none;
+                            height: 0vh;
+                        }
+                    }
+                    
                     .content:hover .image
                     {
                         opacity: 1;
                         animation: fade 1s;
                         animation-duration: 0.5s;
+                        // max-height: 11vh;
                     }
-
-
-
-
 
                     .content {
                         height: 32vh;
@@ -929,29 +965,6 @@ body {
                         flex-wrap: nowrap;
                         align-items: center;
 
-                        // &:hover
-                        // {
-                        //     translate: 55px;
-                        // }
-                        
-                        // &:hover .tooltiptext
-                        // {
-                        //     visibility: visible;
-                        // }
-                        /* Tooltip text */
-                        // .tooltiptext {
-                        // visibility: hidden;
-                        // width: 20vw;
-                        // background-color: black;
-                        // color: #fff;
-                        // text-align: center;
-                        // padding: 5px 0;
-                        // border-radius: 6px;
-                        
-                        // /* Position the tooltip text - see examples below! */
-                        // position: absolute;
-                        // z-index: 1;
-                        // }
 
 
                         .sub-heading {
@@ -965,6 +978,7 @@ body {
 
                         .sec6-definition {
                             display: none;
+                            
                         }
 
                         .image {

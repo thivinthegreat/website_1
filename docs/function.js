@@ -206,11 +206,11 @@ window.setInterval(function(){
     {
          document.getElementById("tspan_head1").textContent = "";
          document.getElementById("tspan_head2").textContent = "Infrastructure ";
-         document.getElementById("tspan1").textContent = " ";
-         document.getElementById("tspan2").textContent = " ";
-         document.getElementById("tspan3").textContent = " ";
-         document.getElementById("tspan4").textContent = " ";
-         document.getElementById("tspan5").textContent = " ";
+         document.getElementById("tspan1").textContent = "Running on multi-cloud  ";
+         document.getElementById("tspan2").textContent = "infrastructure, automation   ";
+         document.getElementById("tspan3").textContent = "infrastructure is designed to   ";
+         document.getElementById("tspan4").textContent = "support different cloud  ";
+         document.getElementById("tspan5").textContent = "platforms ";
          document.getElementById("tspan6").textContent = " ";
          document.getElementById("tspan7").textContent = " ";
      } 
@@ -532,7 +532,7 @@ function moduleCenterButton(e)
     if(id_name === "modules_Infrastructure" )
     {
         document.getElementById("modulesPopUp-heading").innerHTML = "Infrastructure";
-        document.getElementById("modulesPopup-content").innerHTML = "The database automation accelerator module revolves and focuses on the integration around almost all database servers. This module supports Java JDBC, SQL server, Oracle database, MariaDB and My SQL. It additionally supports AWS databases such as AWS Aurora DB and RDS. The focus point of this module is the comparison of large set of data to provide result within the fraction of a second. ";
+        document.getElementById("modulesPopup-content").innerHTML = "Automation Infrastructure and processes are based on a multi-layer infrastructure like Orchestration engine - CI/CD Engine, Base Infrastructure Support Services - Supports the provisioners, Infrastructure Provisioner and Template Creators.";
     }
 
     
