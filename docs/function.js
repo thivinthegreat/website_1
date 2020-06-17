@@ -32,6 +32,16 @@ function sendEmail() {
 
     if (response.length > 0 && name.length > 0 && mailId.length > 0 && phoneNumber.length > 0 && subject.length > 0 && message.length > 0 && policy == true) {
         const url = "https://api.codelessauto.io/send";
+
+        // const data = JSON.stringify({
+        //     "email": mailId,
+        //     "phone": phoneNumber,
+        //     "name": name,
+        //     "subject": subject,
+        //     "text": message,
+        //     "captcha": response
+        //   })
+
         const data = {
             "email": mailId,
             "phone": phoneNumber,
@@ -41,9 +51,26 @@ function sendEmail() {
             "captcha": response
         }
 
-        $.post(url, data, function(data, status) {
-            console.log(data + "status:" + status);
+        const otherParams = {
+            headers: {"Content-Type": "application/json"},
+            body: data,
+            method: "POST"
+        };
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            data: JSON.stringify(data),
+            success: function(data){
+                return data;
+            }
         });
+
+        // $.post(url, data, function(data, status) {
+        //     console.log(data + "status:" + status);
+        // });
         document.getElementById("name").value = "";
         document.getElementById("mailId").value = "";
         document.getElementById("phone").value = "";
