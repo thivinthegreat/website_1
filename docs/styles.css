@@ -151,7 +151,7 @@ body {
 #main-container .section1 .content .navbar .right-content .nav-items li {
   display: inline;
   margin-left: 15px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Exo', sans-serif;
   cursor: pointer;
   font-weight: bold;
 }
@@ -439,24 +439,66 @@ body {
   }
 }
 
-#main-container .section3 .upper .sec3-content .sec3-text {
-  height: 60vh;
-  width: 60vw;
+#main-container .section3 .upper .sec3-content #sec2-content2 {
+  display: none;
+}
+
+#main-container .section3 .upper .sec3-content #sec2-content1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#main-container .section3 .upper .sec3-content .sec3-text {
+  height: 60vh;
+  width: 60vw;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #main-container .section3 .upper .sec3-content .sec3-text p {
   margin: 0;
   font-size: 3vh;
   color: white;
+}
+
+#main-container .section3 .upper .sec3-content .sec3-text .learnMore {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5vh;
+  color: white;
+  cursor: pointer;
+  height: 7vh;
+  font-family: 'Exo', sans-serif;
+}
+
+#main-container .section3 .upper .sec3-content .sec3-text .learnMore button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  height: 8vh;
+  font-size: 2.2vh;
+  font-weight: bold;
+  width: 10vw;
 }
 
 #main-container .section3 .lower {
@@ -1051,6 +1093,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Exo', sans-serif;
 }
 
 #main-container .loadmore .button {

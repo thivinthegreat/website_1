@@ -106,7 +106,7 @@ body {
                         li {
                             display: inline;
                             margin-left: 15px;
-                            font-family: 'Quicksand', sans-serif;
+                            font-family: 'Exo', sans-serif;
                             cursor: pointer;
                             font-weight: bold;
                             
@@ -320,17 +320,51 @@ body {
                     }
                 }
 
+                #sec2-content2 {
+                    display: none;
+                }
+
+                #sec2-content1 {
+                    display: flex;
+                }
+
                 .sec3-text {
                     height: 60vh;
                     width: 60vw;
-                    display: flex;
                     align-items: flex-start;
                     justify-content: center;
+                    flex-direction: column;
 
                     p {
                         margin: 0;
                         font-size: 3vh;
                         color: white;
+                    }
+
+                    .learnMore {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 5vh;
+                        color: white;
+                        cursor: pointer;
+                        height: 7vh;
+                        font-family: 'Exo', sans-serif;
+
+                        button {
+                            background-image: linear-gradient(to right, #d23174 , #f34938);
+                            border: none;
+                            color: white;
+                            padding: 8px;
+                            text-align: center;
+                            text-decoration: none;
+                            cursor: pointer;
+                            border-radius: 25px;
+                            height: 8vh;
+                            font-size: 2.2vh;
+                            font-weight: bold;
+                            width: 10vw;
+                        }
                     }
                 }
             }
@@ -764,6 +798,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: 'Exo', sans-serif;
 
         .button {
             background-image: linear-gradient(to right, #d23174 , #f34938);

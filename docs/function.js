@@ -10,6 +10,16 @@ function showLess() {
     document.getElementById("btnShowLess").style.display = "none";
 }
 
+function learnMore() {
+    document.getElementById("sec2-content1").style.display = "none";
+    document.getElementById("sec2-content2").style.display = "flex";
+}
+
+function mainContent() {
+    document.getElementById("sec2-content1").style.display = "flex";
+    document.getElementById("sec2-content2").style.display = "none";
+}
+
 function sendEmail() {
     var name = document.getElementById("name").value;
     var mailId = document.getElementById("mailId").value;
