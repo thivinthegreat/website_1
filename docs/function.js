@@ -17,7 +17,7 @@ function sendEmail() {
     var subject = document.getElementById("subject").value;
     var message = document.getElementById("msg").value;
     var policy = document.getElementById("policy").value;
-    if (name.lenght > 0 && mailId.length > 0 && phoneNumber.lenght == 10 && subject.lenght > 0 && message.length > 0 && policy == true) {
+    if (name.lenght > 0 && mailId.length > 0 && phoneNumber.lenght == 10 && subject.jplenght > 0 && message.length > 0 && policy == true) {
 
     }
 }
