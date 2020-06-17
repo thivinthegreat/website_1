@@ -26,9 +26,30 @@ function sendEmail() {
     var phoneNumber = document.getElementById("phone").value;
     var subject = document.getElementById("subject").value;
     var message = document.getElementById("msg").value;
-    var policy = document.getElementById("policy").value;
-    if (name.lenght > 0 && mailId.length > 0 && phoneNumber.lenght > 0 && subject.lenght > 0 && message.length > 0 && policy == true) {
+    var policy = document.getElementById("policy").checked;
 
+    var response = grecaptcha.getResponse();
+
+    if (response.length > 0 && name.length > 0 && mailId.length > 0 && phoneNumber.length > 0 && subject.length > 0 && message.length > 0 && policy == true) {
+        const url = "https://api.codelessauto.io/send";
+        const data = {
+            "email": mailId,
+            "phone": phoneNumber,
+            "name": name,
+            "subject": subject,
+            "text": message,
+            "captcha": response
+        }
+
+        $.post(url, data, function(data, status) {
+            console.log(data + "status:" + status);
+        });
+        document.getElementById("name").value = "";
+        document.getElementById("mailId").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("msg").value = "";
+        document.getElementById("policy").checked = "";
     }
 }
 

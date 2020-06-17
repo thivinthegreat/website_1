@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
 
 <body>
@@ -1737,7 +1739,7 @@
                                     <input type="text" placeholder="Enter your mail ID" id="mailId" name="mailId">
                                 </div>
                                 <div class="form">
-                                    <input type="text" placeholder="Enter your Phone number" id="phone" name="phone">
+                                    <input type="number" placeholder="Enter your Phone number" id="phone" name="phone">
                                 </div>
                                 <div class="form">
                                     <input type="text" placeholder="Choose the subject" id="subject" name="subject">
@@ -1747,12 +1749,12 @@
                                         cols="50"></textarea>
                                 </div>
                                 <div class="policy">
-                                    <input type="checkbox" id="policy" name="vehicle1" value="Bike" onclick="validate()">
+                                    <input type="checkbox" id="policy" name="vehicle1">
                                     I Agree to &nbsp;<a href="https://www.accenture.com/au-en/about/privacy-policy" target="_blank">Privacy Policy</a>
                                 </div>
-                                <!-- <div class="captcha">
-                                    <div class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image"></div>
-                                </div> -->
+                                <div class="captcha">
+                                    <div class="g-recaptcha" data-sitekey="6Lc4Yf4UAAAAAJW04Jx33B9g7zdrW3JVEggBU0lw" data-type="image" ></div>
+                                </div>
                             </div>
                         </div>
                         <div class="send">
