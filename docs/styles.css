@@ -562,6 +562,10 @@ body {
   padding-top: 7.2vh;
 }
 
+#main-container .section3 .lower .modules-img svg .modules_centerButton {
+  cursor: pointer;
+}
+
 #main-container .section3 .lower .modules-img svg .modulesSvgCircleBack {
   fill: white;
 }
@@ -598,6 +602,7 @@ body {
           animation-name: fadein;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  opacity: 1;
 }
 
 @-webkit-keyframes fadein {
@@ -616,6 +621,85 @@ body {
   to {
     opacity: 1;
   }
+}
+
+#main-container .section3 .lower .modules-img .modulesPopUp-container {
+  background-color: white;
+  height: 40vh;
+  width: 40vw;
+  visibility: visible;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+  border-radius: 2vh;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+#main-container .section3 .lower .modules-img .modulesPopUp-container .modulesPopUp-closebutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 2vh;
+  padding-right: 3vw;
+  padding-top: 2vh;
+  font-family: 'Exo', sans-serif;
+}
+
+#main-container .section3 .lower .modules-img .modulesPopUp-container .modulesPopUp-closebutton p {
+  margin: 0em;
+  font-size: large;
+  text-shadow: 1px 1px 1px #625757;
+  cursor: pointer;
+}
+
+#main-container .section3 .lower .modules-img .modulesPopUp-container .modulesPopUp-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-family: 'Exo', sans-serif;
+  font-size: 2.2vh;
+  color: #EB4E4E;
+}
+
+#main-container .section3 .lower .modules-img .modulesPopUp-container .modulesPopUp-content {
+  height: 25vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
 }
 
 #main-container .section3 .lower .modules-img img {

@@ -1253,7 +1253,7 @@
                             </linearGradient>
                             <path class="st29" d="M147.9,321.8c0,1.9-1.5,3.4-3.4,3.4s-3.4-1.5-3.4-3.4s1.5-3.4,3.4-3.4l0,0
                                 C146.4,318.5,147.9,320,147.9,321.8z"/>
-                            <circle class="modulesSvgMainCircle " cx="357.1" cy="329.8" r="125.7"/>
+                            <circle class="modulesSvgMainCircle " cx="357.1" cy="329.8" r="125.7" onmouseover="mainCircleMouseEnter(this)" onmouseleave="mainCircleMouseLeave(this)"  />
                             <linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="231.3" y1="1385.9" x2="482.9" y2="1385.9" gradientTransform="matrix(1 0 0 1 0 -1056)">
                                 <stop  offset="0" style="stop-color:#D23274"/>
                                 <stop  offset="1" style="stop-color:#F24A37"/>
@@ -1265,12 +1265,12 @@
                                 <stop  offset="0" style="stop-color:#D23274"/>
                                 <stop  offset="1" style="stop-color:#F24A37"/>
                             </linearGradient>
-                            <path id="modules_centerButton" class="st31" d="M366.6,435.8c-2.3,3-5.8,4.7-9.5,4.7c-6,0-11.1-4.4-11.9-10.4c-0.9-6.6,3.7-12.6,10.3-13.5
+                            <path id="modules_centerButton" class="st31 modules_centerButton" d="M366.6,435.8c-2.3,3-5.8,4.7-9.5,4.7c-6,0-11.1-4.4-11.9-10.4c-0.9-6.6,3.7-12.6,10.3-13.5
                                 c6.6-0.9,12.6,3.7,13.5,10.3C369.4,430,368.6,433.2,366.6,435.8L366.6,435.8z" onclick="moduleCenterButton(this)"/>
-                            <path class="st0" d="M361.7,428.5c0,0.3-0.1,0.6-0.3,0.8l-7,6.3c-0.2,0.2-0.5,0.3-0.8,0.3l0,0c-0.3,0-0.5-0.1-0.7-0.3
+                            <path class="st0 modules_centerButton" d="M361.7,428.5c0,0.3-0.1,0.6-0.3,0.8l-7,6.3c-0.2,0.2-0.5,0.3-0.8,0.3l0,0c-0.3,0-0.5-0.1-0.7-0.3
                                 c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.5,0.3-0.7l5.8-5.1c0.1-0.1,0.2-0.3,0.2-0.5s-0.1-0.4-0.2-0.5l-5.8-5.1
-                                c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.5,0.3-0.7c0.4-0.4,1.1-0.4,1.5,0l7,6.3C361.6,427.9,361.7,428.2,361.7,428.5z"/>
-                            <text transform="matrix(1 0 0 1 248.92 290.6899)" class="st32 st33 st34 moduleCenterCircle_text">
+                                c-0.2-0.2-0.3-0.4-0.3-0.7c0-0.3,0.1-0.5,0.3-0.7c0.4-0.4,1.1-0.4,1.5,0l7,6.3C361.6,427.9,361.7,428.2,361.7,428.5z" onclick="moduleCenterButton(this)"/>
+                            <text transform="matrix(1 0 0 1 248.92 290.6899)" class="st32 st33 st34 moduleCenterCircle moduleCenterCircle_text " onmouseover="mainCircleMouseEnter()">
                                 <tspan x="10" dy="15" id="tspan1">      Mainframe automation </tspan>    
                                 <tspan x="10" dy="15" id="tspan2">accelerator module created to </tspan>    
                                 <tspan x="10" dy="15" id="tspan3">make mainframe automation </tspan>    
@@ -1281,11 +1281,27 @@
 
 
                             </text>
-                            <text id="tspan_head1" transform="matrix(1 0 0 1 314.53 255.4399)" class="st35 st1 st2 moduleCenterCircle_heading">MainFrame</text>
-                            <text id="tspan_head2" transform="matrix(1 0 0 1 299.5 272.04)" class="st35 st1 st2"></text>
+                            <text id="tspan_head1" transform="matrix(1 0 0 1 314.53 255.4399)" class="st35 st1 st2 moduleCenterCircle moduleCenterCircle_heading "
+                              onmouseover="mainCircleMouseEnter()">MainFrame</text>
+                            <text id="tspan_head2" transform="matrix(1 0 0 1 299.5 272.04)" class="st35 st1 st2" onmouseover="mainCircleMouseEnter()"></text>
                         </g>
                         </g>
                         </svg>
+                        <div class="modulesPopUp-container">
+                            <div class="modulesPopUp-closebutton" >
+                                <p onclick="modulesPopupClose(this)"><strong>X</strong>   </p>
+                            </div>
+                            <div class="modulesPopUp-heading">
+                                <p id="modulesPopUp-heading"> 
+                                    Desktop  
+                                </p>
+                            </div>
+                            <div class="modulesPopUp-content">
+                                <p id="modulesPopup-content"> 
+                                    The desktop automation accelerator module is designed to vivify desktop automation. Most legacy applications are desktop based and automation around this is a tiring task, with significant costs involved. The desktop automation accelerator module ruptures this myth and nurtures the development of desktop applications by supporting opensource frameworks such as Microsoft WinAppDriver , UI Automation, Sikuli ,AutoIT library, as well as licenced SmartBear TestLeft.
+                                </p>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
