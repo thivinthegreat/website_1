@@ -1,6 +1,6 @@
 // Defined Functions
 
-var ModuletimeDelay = 1000;
+var ModuletimeDelay = 7000;
 function loadMore() {
     document.getElementById("hidden").style.display = "block";
     document.getElementById("btnLoadMore").style.display = "none";
@@ -161,12 +161,17 @@ var modsize = modulesArray.length;
 window.setInterval(function(){
 
     // console.log(i);
-    var mod  = document.getElementById(modulesArray[i]);
-    i = i+1;
+    
     if(isPopupActive == false)
         if( modulesCenterCircleHover == false) 
+        {
+            var mod  = document.getElementById(modulesArray[i]);
+            i = i+1; 
             changeModuleText(mod);
-    if(i > modulesArray.length - 1) i=0;
+            if(i > modulesArray.length - 1) i=0;
+        }
+            
+    
     // plusSlides(1);
 
     },ModuletimeDelay );
