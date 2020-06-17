@@ -16,6 +16,10 @@ function sendEmail() {
     var phoneNumber = document.getElementById("phone").value;
     var subject = document.getElementById("subject").value;
     var message = document.getElementById("msg").value;
+    var policy = document.getElementById("policy").value;
+    if (name.lenght > 0 && mailId.length > 0 && phoneNumber.lenght == 10 && subject.lenght > 0 && ) {
+
+    }
 }
 
 const header = document.querySelector(".navbar");

@@ -858,6 +858,28 @@ body {
                     width: 100%;
                 }
 
+                .policy {
+                    font-family: 'Quicksand', sans-serif;
+                    display: "inline-block";
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    align-content: stretch;
+
+                    input {
+                        width: 1vw;
+                        height: 1vw;
+                        margin-right: 1vw;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #333333;
+                    }
+                }
+
                 input {
                     width: 89%;
                     height: 7vh;
@@ -889,7 +911,7 @@ body {
         .send {
             height: 12vh;
             display: flex;
-            align-items: flex-end;
+            align-items: flex-start;
             justify-content: center;
 
             .button {
