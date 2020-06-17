@@ -102,6 +102,11 @@ body {
   font-family: 'Exo', sans-serif;
 }
 
+#main-container .section1 .content .navbar .logo .title a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 #main-container .section1 .content .navbar .logo #color-img {
   height: 7vh;
   display: block;
@@ -241,6 +246,7 @@ body {
   padding-left: 10%;
   padding-right: 6%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #main-container .section2 .sec2-container .list {

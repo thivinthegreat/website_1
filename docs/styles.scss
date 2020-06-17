@@ -67,6 +67,11 @@ body {
                         padding-left: 0.5vw;
                         font-size: 2.3vh;
                         font-family: 'Exo', sans-serif;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--text);
+                        }
                     }
 
                     #color-img {
@@ -176,6 +181,7 @@ body {
             padding-left: 10%;
             padding-right: 6%;
             overflow-x: hidden;
+            overflow-y: hidden;
 
             .list {
                 height: 90vh;
