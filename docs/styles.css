@@ -108,12 +108,12 @@ body {
 }
 
 #main-container .section1 .content .navbar .logo #color-img {
-  height: 7vh;
+  height: 5vh;
   display: block;
 }
 
 #main-container .section1 .content .navbar .logo #white-img {
-  height: 7vh;
+  height: 5vh;
   display: none;
 }
 
@@ -1196,7 +1196,7 @@ body {
 }
 
 #main-container .section6 .sec6-content .benifits .list .content:hover .sec6-definition {
-  padding-top: 3vh;
+  padding-top: -2vh;
   display: block;
   visibility: visible;
   text-align: justify;

@@ -1,6 +1,6 @@
 // Defined Functions
 
-var ModuletimeDelay = 7000;
+var ModuletimeDelay = 6000;
 function loadMore() {
     document.getElementById("hidden").style.display = "block";
     document.getElementById("btnLoadMore").style.display = "none";
@@ -217,7 +217,7 @@ window.setInterval(function(){
 
     if (id_name === "modules_Mobile")
     {
-        document.getElementById("tspan_head1").textContent = "  Mobile";
+        document.getElementById("tspan_head1").textContent = " \xa0 Mobile";
         document.getElementById("tspan_head2").textContent = "";
         document.getElementById("tspan1").textContent = "Android, IOS and Windows  ";
         document.getElementById("tspan2").textContent = "APP automation and WEB ";
@@ -360,8 +360,8 @@ window.setInterval(function(){
 
     if (id_name === "modules_Performance")
     {
-        document.getElementById("tspan_head1").textContent = "Performance ";
-        document.getElementById("tspan_head2").textContent = "   ";
+        document.getElementById("tspan_head1").textContent = " ";
+        document.getElementById("tspan_head2").textContent = "Performance   ";
         document.getElementById("tspan1").textContent = " Implemented to test Rest";
         document.getElementById("tspan2").textContent = " API Performance and Web";
         document.getElementById("tspan3").textContent = " Application load test by";
