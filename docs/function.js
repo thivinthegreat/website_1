@@ -197,7 +197,7 @@ window.setInterval(function(){
         document.getElementById("tspan3").textContent = "\xa0 requires great availability  ";
         document.getElementById("tspan4").textContent = "\xa0 and security. This make   ";
         document.getElementById("tspan5").textContent = "\xa0 mainframe automation  ";
-        document.getElementById("tspan6").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0      a reality ";
+        document.getElementById("tspan6").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0      a reality. ";
         document.getElementById("tspan7").textContent = " ";
 
     } 
@@ -210,7 +210,7 @@ window.setInterval(function(){
          document.getElementById("tspan2").textContent = "infrastructure, automation   ";
          document.getElementById("tspan3").textContent = "infrastructure is designed to   ";
          document.getElementById("tspan4").textContent = "support different cloud  ";
-         document.getElementById("tspan5").textContent = "platforms ";
+         document.getElementById("tspan5").textContent = "platforms. ";
          document.getElementById("tspan6").textContent = " ";
          document.getElementById("tspan7").textContent = " ";
      } 
@@ -223,7 +223,7 @@ window.setInterval(function(){
         document.getElementById("tspan2").textContent = "APP automation and WEB ";
         document.getElementById("tspan3").textContent = "browser automation testing  ";
         document.getElementById("tspan4").textContent = "across all mobile devices and  ";
-        document.getElementById("tspan5").textContent = "tablets available in the market ";
+        document.getElementById("tspan5").textContent = "tablets available in the market. ";
         document.getElementById("tspan6").textContent = " ";
         document.getElementById("tspan7").textContent = " ";
     }
@@ -236,7 +236,7 @@ window.setInterval(function(){
         document.getElementById("tspan2").textContent = "of APIs such as SOAP, REST,";
         document.getElementById("tspan3").textContent = "XML, JSON and Response ";
         document.getElementById("tspan4").textContent = "Validations including modern  ";
-        document.getElementById("tspan5").textContent = "cloud microservices  ";
+        document.getElementById("tspan5").textContent = "cloud microservices.  ";
         document.getElementById("tspan6").textContent = " ";
         document.getElementById("tspan7").textContent = "";
     }
@@ -264,7 +264,7 @@ window.setInterval(function(){
         document.getElementById("tspan4").textContent = "Microsoft WinAppDriver &  ";
         document.getElementById("tspan5").textContent = "UI Automation , library Sikuli,   ";
         document.getElementById("tspan6").textContent = "AutoIT and licensed SmartBear  ";
-        document.getElementById("tspan7").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0  TestLeft ";
+        document.getElementById("tspan7").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0  TestLeft. ";
     }
     
     if (id_name === "modules_Companion")
@@ -393,7 +393,7 @@ window.setInterval(function(){
         document.getElementById("tspan3").textContent = "its advanced features like";
         document.getElementById("tspan4").textContent = "autoscaling, containerization , ";
         document.getElementById("tspan5").textContent = "orchestration infrastructure   ";
-        document.getElementById("tspan6").textContent = "provisioning and so on ";
+        document.getElementById("tspan6").textContent = "provisioning and so on.";
         document.getElementById("tspan7").textContent = "";
     }
 
@@ -438,7 +438,7 @@ function moduleCenterButton(e)
 
     if(id_name === "modules_Mobile" )
     {
-        document.getElementById("modulesPopUp-heading").innerHTML = "Mobile & Tablets Module:";
+        document.getElementById("modulesPopUp-heading").innerHTML = "Mobile & Tablets Module";
         document.getElementById("modulesPopup-content").innerHTML = "Mobile application testing is a process by which an application software developed for handheld mobile devices and tablets are tested for its functionality, usability and consistency.";
     }
 
@@ -519,7 +519,7 @@ function moduleCenterButton(e)
 
     if(id_name === "modules_Performance" )
     {
-        document.getElementById("modulesPopUp-heading").innerHTML = "Performance Test Module:";
+        document.getElementById("modulesPopUp-heading").innerHTML = "Performance Test Module";
         document.getElementById("modulesPopup-content").innerHTML = "The performance test accelerator module supports performance testing by enabling testers to calculate the performance time of test cases using CodelessAuto accelerator’s core features. It is implemented to test the Rest API Performance test and Web Application load via integration with Jmeter library. Another advantage of this module is its ability to reuse/run already created Jmeter tests via the CodelessAuto accelerator enabling access to all cloud infrastructure provisioning and autoscaling.";
     }
 
