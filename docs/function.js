@@ -83,12 +83,12 @@ function sendEmail() {
     }
 }
 
+var isMobile = false;
+
 const header = document.querySelector(".navbar");
 const sectionOne = document.querySelector(".firstSession");
 
-const sectionOneOptions = {
-    rootMargin: "-200px 0px 0px 0px"
-};
+var sectionOneOptions;
 
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
     entries.forEach(entry => {
@@ -96,11 +96,16 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             header.classList.add("nav-scrolled");
             document.getElementById("color-img").style.display = "block";
             document.getElementById("white-img").style.display = "none";
-
         } else {
             header.classList.remove("nav-scrolled");
             document.getElementById("color-img").style.display = "none";
             document.getElementById("white-img").style.display = "block";
+            if (isMobile) {
+                document.getElementById("nav-title").style.display = "block";
+            }
+            else {
+                document.getElementById("nav-title").style.display = "none";
+            }
         }
     })
 }, sectionOneOptions);
@@ -127,8 +132,19 @@ function orientationLockFunction()
 
 function orientationChangeDetect()
 {
-    if(window.innerHeight <  window.innerWidth*0.8)
+    if(window.innerHeight <  window.innerWidth*0.8) {
         alert("Device is in Potrait mode, Please change it to landscape mode");
+        sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+        isMobile  = true;
+    }
+    else {
+        isMobile = false;
+       sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+    }
 }
 
 var prevActiveModuleId = "modules_Database";
