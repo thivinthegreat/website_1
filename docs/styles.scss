@@ -7,7 +7,15 @@ body {
 
     --text: white;
     --background: transparent;
+
+    .desk {
+        display: block;
+    }
     
+    .mobile {
+        display: none;
+    }
+
     .sub-container {
         scroll-behavior: smooth;
     }
@@ -172,13 +180,15 @@ body {
         width:  100%;
 
         .sec2-heading1 {
-            padding-left: 10%;
-            padding-right: 6%;
             font-size: 5.6vh;
             padding-top: 5vh;
             height: 20vh;
             width: 100%;
             font-family: 'Exo', sans-serif;
+
+            h3 {
+                padding-left: 10%;
+            }
         }
 
         .sec2-container {
@@ -1231,6 +1241,13 @@ body {
     }
     #main-container {
 
+        .mobile {
+            display: block;
+        }
+        .desk {
+            display: none;
+        }
+
         --text: white;
         --background: transparent;
         
@@ -1243,7 +1260,7 @@ body {
             height: 90vh;
             width: 100%;
     
-            .bgImg {
+            .m_bgImg {
                 max-height: 85vh;
                 min-height: 85vh;
                 width: 100%;
@@ -1309,7 +1326,7 @@ body {
                 }
     
                 .heading {
-                    height: 15vh;
+                    height: 18vh;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1327,8 +1344,8 @@ body {
                     align-items: flex-start;
     
                     svg {
-                        max-height: 55vh;
-                        min-height: 55vh;
+                        max-height: 60vh;
+                        min-height: 60vh;
                         width: 100%;
                         z-index: 2;
                     }
@@ -1337,20 +1354,20 @@ body {
     
             .left-circle {
                 position: absolute;
-                height: 7vw;
-                width: 7vw;
-                top: 108vh;
-                left: 25vh;
+                height: 10vw;
+                width: 10vw;
+                top: 82vh;
+                left: 5vh;
                 background-image: linear-gradient(to right, #d23174, #f34938);
                 border-radius: 50%;
             }
     
             .right-circle {
                 position: absolute;
-                height: 15vw;
-                width: 15vw;
-                top: 80vh;
-                right: 16vh;
+                height: 25vw;
+                width: 25vw;
+                top: 72vh;
+                right: 0vh;
                 background-image: linear-gradient(to right, #97134a, #f34938);
                 border-radius: 50%;
             }
@@ -1369,6 +1386,10 @@ body {
                 height: 10vh;
                 width: 100%;
                 font-family: 'Exo', sans-serif;
+
+                h3 {
+                    padding-left: 0%;
+                }
             }
     
             .sec2-container {
@@ -1388,11 +1409,11 @@ body {
                     height: 90vh;
                     width: 90vw;
                     font-family: 'Exo', sans-serif;
-                    padding-left: 7vw;
                 }
     
                 .left-session {
-
+                    padding-left: 7vw;
+                    
                     h3 {
                         font-size: 5.6vh;
                         font-family: 'Exo', sans-serif;
@@ -1428,7 +1449,7 @@ body {
     
         .section3 {
             margin-top: 10vh;
-            height: 222vh;
+            height: 230vh;
             position: relative;
             overflow-x: hidden;
     
@@ -1442,9 +1463,9 @@ body {
             .sec3-backimg1
             {
                 width: 100%;
-                max-height: 150vh;
+                max-height: 183vh;
                 position: absolute;
-                min-height: 150vh;
+                min-height: 183vh;
             }
     
             .sec3-backimg2
@@ -1452,12 +1473,13 @@ body {
                 width: 100%;
                 max-height: 125vh;
                 position: absolute;
+                display: none;
             }
     
             .upper {
     
                 position: absolute;
-                height: 115vh;
+                height: 180vh;
                 width: 100%;
     
                 .sec3-heading {
@@ -1497,7 +1519,7 @@ body {
                     justify-content: space-around;
                     align-items: flex-start;
                     align-content: space-between;
-                    height: 95vh;
+                    height: 160vh;
                     padding-left: 10%;
                     padding-right: 10%;
                     position: relative;
@@ -1506,14 +1528,14 @@ body {
     
                     .sec3-img {
                         display: flex;
-                        height: 60vh;
-                        width: 50vw;
-                        align-items: flex-end;
+                        width: 100%;
+                        height: 35vh;
+                        align-items: flex-start;
                         justify-content: center;
     
                         svg {
-                            max-height: 95%;
-                            width: 95%;
+                            max-height: 30vh;
+                            width: 55vw;
     
                             .rotate {
                                 animation: rotate 5s linear infinite;
@@ -1529,17 +1551,20 @@ body {
                     }
     
                     #sec2-content2 {
+                        width: 100%;
                         display: none;
+                        text-align: justify;
                     }
     
                     #sec2-content1 {
                         display: flex;
                         width: 100%;
                         text-align: justify;
+                        justify-content: flex-start;
                     }
     
                     .sec3-text {
-                        height: 60vh;
+                        height: 120vh;
                         width: 60vw;
                         align-items: flex-start;
                         justify-content: center;
@@ -1584,7 +1609,7 @@ body {
                                 height: 8vh;
                                 font-size: 2.2vh;
                                 font-weight: bold;
-                                width: 10vw;
+                                width: 30vw;
                             }
                         }
                     }
@@ -1597,7 +1622,7 @@ body {
                 top: 91vh;
                 height: 120vh;
                 width: 100%;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 flex-wrap: nowrap;
                 justify-content: flex-start;

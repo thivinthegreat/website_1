@@ -100,12 +100,24 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             header.classList.remove("nav-scrolled");
             document.getElementById("color-img").style.display = "none";
             document.getElementById("white-img").style.display = "block";
-            if (isMobile) {
-                document.getElementById("nav-title").style.display = "block";
-            }
-            else {
-                document.getElementById("nav-title").style.display = "none";
-            }
+        }
+        if (isMobile) {
+            document.getElementById("nav-title").style.display = "block";
+            // document.getElementsByClassName("mobile").forEach(m => {
+            //     m.style.display = block;
+            // });
+            // document.getElementsByClassName("desk").forEach(m => {
+            //     m.style.display = none;
+            // });
+        }
+        else {
+            document.getElementById("nav-title").style.display = "none";
+            // document.getElementsByClassName("mobile").forEach(m => {
+            //     m.style.display = none;
+            // });
+            // document.getElementsByClassName("desk").forEach(m => {
+            //     m.style.display = block;
+            // });
         }
     })
 }, sectionOneOptions);
