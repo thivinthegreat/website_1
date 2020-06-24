@@ -73,7 +73,7 @@ body {
                     .title {
                         color: var(--text);
                         padding-left: 0.5vw;
-                        font-size: 2.3vh;
+                        font-size: 2.1vh;
                         font-family: 'Exo', sans-serif;
 
                         a {
@@ -116,7 +116,7 @@ body {
                             margin-left: 15px;
                             font-family: 'Exo', sans-serif;
                             cursor: pointer;
-                            font-weight: bold;
+                            font-weight: 500;
                             
                             a {
                                 color: var(--text);
@@ -365,10 +365,14 @@ body {
 
                     .sec3-list
                     {
+                        ul {
+                            margin-bottom: 0;
+                        }
+
                         li 
                         {
                             color: white;
-                            font-size: 1.9vh;
+                            font-size: 2.2vh;
                             opacity: 1;
                             transition: all linear 0.5s;
                         }
@@ -385,18 +389,24 @@ body {
                         font-family: 'Exo', sans-serif;
 
                         button {
-                            background-image: linear-gradient(to right, #d23174 , #f34938);
+                            background: white;
                             border: none;
-                            color: white;
+                            color: #e33e55;
                             padding: 8px;
                             text-align: center;
                             text-decoration: none;
                             cursor: pointer;
-                            border-radius: 25px;
+                            border-radius: 35px;
                             height: 8vh;
                             font-size: 2.2vh;
                             font-weight: bold;
                             width: 10vw;
+
+                            &:hover {
+                                background-image: linear-gradient(to right, #d23174, #f34938);
+                                color: white;
+                                transition: all 0.5s ease-in;
+                            }
                         }
                     }
                 }
@@ -776,7 +786,7 @@ body {
                         width: 100%;
 
                         img {
-                            height: 35vh;
+                            height: 38vh;
                             width: 20vw;
                             width: 100%;
                         }
@@ -790,6 +800,7 @@ body {
                 .content {
                     height: 40vh;
                     width: 100%;
+                    margin-top: 3vh;
 
                     .details {
                         display: flex;
@@ -1163,6 +1174,7 @@ body {
                     background: white;
                     font-size: 2vh;
                     padding-left: 1vw;
+                    font-family: 'Quicksand', sans-serif;
                 }
 
                 textarea {
@@ -1175,6 +1187,7 @@ body {
                     font-size: 2vh;
                     padding-left: 1vw;
                     padding-top: 1vh;
+                    font-family: 'Quicksand', sans-serif;
                 }
             }
 
@@ -1191,18 +1204,24 @@ body {
 
             .button {
                 padding: 0;
-                background-image: linear-gradient(to right, #d23174 , #f34938);
+                background: white;
                 border: none;
-                color: white;
+                color: #e33e55;
                 padding: 8px;
                 text-align: center;
                 text-decoration: none;
                 cursor: pointer;
-                border-radius: 25px;
+                border-radius: 35px;
                 height: 8vh;
                 font-size: 2.2vh;
                 font-weight: bold;
                 width: 10vw;
+
+                &:hover {
+                    background-image: linear-gradient(to right, #d23174, #f34938);
+                    color: white;
+                    transition: all 0.5s ease-in;
+                }
             }
 
             button:focus {
@@ -1216,7 +1235,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3vh;
+        font-size: 2vh;
+        font-weight: 300;
         font-family: 'Quicksand', sans-serif;
     }
 
@@ -1379,7 +1399,7 @@ body {
             overflow-x: hidden;
 
             .sec2-heading1 {
-                padding-left: 4%;
+                padding-left: 3%;
                 padding-right: 6%;
                 font-size: 3vh;
                 padding-top: 5vh;
@@ -1449,23 +1469,23 @@ body {
     
         .section3 {
             margin-top: 10vh;
-            height: 230vh;
+            height: 250vh;
             position: relative;
             overflow-x: hidden;
     
             .sec3-img2 {
                 position: absolute;
-                top: 125vh;
-                height: 120vh;
+                top: 155vh;
+                height: 95vh;
                 width: 100%;
             }
     
             .sec3-backimg1
             {
                 width: 100%;
-                max-height: 183vh;
+                max-height: 163vh;
                 position: absolute;
-                min-height: 183vh;
+                min-height: 163vh;
             }
     
             .sec3-backimg2
@@ -1473,13 +1493,12 @@ body {
                 width: 100%;
                 max-height: 125vh;
                 position: absolute;
-                display: none;
             }
     
             .upper {
     
                 position: absolute;
-                height: 180vh;
+                height: 160vh;
                 width: 100%;
     
                 .sec3-heading {
@@ -1519,7 +1538,7 @@ body {
                     justify-content: space-around;
                     align-items: flex-start;
                     align-content: space-between;
-                    height: 160vh;
+                    height: 130vh;
                     padding-left: 10%;
                     padding-right: 10%;
                     position: relative;
@@ -1564,7 +1583,7 @@ body {
                     }
     
                     .sec3-text {
-                        height: 120vh;
+                        height: 90vh;
                         width: 60vw;
                         align-items: flex-start;
                         justify-content: center;
@@ -1574,6 +1593,10 @@ body {
                             margin: 0;
                             font-size: 2.5vh;
                             color: white;
+
+                            .m_sec3_text1 {
+                                display: block;
+                            }
                         }
     
                         .sec3-list
@@ -1610,6 +1633,12 @@ body {
                                 font-size: 2.2vh;
                                 font-weight: bold;
                                 width: 30vw;
+
+                                &:hover {
+                                    background-image: linear-gradient(to right, #d23174, #f34938);
+                                    color: white;
+                                    transition: all 0.5s ease-in;
+                                }
                             }
                         }
                     }
@@ -1619,10 +1648,9 @@ body {
         
             .lower {
                 position: absolute;
-                top: 91vh;
-                height: 120vh;
+                top: 150vh;
+                height: 90vh;
                 width: 100%;
-                display: none;
                 flex-direction: column;
                 flex-wrap: nowrap;
                 justify-content: flex-start;
@@ -1637,22 +1665,26 @@ body {
                     display: flex;
                     align-items: flex-end;
                     justify-content: center;
+                    
+                    h3 {
+                        margin-bottom: 0;
+                    }
                 }
     
                 .modules-img {
                     height: 100vh;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: center;
                     position: relative;
     
                     svg 
                     {
     
-                        height: 90vh;
-                        max-height: 90vh;
+                        height: 74vh;
+                        max-height: 74vh;
                         z-index: 2;
-                        padding-top: 7.2vh;
+                        padding-top: 0px;
     
                         .modules_centerButton
                         {
@@ -1768,7 +1800,7 @@ body {
     
                     img {
                         position: absolute;
-                        max-height: 110vh;
+                        max-height: 69vh;
                     }
     
                     .circleImg {
@@ -2254,14 +2286,14 @@ body {
             font-family: 'Exo', sans-serif;
     
             .button {
-                background-image: linear-gradient(to right, #d23174 , #f34938);
+                background: linear-gradient(to right, #d23174 , #f34938);
                 border: none;
                 color: white;
                 padding: 8px;
                 text-align: center;
                 text-decoration: none;
                 cursor: pointer;
-                border-radius: 25px;
+                border-radius: 35px;
                 height: 8vh;
                 font-size: 2.2vh;
                 font-weight: bold;
@@ -2382,6 +2414,7 @@ body {
                         background: white;
                         font-size: 2vh;
                         padding-left: 1vw;
+                        font-family: 'Quicksand', sans-serif;
                     }
     
                     textarea {
@@ -2394,6 +2427,8 @@ body {
                         font-size: 2vh;
                         padding-left: 1vw;
                         padding-top: 1vh;
+                        font-family: 'Quicksand', sans-serif;
+                        font-weight: 400;
                     }
                 }
     
@@ -2410,18 +2445,24 @@ body {
     
                 .button {
                     padding: 0;
-                    background-image: linear-gradient(to right, #d23174 , #f34938);
+                    background-image: white;
                     border: none;
-                    color: white;
+                    color: #e33e55;
                     padding: 8px;
                     text-align: center;
                     text-decoration: none;
                     cursor: pointer;
-                    border-radius: 25px;
+                    border-radius: 35px;
                     height: 8vh;
                     font-size: 2.2vh;
                     font-weight: bold;
                     width: 10vw;
+                    
+                    &:hover {
+                        background-image: linear-gradient(to right, #d23174, #f34938);
+                        color: white;
+                        transition: all 0.5s ease-in;
+                    }
                 }
     
                 button:focus {
@@ -2435,7 +2476,8 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 3vh;
+            font-size: 2vh;
+            font-weight: 300;
             font-family: 'Quicksand', sans-serif;
         }
 
