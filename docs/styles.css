@@ -2084,19 +2084,18 @@ body {
     font-family: 'Exo', sans-serif;
   }
   #main-container .section3 .upper .sec3-content .sec3-text .learnMore button {
-    background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-    background-image: linear-gradient(to right, #d23174, #f34938);
+    background-color: white;
     border: none;
-    color: white;
+    color: #e33e55;
     padding: 8px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 35px;
     height: 8vh;
     font-size: 2.2vh;
     font-weight: bold;
-    width: 30vw;
+    width: 35vw;
   }
   #main-container .section3 .upper .sec3-content .sec3-text .learnMore button:hover {
     background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
