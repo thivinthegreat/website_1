@@ -39,7 +39,10 @@ body {
             .nav-scrolled {
                 --text: #333333;
                 --background: white;
-                box-shadow: 0 3px 20px rgba(black, 0.2)
+                box-shadow: 0 3px 20px rgba(black, 0.2);
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+
             }
 
             .navbar {
@@ -56,6 +59,7 @@ body {
                 background: var(--background);
                 display: flex;
                 align-items: center;
+                transition: all 0.3s ease-in-out;
 
                 .logo {
                     display: flex;
@@ -67,6 +71,7 @@ body {
                         padding-left: 0.5vw;
                         font-size: 2.3vh;
                         font-family: 'Exo', sans-serif;
+                        display: block;
 
                         a {
                             text-decoration: none;
@@ -98,10 +103,14 @@ body {
                         align-items: flex-start;
                         align-content: stretch;
                         padding-top: 0.5vh;
-
+                        position: relative;
+                        transition: all 0.5s ease-in-out;
+                         
                         ul {
                             margin: 0;
+                            position: relative;
                         }
+                        
 
                         li {
                             display: inline;
@@ -109,11 +118,26 @@ body {
                             font-family: 'Exo', sans-serif;
                             cursor: pointer;
                             font-weight: bold;
+
+                            &:hover a
+                            {
+                                
+
+                            }
+
                             
                             a {
                                 color: var(--text);
                                 text-decoration: none;
                                 font-size: 2.3vh;
+                            }
+
+                            .item-active
+                            {
+                                color: rgb(235, 71, 71);
+                                border-bottom: 3px solid;
+                                transition: all 0.5s ease-in-out;
+
                             }
                         }
                     }
@@ -172,8 +196,8 @@ body {
         width:  100%;
 
         .sec2-heading1 {
-            padding-left: 10%;
-            padding-right: 6%;
+            // padding-left: 10%;
+            // padding-right: 6%;
             font-size: 5.6vh;
             padding-top: 5vh;
             height: 20vh;
@@ -428,7 +452,7 @@ body {
 
                     height: 90vh;
                     max-height: 90vh;
-                    z-index: 2;
+                    z-index: 5;
                     padding-top: 7.2vh;
 
                     .modules_centerButton
@@ -439,6 +463,8 @@ body {
                     .modulesSvgCircleBack
                     {
                         fill: white;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
 
                         &:hover
                         {
@@ -458,13 +484,40 @@ body {
 
                     .modulesSvgCircleBack_Active
                     {
-                        transition-duration: 300ms;
-                        transition: all 0.35s ease-in-out;
-                        fill: white;
-                        stroke-width: 11px;
-                        stroke-opacity: 0.5;
-                        stroke: rgb(255, 240, 240);
+     
+                        fill: rgba(250, 96, 142, 0.75);
+                        stroke-width: 5px;
+                        // stroke-opacity: 0.95;
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400px;
+                        stroke: #cf161c;
                         cursor: pointer;
+                        animation: dash 1s ease-in-out forwards ;
+                        transform-origin: center;
+                        // transition-duration: 300ms;
+                        // transition: all 0.35s ease-in-out;
+                        
+                    }
+
+                    @keyframes dash {
+                        from {
+                          stroke-dashoffset: 400;
+                        }
+                        to {
+                          stroke-dashoffset: 0;
+                        }
+                    }
+
+                    .modulesSvgVector_Active
+                    {
+                        fill:rgb(255, 255, 255);
+                    }
+
+                    .modulesSvgText_Active
+                    {
+                       fill: black;
+                    //    stroke-width: 0.5;
+                    //    stroke: white;
                     }
                     
                     .moduleCenterCircle_heading
@@ -492,7 +545,7 @@ body {
                             flex-wrap: nowrap;
                             justify-content: center;
                             flex-direction: column;
-                            z-index: 2;
+                            z-index: 6;
                             border-radius: 2vh;
                             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
         
@@ -1011,6 +1064,9 @@ body {
 
     #hidden {
         display: none;
+        // visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
     }
 
     #btnShowLess {
@@ -2111,17 +2167,7 @@ body {
                             
                         }
                         
-                        @keyframes fade {
-                            0% {
-                                opacity: 0;
-                            }
-                        
-                            100% {
-                                opacity: 1;
-                            }
-                        }
-                        
-    
+      
                         .content:hover .sub-heading {
                             // display: none;
                             // visibility: hidden;
@@ -2133,7 +2179,7 @@ body {
                            height: 0vh;
                            visibility: visible;
                            transition-property: all;
-                            animation: fader 0.5s;
+                            animation: fader 0.8s;
                             font-size: 2vh;
                         }
     
@@ -2157,10 +2203,11 @@ body {
                         .content:hover .image
                         {
                             opacity: 1;
-                            animation: fade 1s;
-                            animation-duration: 0.5s;
+                            animation: fade 0.9s;
+                            
                             // max-height: 11vh;
                         }
+
     
                         .content {
                             height: 32vh;
@@ -2189,7 +2236,7 @@ body {
                             .image {
                                 height: 20vh;
                                 position: relative;
-                                opacity: 0.82;
+                                opacity: 0.95;
     
                                 img {
                                     max-height: 20vh;

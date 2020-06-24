@@ -1,10 +1,17 @@
 // Defined Functions
 
+
+
 var ModuletimeDelay = 6000;
 function loadMore() {
-    document.getElementById("hidden").style.display = "block";
-    document.getElementById("btnLoadMore").style.display = "none";
-    document.getElementById("btnShowLess").style.display = "flex";
+    window.setTimeout( function() { 
+        document.getElementById("hidden").style.display = "block";
+        document.getElementById("hidden").style.opacity = 1; 
+        document.getElementById("btnLoadMore").style.display = "none";
+        document.getElementById("btnShowLess").style.display = "flex";
+    
+    } , 100 );
+
 }
 
 function showLess() {
@@ -87,11 +94,25 @@ var isMobile = false;
 
 const header = document.querySelector(".navbar");
 const sectionOne = document.querySelector(".firstSession");
+const sectionTwo = document.querySelector(".section2");
+const sectionThree = document.querySelector(".lower");
+const sectionFour = document.querySelector(".section5");
+const sectionFive = document.querySelector(".section6");
+const sectionSix = document.querySelector(".section7");
+const heading_underline = document.querySelector(".heading-underline");
+
+
+
+
 
 var sectionOneOptions;
+var sectionTitleOptions;
 
+
+/////--------- Observation for Nav Bar to change color upon Scrolling --------------  ////// 
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
     entries.forEach(entry => {
+
         if(!entry.isIntersecting) {
             header.classList.add("nav-scrolled");
             document.getElementById("color-img").style.display = "block";
@@ -100,7 +121,7 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             header.classList.remove("nav-scrolled");
             document.getElementById("color-img").style.display = "none";
             document.getElementById("white-img").style.display = "block";
-            if (isMobile) {
+            if (!isMobile) {
                 document.getElementById("nav-title").style.display = "block";
             }
             else {
@@ -109,8 +130,58 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
         }
     })
 }, sectionOneOptions);
-
+// Observation call Function
 sectionOneObserver.observe(sectionOne);
+
+////// - END -- ///////////
+
+
+
+// Observation function to Change the color of heading of nav bar based on position
+const sectionTitleObserver = new IntersectionObserver(function(entries, sectionTitleObserver) {
+    entries.forEach(entry => {
+        // get the bounding rect of the current Class
+        const className = entry.target.className;
+        console.log(className);
+        console.log(entry);
+        const activeAnchor = document.querySelector(`[data-page=${className}]`); // selects the li item from Nav bar based on className
+        const width = activeAnchor.getBoundingClientRect().width;
+        const left = activeAnchor.getBoundingClientRect().left;
+
+        
+        $(window).bind('mousewheel DOMMouseScroll', function(event){
+            if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+                console.log("Wheelup");
+            }
+            else {
+                console.log("WheelDown");
+
+            }
+        });
+        if(entry.isIntersecting)
+        {
+            activeAnchor.classList.add("item-active");
+            // heading_underline.style.setProperty('width' , `${width}vh`);
+            // heading_underline.style.setProperty('left' , `${left}vh`);
+
+        }
+        else{
+            activeAnchor.classList.remove("item-active");
+            // heading_underline.style.setProperty('width' , `10px`);
+
+        }
+    })
+}, sectionTitleOptions);
+
+sectionTitleObserver.observe(sectionTwo);
+sectionTitleObserver.observe(sectionThree);
+sectionTitleObserver.observe(sectionFour);
+sectionTitleObserver.observe(sectionFive);
+sectionTitleObserver.observe(sectionSix);
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     orientationLockFunction();
@@ -149,7 +220,7 @@ function orientationChangeDetect()
 
 var prevActiveModuleId = "modules_Database";
 var isPopupActive = false;
-var currentActiveModuleId = "modules_Mainframe";
+var currentActiveModuleId = "modules_API";
 var modulesCenterCircleHover = false;
 var slideIndex = 1;
 var modulesArrayElements = [];
@@ -174,246 +245,274 @@ function modulesArrayLoader()
 
 var i = 0;
 var modsize = modulesArray.length;
-window.setInterval(function(){
 
-    // console.log(i);
-    
-    if(isPopupActive == false)
-        if( modulesCenterCircleHover == false) 
-        {
-            var mod  = document.getElementById(modulesArray[i]);
-            i = i+1; 
-            changeModuleText(mod);
-            if(i > modulesArray.length - 1) i=0;
-        }
+// window.setInterval(function(){
+//     if(isPopupActive == false)
+//         if( modulesCenterCircleHover == false) 
+//         {
+//             var mod  = document.getElementById(modulesArray[i]);
+//             i = i+1; 
+//             changeModuleText(mod);
+//             if(i > modulesArray.length - 1) i=0;
+//         }
             
     
-    // plusSlides(1);
+//     // plusSlides(1);
 
-    },ModuletimeDelay );
+//     },ModuletimeDelay );
 
-    function changeModuleText(e)
+function changeModuleText(e)
 {
     var id_name;
     id_name = e.id;
+    id_name = "modules_" + id_name;
+    var vecName = id_name + "_vector";
+    var textName = id_name + "_text";
+
 
     prevActiveModuleId = currentActiveModuleId ;
     currentActiveModuleId = id_name;
 
-    if(prevActiveModuleId != e.id)
-        document.getElementById(prevActiveModuleId).className.baseVal = "modulesSvgCircleBack";
+    console.log("Current Vec name  "  , vecName);
+    console.log("Current text name  "  , textName);
+    console.log("Current id name  "  , currentActiveModuleId);
 
-    // alert(id_name);
-    if (id_name === "modules_Mainframe")
-   {
-        document.getElementById("tspan_head1").textContent = "MainFrame";
-        document.getElementById("tspan_head2").textContent = "";
-        document.getElementById("tspan1").textContent = "\xa0 Used for larger scale";
-        document.getElementById("tspan2").textContent = "\xa0 computing purposes that ";
-        document.getElementById("tspan3").textContent = "\xa0 requires great availability  ";
-        document.getElementById("tspan4").textContent = "\xa0 and security. This make   ";
-        document.getElementById("tspan5").textContent = "\xa0 mainframe automation  ";
-        document.getElementById("tspan6").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0      a reality. ";
-        document.getElementById("tspan7").textContent = " ";
+    console.log("Prev  id name  "  , prevActiveModuleId);
 
-    } 
 
-    if (id_name === "modules_Infrastructure")
-    {
-         document.getElementById("tspan_head1").textContent = "";
-         document.getElementById("tspan_head2").textContent = "Infrastructure ";
-         document.getElementById("tspan1").textContent = "Running on multi-cloud  ";
-         document.getElementById("tspan2").textContent = "infrastructure, automation   ";
-         document.getElementById("tspan3").textContent = "infrastructure is designed to   ";
-         document.getElementById("tspan4").textContent = "support different cloud  ";
-         document.getElementById("tspan5").textContent = "platforms. ";
-         document.getElementById("tspan6").textContent = " ";
-         document.getElementById("tspan7").textContent = " ";
-     } 
 
-    if (id_name === "modules_Mobile")
-    {
-        document.getElementById("tspan_head1").textContent = " \xa0 Mobile";
-        document.getElementById("tspan_head2").textContent = "";
-        document.getElementById("tspan1").textContent = "Android, IOS and Windows  ";
-        document.getElementById("tspan2").textContent = "APP automation and WEB ";
-        document.getElementById("tspan3").textContent = "browser automation testing  ";
-        document.getElementById("tspan4").textContent = "across all mobile devices and  ";
-        document.getElementById("tspan5").textContent = "tablets available in the market. ";
-        document.getElementById("tspan6").textContent = " ";
-        document.getElementById("tspan7").textContent = " ";
-    }
 
-    if (id_name === "modules_API")
-    {
-        document.getElementById("tspan_head1").textContent = "   \xa0 \xa0 API &";
-        document.getElementById("tspan_head2").textContent = " Microservices  ";
-        document.getElementById("tspan1").textContent = "This supports all types  ";
-        document.getElementById("tspan2").textContent = "of APIs such as SOAP, REST,";
-        document.getElementById("tspan3").textContent = "XML, JSON and Response ";
-        document.getElementById("tspan4").textContent = "Validations including modern  ";
-        document.getElementById("tspan5").textContent = "cloud microservices.  ";
-        document.getElementById("tspan6").textContent = " ";
-        document.getElementById("tspan7").textContent = "";
-    }
 
-    if (id_name === "modules_WebUI")
-    {
-        document.getElementById("tspan_head1").textContent = " \xa0\xa0 WebUI";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "Developed with a view   ";
-        document.getElementById("tspan2").textContent = "to support all kinds of web ";
-        document.getElementById("tspan3").textContent = "applications across various ";
-        document.getElementById("tspan4").textContent = "web browsers, operating  ";
-        document.getElementById("tspan5").textContent = "systems and cloud platforms. ";
-        document.getElementById("tspan6").textContent = "";
-        document.getElementById("tspan7").textContent = "";
-    }
 
-    if (id_name === "modules_Desktop")
-    {   
-        document.getElementById("tspan_head1").textContent = " Desktop ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "Nurtures the development ";
-        document.getElementById("tspan2").textContent = "of desktop applications";
-        document.getElementById("tspan3").textContent = "by supporting opensource  ";
-        document.getElementById("tspan4").textContent = "Microsoft WinAppDriver &  ";
-        document.getElementById("tspan5").textContent = "UI Automation , library Sikuli,   ";
-        document.getElementById("tspan6").textContent = "AutoIT and licensed SmartBear  ";
-        document.getElementById("tspan7").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0  TestLeft. ";
-    }
+
+    var prevVecName     = prevActiveModuleId + "_text";
+    var prevtextName    = prevActiveModuleId + "_vector";
+    console.log("Prev  vec name  "  , prevVecName);
+    console.log("Prev  text name  "  , prevtextName);
+
+
+    window.setTimeout( function() {document.getElementById(prevActiveModuleId).className.baseVal = "modulesSvgCircleBack";} , 100 );
+    window.setTimeout( function() {document.getElementById(prevVecName).className.baseVal = "";} , 100 );
+    window.setTimeout( function() {document.getElementById(prevtextName).className.baseVal = "";} , 100 );
+
+
+    window.setTimeout( function() { document.getElementById(currentActiveModuleId).className.baseVal = "modulesSvgCircleBack_Active" } , 100 );
+    window.setTimeout( function() { document.getElementById(currentActiveModuleId).setAttribute("stroke-dashoffset", "0px") } , 100 );
+    window.setTimeout( function() { document.getElementById(vecName).className.baseVal = "modulesSvgVector_Active" } , 100 );
+    window.setTimeout( function() { document.getElementById(textName).className.baseVal = "modulesSvgText_Active" } , 100 );
+
+
     
-    if (id_name === "modules_Companion")
-    {
-        document.getElementById("tspan_head1").textContent = "Companion ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "Individuals can carry out all";
-        document.getElementById("tspan2").textContent = "required actions to script,";
-        document.getElementById("tspan3").textContent = "maintain and execute test cases";
-        document.getElementById("tspan4").textContent = "from the simplicity of one     ";
-        document.getElementById("tspan5").textContent = "centralized application.";
-        document.getElementById("tspan6").textContent = "";
-        document.getElementById("tspan7").textContent = "";
-    }
+    // alert(id_name);
+//     if (id_name === "modules_Mainframe")
+//    {
+//         document.getElementById("tspan_head1").textContent = "MainFrame";
+//         document.getElementById("tspan_head2").textContent = "";
+//         document.getElementById("tspan1").textContent = "\xa0 Used for larger scale";
+//         document.getElementById("tspan2").textContent = "\xa0 computing purposes that ";
+//         document.getElementById("tspan3").textContent = "\xa0 requires great availability  ";
+//         document.getElementById("tspan4").textContent = "\xa0 and security. This make   ";
+//         document.getElementById("tspan5").textContent = "\xa0 mainframe automation  ";
+//         document.getElementById("tspan6").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0      a reality. ";
+//         document.getElementById("tspan7").textContent = " ";
 
-    if (id_name === "modules_Accessibility")
-    {
-        document.getElementById("tspan_head1").textContent = "Accessibility ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "Allows universal access of the";
-        document.getElementById("tspan2").textContent = "web, especially to those who";
-        document.getElementById("tspan3").textContent = "have difficulty in understanding,";
-        document.getElementById("tspan4").textContent = "navigating and interacting with";
-        document.getElementById("tspan5").textContent = "the web due to disabilities.";
-        document.getElementById("tspan6").textContent = "";
-        document.getElementById("tspan7").textContent = "";
-    }
+//     } 
 
-    if (id_name === "modules_Security")
-    {
-        document.getElementById("tspan_head1").textContent = " Security ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "\xa0 Detection of security risks";
-        document.getElementById("tspan2").textContent = "\xa0 in the system which allows";
-        document.getElementById("tspan3").textContent = "\xa0 developers to address these";
-        document.getElementById("tspan4").textContent = "\xa0 issues through code.";
-        document.getElementById("tspan5").textContent = "";
-        document.getElementById("tspan6").textContent = "";
-        document.getElementById("tspan7").textContent = "";
-    }
+//     if (id_name === "modules_Infrastructure")
+//     {
+//          document.getElementById("tspan_head1").textContent = "";
+//          document.getElementById("tspan_head2").textContent = "Infrastructure ";
+//          document.getElementById("tspan1").textContent = "Running on multi-cloud  ";
+//          document.getElementById("tspan2").textContent = "infrastructure, automation   ";
+//          document.getElementById("tspan3").textContent = "infrastructure is designed to   ";
+//          document.getElementById("tspan4").textContent = "support different cloud  ";
+//          document.getElementById("tspan5").textContent = "platforms. ";
+//          document.getElementById("tspan6").textContent = " ";
+//          document.getElementById("tspan7").textContent = " ";
+//      } 
 
-    if (id_name === "modules_Batch")
-    {
-        document.getElementById("tspan_head1").textContent = "  Batch/SSH ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "Focuses automation of";
-        document.getElementById("tspan2").textContent = "multi-machines, cross-platform";
-        document.getElementById("tspan3").textContent = "batch processes in distributed";
-        document.getElementById("tspan4").textContent = "networks and the most efficient";
-        document.getElementById("tspan5").textContent = "and simple module that heavily";
-        document.getElementById("tspan6").textContent = " relies on shell commands.";
-        document.getElementById("tspan7").textContent = "        ";
-    }
-    if (id_name === "modules_integration")
-    {
-        document.getElementById("tspan_head1").textContent = "Integration ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "\xa0 This adaptor already built";
-        document.getElementById("tspan2").textContent = "\xa0 (via APIs) and available for";
-        document.getElementById("tspan3").textContent = "\xa0 common tools and products";
-        document.getElementById("tspan4").textContent = "\xa0 like Jira, Confluence, ALM,";
-        document.getElementById("tspan5").textContent = "\xa0 QTest, GIT and e-mailer";
-        document.getElementById("tspan6").textContent = "\xa0 services to save upfront time";
-        document.getElementById("tspan7").textContent = "\xa0 on    automation.";
-    }
+//     if (id_name === "modules_Mobile")
+//     {
+//         document.getElementById("tspan_head1").textContent = " \xa0 Mobile";
+//         document.getElementById("tspan_head2").textContent = "";
+//         document.getElementById("tspan1").textContent = "Android, IOS and Windows  ";
+//         document.getElementById("tspan2").textContent = "APP automation and WEB ";
+//         document.getElementById("tspan3").textContent = "browser automation testing  ";
+//         document.getElementById("tspan4").textContent = "across all mobile devices and  ";
+//         document.getElementById("tspan5").textContent = "tablets available in the market. ";
+//         document.getElementById("tspan6").textContent = " ";
+//         document.getElementById("tspan7").textContent = " ";
+//     }
 
-    if (id_name === "modules_elastic")
-    {
-        document.getElementById("tspan_head1").textContent = "Elastic Stack";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "\xa0 Helps to reduce the time";
-        document.getElementById("tspan2").textContent = "\xa0 in building/generating";
-        document.getElementById("tspan3").textContent = "\xa0 the real-time reports and";
-        document.getElementById("tspan4").textContent = "\xa0 dashboards in today's";
-        document.getElementById("tspan5").textContent = "\xa0 competitive world.";
-        document.getElementById("tspan6").textContent = "";
-        document.getElementById("tspan7").textContent = "";
-    }
+//     if (id_name === "modules_API")
+//     {
+//         document.getElementById("tspan_head1").textContent = "   \xa0 \xa0 API &";
+//         document.getElementById("tspan_head2").textContent = " Microservices  ";
+//         document.getElementById("tspan1").textContent = "This supports all types  ";
+//         document.getElementById("tspan2").textContent = "of APIs such as SOAP, REST,";
+//         document.getElementById("tspan3").textContent = "XML, JSON and Response ";
+//         document.getElementById("tspan4").textContent = "Validations including modern  ";
+//         document.getElementById("tspan5").textContent = "cloud microservices.  ";
+//         document.getElementById("tspan6").textContent = " ";
+//         document.getElementById("tspan7").textContent = "";
+//     }
+
+//     if (id_name === "modules_WebUI")
+//     {
+//         document.getElementById("tspan_head1").textContent = " \xa0\xa0 WebUI";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "Developed with a view   ";
+//         document.getElementById("tspan2").textContent = "to support all kinds of web ";
+//         document.getElementById("tspan3").textContent = "applications across various ";
+//         document.getElementById("tspan4").textContent = "web browsers, operating  ";
+//         document.getElementById("tspan5").textContent = "systems and cloud platforms. ";
+//         document.getElementById("tspan6").textContent = "";
+//         document.getElementById("tspan7").textContent = "";
+//     }
+
+//     if (id_name === "modules_Desktop")
+//     {   
+//         document.getElementById("tspan_head1").textContent = " Desktop ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "Nurtures the development ";
+//         document.getElementById("tspan2").textContent = "of desktop applications";
+//         document.getElementById("tspan3").textContent = "by supporting opensource  ";
+//         document.getElementById("tspan4").textContent = "Microsoft WinAppDriver &  ";
+//         document.getElementById("tspan5").textContent = "UI Automation , library Sikuli,   ";
+//         document.getElementById("tspan6").textContent = "AutoIT and licensed SmartBear  ";
+//         document.getElementById("tspan7").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0  TestLeft. ";
+//     }
+    
+//     if (id_name === "modules_Companion")
+//     {
+//         document.getElementById("tspan_head1").textContent = "Companion ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "Individuals can carry out all";
+//         document.getElementById("tspan2").textContent = "required actions to script,";
+//         document.getElementById("tspan3").textContent = "maintain and execute test cases";
+//         document.getElementById("tspan4").textContent = "from the simplicity of one     ";
+//         document.getElementById("tspan5").textContent = "centralized application.";
+//         document.getElementById("tspan6").textContent = "";
+//         document.getElementById("tspan7").textContent = "";
+//     }
+
+//     if (id_name === "modules_Accessibility")
+//     {
+//         document.getElementById("tspan_head1").textContent = "Accessibility ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "Allows universal access of the";
+//         document.getElementById("tspan2").textContent = "web, especially to those who";
+//         document.getElementById("tspan3").textContent = "have difficulty in understanding,";
+//         document.getElementById("tspan4").textContent = "navigating and interacting with";
+//         document.getElementById("tspan5").textContent = "the web due to disabilities.";
+//         document.getElementById("tspan6").textContent = "";
+//         document.getElementById("tspan7").textContent = "";
+//     }
+
+//     if (id_name === "modules_Security")
+//     {
+//         document.getElementById("tspan_head1").textContent = " Security ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "\xa0 Detection of security risks";
+//         document.getElementById("tspan2").textContent = "\xa0 in the system which allows";
+//         document.getElementById("tspan3").textContent = "\xa0 developers to address these";
+//         document.getElementById("tspan4").textContent = "\xa0 issues through code.";
+//         document.getElementById("tspan5").textContent = "";
+//         document.getElementById("tspan6").textContent = "";
+//         document.getElementById("tspan7").textContent = "";
+//     }
+
+//     if (id_name === "modules_Batch")
+//     {
+//         document.getElementById("tspan_head1").textContent = "  Batch/SSH ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "Focuses automation of";
+//         document.getElementById("tspan2").textContent = "multi-machines, cross-platform";
+//         document.getElementById("tspan3").textContent = "batch processes in distributed";
+//         document.getElementById("tspan4").textContent = "networks and the most efficient";
+//         document.getElementById("tspan5").textContent = "and simple module that heavily";
+//         document.getElementById("tspan6").textContent = " relies on shell commands.";
+//         document.getElementById("tspan7").textContent = "        ";
+//     }
+//     if (id_name === "modules_integration")
+//     {
+//         document.getElementById("tspan_head1").textContent = "Integration ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "\xa0 This adaptor already built";
+//         document.getElementById("tspan2").textContent = "\xa0 (via APIs) and available for";
+//         document.getElementById("tspan3").textContent = "\xa0 common tools and products";
+//         document.getElementById("tspan4").textContent = "\xa0 like Jira, Confluence, ALM,";
+//         document.getElementById("tspan5").textContent = "\xa0 QTest, GIT and e-mailer";
+//         document.getElementById("tspan6").textContent = "\xa0 services to save upfront time";
+//         document.getElementById("tspan7").textContent = "\xa0 on    automation.";
+//     }
+
+//     if (id_name === "modules_elastic")
+//     {
+//         document.getElementById("tspan_head1").textContent = "Elastic Stack";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "\xa0 Helps to reduce the time";
+//         document.getElementById("tspan2").textContent = "\xa0 in building/generating";
+//         document.getElementById("tspan3").textContent = "\xa0 the real-time reports and";
+//         document.getElementById("tspan4").textContent = "\xa0 dashboards in today's";
+//         document.getElementById("tspan5").textContent = "\xa0 competitive world.";
+//         document.getElementById("tspan6").textContent = "";
+//         document.getElementById("tspan7").textContent = "";
+//     }
 
 
-    if (id_name === "modules_AI")
-    {
-        document.getElementById("tspan_head1").textContent = " \xa0 \xa0 \xa0     AI    ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "\xa0  Provides integration to AI ";
-        document.getElementById("tspan2").textContent = "\xa0 and ML algorithms empowering ";
-        document.getElementById("tspan3").textContent = "\xa0  users with  tools to get value";
-        document.getElementById("tspan4").textContent = "\xa0   and insights from their ";
-        document.getElementById("tspan5").textContent = " \xa0 Elasticsearch data and view  ";
-        document.getElementById("tspan6").textContent = "\xa0  machine learning. ";
-        document.getElementById("tspan7").textContent = "  ";
-    }
+//     if (id_name === "modules_AI")
+//     {
+//         document.getElementById("tspan_head1").textContent = " \xa0 \xa0 \xa0     AI    ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "\xa0  Provides integration to AI ";
+//         document.getElementById("tspan2").textContent = "\xa0 and ML algorithms empowering ";
+//         document.getElementById("tspan3").textContent = "\xa0  users with  tools to get value";
+//         document.getElementById("tspan4").textContent = "\xa0   and insights from their ";
+//         document.getElementById("tspan5").textContent = " \xa0 Elasticsearch data and view  ";
+//         document.getElementById("tspan6").textContent = "\xa0  machine learning. ";
+//         document.getElementById("tspan7").textContent = "  ";
+//     }
 
-    if (id_name === "modules_Performance")
-    {
-        document.getElementById("tspan_head1").textContent = " ";
-        document.getElementById("tspan_head2").textContent = "Performance   ";
-        document.getElementById("tspan1").textContent = " Implemented to test Rest";
-        document.getElementById("tspan2").textContent = " API Performance and Web";
-        document.getElementById("tspan3").textContent = " Application load test by";
-        document.getElementById("tspan4").textContent = " enabling testers to calculate";
-        document.getElementById("tspan5").textContent = " the performance time of test";
-        document.getElementById("tspan6").textContent = " cases using this module.";
-        document.getElementById("tspan7").textContent = "";
-    }
+//     if (id_name === "modules_Performance")
+//     {
+//         document.getElementById("tspan_head1").textContent = " ";
+//         document.getElementById("tspan_head2").textContent = "Performance   ";
+//         document.getElementById("tspan1").textContent = " Implemented to test Rest";
+//         document.getElementById("tspan2").textContent = " API Performance and Web";
+//         document.getElementById("tspan3").textContent = " Application load test by";
+//         document.getElementById("tspan4").textContent = " enabling testers to calculate";
+//         document.getElementById("tspan5").textContent = " the performance time of test";
+//         document.getElementById("tspan6").textContent = " cases using this module.";
+//         document.getElementById("tspan7").textContent = "";
+//     }
 
-    if (id_name === "modules_Database")
-    {
-        document.getElementById("tspan_head1").textContent = "Database ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = " This supports Java JDBC, ";
-        document.getElementById("tspan2").textContent = "SQL server, Oracle database,";
-        document.getElementById("tspan3").textContent = " MariaDB, My SQL. It additionally";
-        document.getElementById("tspan4").textContent = " supports AWS database such  ";
-        document.getElementById("tspan5").textContent = " as AWS Aurora DB and RDS. ";
-        document.getElementById("tspan6").textContent = " ";
-        document.getElementById("tspan7").textContent = "";
-    }
+//     if (id_name === "modules_Database")
+//     {
+//         document.getElementById("tspan_head1").textContent = "Database ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = " This supports Java JDBC, ";
+//         document.getElementById("tspan2").textContent = "SQL server, Oracle database,";
+//         document.getElementById("tspan3").textContent = " MariaDB, My SQL. It additionally";
+//         document.getElementById("tspan4").textContent = " supports AWS database such  ";
+//         document.getElementById("tspan5").textContent = " as AWS Aurora DB and RDS. ";
+//         document.getElementById("tspan6").textContent = " ";
+//         document.getElementById("tspan7").textContent = "";
+//     }
 
-    if (id_name === "modules_Cloud")
-    {
-        document.getElementById("tspan_head1").textContent = " \xa0 Cloud ";
-        document.getElementById("tspan_head2").textContent = "   ";
-        document.getElementById("tspan1").textContent = "A breeze via native support  ";
-        document.getElementById("tspan2").textContent = "to integrate with cloud providers";
-        document.getElementById("tspan3").textContent = "its advanced features like";
-        document.getElementById("tspan4").textContent = "autoscaling, containerization , ";
-        document.getElementById("tspan5").textContent = "orchestration infrastructure   ";
-        document.getElementById("tspan6").textContent = "provisioning and so on.";
-        document.getElementById("tspan7").textContent = "";
-    }
+//     if (id_name === "modules_Cloud")
+//     {
+//         document.getElementById("tspan_head1").textContent = " \xa0 Cloud ";
+//         document.getElementById("tspan_head2").textContent = "   ";
+//         document.getElementById("tspan1").textContent = "A breeze via native support  ";
+//         document.getElementById("tspan2").textContent = "to integrate with cloud providers";
+//         document.getElementById("tspan3").textContent = "its advanced features like";
+//         document.getElementById("tspan4").textContent = "autoscaling, containerization , ";
+//         document.getElementById("tspan5").textContent = "orchestration infrastructure   ";
+//         document.getElementById("tspan6").textContent = "provisioning and so on.";
+//         document.getElementById("tspan7").textContent = "";
+//     }
 
-    window.setTimeout( function() { e.className.baseVal = "modulesSvgCircleBack_Active" } , 100 );
 
 }
 
