@@ -2,7 +2,7 @@
 
 
 
-var ModuletimeDelay = 6000;
+var ModuletimeDelay = 3000;
 function loadMore() {
     window.setTimeout( function() { 
         document.getElementById("hidden").style.display = "block";
@@ -218,9 +218,11 @@ function orientationChangeDetect()
     }
 }
 
-var prevActiveModuleId = "modules_Database";
+var prevActiveModuleId ="Mobile";
+var prevActiveModule = document.getElementById("Mobile");
 var isPopupActive = false;
-var currentActiveModuleId = "modules_API";
+var currentActiveModule = document.getElementById("API");
+var currentActiveModuleId = "API"
 var modulesCenterCircleHover = false;
 var slideIndex = 1;
 var modulesArrayElements = [];
@@ -230,9 +232,9 @@ var N_modulesArrayText = 7;
 var N_modulesArrayHeading = 2;
 
 
-var modulesArray = ["modules_Mainframe", "modules_Mobile", "modules_Cloud",  "modules_API", "modules_WebUI" , "modules_Desktop" , "modules_Companion" ,
-                    "modules_Accessibility", "modules_Security", "modules_Infrastructure", "modules_Batch", "modules_integration", 
-                    "modules_elastic", "modules_AI" , "modules_Performance", "modules_Database"];
+var modulesArray = ["Mainframe", "Mobile", "Cloud",  "API", "WebUI" , "Desktop" , "Companion" ,
+                    "Accessibility", "Security", "Infrastructure", "Batch", "integration", 
+                    "elastic", "AI" , "Performance", "Database"];
 
 
 
@@ -246,20 +248,20 @@ function modulesArrayLoader()
 var i = 0;
 var modsize = modulesArray.length;
 
-// window.setInterval(function(){
-//     if(isPopupActive == false)
-//         if( modulesCenterCircleHover == false) 
-//         {
-//             var mod  = document.getElementById(modulesArray[i]);
-//             i = i+1; 
-//             changeModuleText(mod);
-//             if(i > modulesArray.length - 1) i=0;
-//         }
+window.setInterval(function(){
+    if(isPopupActive == false)
+        if( modulesCenterCircleHover == false) 
+        {
+            var mod  = document.getElementById(modulesArray[i]);
+            i = i+1; 
+            changeModuleText(mod);
+            if(i > modulesArray.length - 1) i=0;
+        }
             
     
-//     // plusSlides(1);
+    // plusSlides(1);
 
-//     },ModuletimeDelay );
+    },ModuletimeDelay );
 
 function changeModuleText(e)
 {
@@ -269,22 +271,14 @@ function changeModuleText(e)
     var vecName = id_name + "_vector";
     var textName = id_name + "_text";
 
-
-    prevActiveModuleId = currentActiveModuleId ;
+    prevActiveModule = currentActiveModule;
     currentActiveModuleId = id_name;
-
     console.log("Current Vec name  "  , vecName);
     console.log("Current text name  "  , textName);
     console.log("Current id name  "  , currentActiveModuleId);
+    console.log("Prev  id name  "  , prevActiveModule.id);
 
-    console.log("Prev  id name  "  , prevActiveModuleId);
-
-
-
-
-
-
-
+    var prevActiveModuleId = "modules_" + prevActiveModule.id;
     var prevVecName     = prevActiveModuleId + "_text";
     var prevtextName    = prevActiveModuleId + "_vector";
     console.log("Prev  vec name  "  , prevVecName);
@@ -295,12 +289,12 @@ function changeModuleText(e)
     window.setTimeout( function() {document.getElementById(prevVecName).className.baseVal = "";} , 100 );
     window.setTimeout( function() {document.getElementById(prevtextName).className.baseVal = "";} , 100 );
 
-
     window.setTimeout( function() { document.getElementById(currentActiveModuleId).className.baseVal = "modulesSvgCircleBack_Active" } , 100 );
     window.setTimeout( function() { document.getElementById(currentActiveModuleId).setAttribute("stroke-dashoffset", "0px") } , 100 );
     window.setTimeout( function() { document.getElementById(vecName).className.baseVal = "modulesSvgVector_Active" } , 100 );
     window.setTimeout( function() { document.getElementById(textName).className.baseVal = "modulesSvgText_Active" } , 100 );
 
+    currentActiveModule = e;
 
     
     // alert(id_name);

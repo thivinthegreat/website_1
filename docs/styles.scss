@@ -464,7 +464,7 @@ body {
                     {
                         fill: white;
                         cursor: pointer;
-                        transition: all 0.3s ease-in-out;
+                        transition: all 0.6s ease-in-out;
 
                         &:hover
                         {
@@ -511,6 +511,12 @@ body {
                     .modulesSvgVector_Active
                     {
                         fill:rgb(255, 255, 255);
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400;
+                        stroke: #ffffff;
+
+                        animation: dash 1s ease-in-out forwards ;
+
                     }
 
                     .modulesSvgText_Active
