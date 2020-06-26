@@ -47,7 +47,10 @@ body {
             .nav-scrolled {
                 --text: #333333;
                 --background: white;
-                box-shadow: 0 3px 20px rgba(black, 0.2)
+                box-shadow: 0 3px 20px rgba(black, 0.2);
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+
             }
 
             .navbar {
@@ -64,6 +67,7 @@ body {
                 background: var(--background);
                 display: flex;
                 align-items: center;
+                transition: all 0.3s ease-in-out;
 
                 .logo {
                     display: flex;
@@ -75,6 +79,7 @@ body {
                         padding-left: 0.5vw;
                         font-size: 2.1vh;
                         font-family: 'Exo', sans-serif;
+                        display: block;
 
                         a {
                             text-decoration: none;
@@ -106,10 +111,14 @@ body {
                         align-items: flex-start;
                         align-content: stretch;
                         padding-top: 0.5vh;
-
+                        position: relative;
+                        transition: all 0.5s ease-in-out;
+                         
                         ul {
                             margin: 0;
+                            position: relative;
                         }
+                        
 
                         li {
                             display: inline;
@@ -122,6 +131,14 @@ body {
                                 color: var(--text);
                                 text-decoration: none;
                                 font-size: 2.3vh;
+                            }
+
+                            .item-active
+                            {
+                                color: rgb(235, 71, 71);
+                                border-bottom: 3px solid;
+                                transition: all 0.5s ease-in-out;
+
                             }
                         }
                     }
@@ -448,7 +465,7 @@ body {
 
                     height: 90vh;
                     max-height: 90vh;
-                    z-index: 2;
+                    z-index: 5;
                     padding-top: 7.2vh;
 
                     .modules_centerButton
@@ -456,9 +473,16 @@ body {
                         cursor: pointer;
                     }
 
+                    .modulesIconGroup
+                    {
+                        cursor: pointer;
+                    }
+
                     .modulesSvgCircleBack
                     {
                         fill: white;
+                        cursor: pointer;
+                        transition: all 0.6s ease-in-out;
 
                         &:hover
                         {
@@ -474,19 +498,153 @@ body {
                     .modulesSvgMainCircle
                     {
                         fill:white;
+                        transform-origin: center center;
                     }
+
+                    .modulesSvgMainCircleStroke
+                    {
+                        transform-origin: 50.45% 45.75%;
+                        animation: spin 3s infinite linear;
+                        @keyframes spin {
+                            from {transform:rotate(0deg);}
+                            to {transform:rotate(360deg);}
+                        }
+                    }
+
 
                     .modulesSvgCircleBack_Active
                     {
-                        transition-duration: 300ms;
-                        transition: all 0.35s ease-in-out;
-                        fill: white;
-                        stroke-width: 11px;
-                        stroke-opacity: 0.5;
-                        stroke: rgb(255, 240, 240);
+     
+                        fill: rgba(233, 51, 105, 1);
+                        stroke-width: 3px;
+                        // stroke-opacity: 0.95;
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400px;
+                        stroke: #ffffff;
                         cursor: pointer;
+                        animation: dash 1.5s ease-in-out forwards ;
+                        transform-origin: center;
+                        // transition-duration: 300ms;
+                        // transition: all 0.35s ease-in-out;
+                        
+                    }
+
+                    @keyframes dash {
+                        from {
+                          stroke-dashoffset: 400;
+                        }
+                        to {
+                          stroke-dashoffset: 0;
+                        }
                     }
                     
+
+                    .modulesSvgVector_Active
+                    {
+                        // fill:rgb(255, 255, 255);
+                        stroke-dasharray: 400;
+                        stroke-width: 1.9px;
+                        stroke-dashoffset: 400;
+                        stroke: rgba(255, 255, 255, 1);
+                        
+
+                        animation: dash1 1.9s ease-in-out forwards ;
+                        
+
+                    }
+
+                    @keyframes dash1 {
+                        0% {
+                          stroke-dashoffset: 400;
+                         fill: none;
+
+                        }
+                        100% {
+                          stroke-dashoffset: 0;
+                          stroke-width: 0;
+                          fill:rgb(255, 255, 255);
+                        }
+                    }
+
+                    .modulesSvgText_Active
+                    {
+                        stroke-dasharray: 400;
+                        stroke-width: 2px;
+                        stroke-dashoffset: 400;
+                        stroke: rgba(255, 255, 255, 1);
+                        
+
+                        animation: dash1 0.5s ease-in-out alternate ;
+                    }
+
+                    .modulesGroup1-
+                    {
+                        animation: floating 4s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(0.3vh,0.3vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+                    
+
+                    .modulesGroup2-
+                    {
+                        animation: floating 4s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(-0.3vh,0.3vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+
+                    .modulesGroup3-
+                    {
+                        animation: floating 5s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(-0.3vh,-0.4vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+
+                    .modulesGroup4-
+                    {
+                        animation: floating 6s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(0.3vh,-0.3vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
                     .moduleCenterCircle_heading
                     {
                         transition: ease-in;
@@ -503,18 +661,24 @@ body {
 
                 .modulesPopUp-container
                 {
-                            background-color: white;
-                            height: 40vh;
-                            width: 40vw;
+                            background-color: #e54e57;
+                            height: 0vh;
+                            width: 0vw;
                             visibility: hidden;
+                            opacity: 0;
                             position: absolute;
                             display: flex;
                             flex-wrap: nowrap;
                             justify-content: center;
                             flex-direction: column;
-                            z-index: 2;
-                            border-radius: 2vh;
+                            z-index: 6;
+                            border-radius: 80vh;
                             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+                            transition: all 0.6s ease-in-out;
+                            // transition: height 0.8s ease-in-out;
+                            // transition: width 0.8s ease-in-out;
+
+                            // animation: grow 1s linear;  
         
         
                             .modulesPopUp-closebutton
@@ -527,11 +691,30 @@ body {
                                 padding-top: 2vh;
                                 font-family: 'Exo', sans-serif;
         
-                                p {
+                                img {
                                     margin: 0em;
-                                    font-size: large;
-                                    text-shadow: 1px 1px 1px #625757;
+                                    height: 3vh;
+                                    width: 3vh;
                                     cursor: pointer;
+                                    transition: all 1s ease;
+                                }
+
+                                &:hover{
+                                    transform-origin: 91% 91%;
+                                    animation: spint 0.5s ease forwards;
+                                    animation-iteration-count: 1;
+                                    
+                                    @keyframes spint { 
+                                        from { 
+                                            transform: scale(1);
+                                            // transform: rotate(0deg);
+                                        } to { 
+                                            transform: scale(1.1);
+                                            // transform: rotate(90deg);
+
+
+                                        }
+                                    }
                                 }
         
                             }
@@ -545,6 +728,12 @@ body {
                                 font-family: 'Exo', sans-serif;
                                 font-size: 2.2vh;
                                 color: #EB4E4E;
+                                opacity: 0;
+                                transition: all 2s ease;
+
+                                // visibility: visible;
+                                // transition: visibility 1s ease;
+                                // transition-delay: 1s;
         
                                 
                             }
@@ -560,6 +749,10 @@ body {
                                 font-size: 1.8vh;
                                 justify-content: center;
                                 text-align: justify;
+                                opacity: 0;
+                                transition: all 2s ease;
+                                // animation: popupcontent 2s ease-in-out;
+
                             }
                 }
 
@@ -627,33 +820,33 @@ body {
                 }
             }
 
-            .list1-sub1:hover .devops {
-                max-height: 15vh;
-            }
+            // .list1-sub1:hover .devops {
+            //     max-height: 15vh;
+            // }
 
-            .list1-sub2:hover .inSpirit {
-                max-height: 15vh;
-            }
+            // .list1-sub2:hover .inSpirit {
+            //     max-height: 15vh;
+            // }
 
-            .list1-sub3:hover .shiftLeft {
-                max-height: 15vh;
-            }
+            // .list1-sub3:hover .shiftLeft {
+            //     max-height: 15vh;
+            // }
 
-            .list1-sub4:hover .agile {
-                max-height: 15vh;
-            }
+            // .list1-sub4:hover .agile {
+            //     max-height: 15vh;
+            // }
 
-            .list2-sub1:hover .accelerate {
-                max-height: 15vh;
-            }
+            // .list2-sub1:hover .accelerate {
+            //     max-height: 15vh;
+            // }
 
-            .list2-sub2:hover .module {
-                max-height: 15vh;
-            }
+            // .list2-sub2:hover .module {
+            //     max-height: 15vh;
+            // }
 
-            .list2-sub3:hover .elk {
-                max-height: 15vh;
-            }
+            // .list2-sub3:hover .elk {
+            //     max-height: 15vh;
+            // }
 
             .shell {
                 height: 50vh;
@@ -663,10 +856,50 @@ body {
                 flex-wrap: nowrap;
                 align-items: center;
                 padding-top: 3vh;
+                transition: 0.8s ease;
+                cursor: pointer;
 
+                .shell_highlight
+                {
+                    fill: #E33E54;
+                    background-color: #ffffff;
+                    color: yellow;
+                    // padding: 1vh;
+                    height: 1.5vh;
+                    top: 0vh;
+                    position: absolute;
+                    width: 18vw;
+                    border-radius:  0.2vh 0.2vh 0 0 ;
+                    opacity: 1;
+                    transition: 0.8s ease;
+                    z-index: -5;
+                    visibility: hidden;
+                    transform: translateY(-2vh);
+
+
+                }
+
+                &:hover .shell_highlight
+                {
+                    opacity: 1;
+                    z-index: 3;
+                    visibility: visible;
+                    background-color: #E33E54;
+                    border-radius:  1.8vh 1.8vh 0 0 ;
+                    transition: 0.8s ease;
+                    transform: translateY(0.0vh);
+                    
+                }
+
+                &:hover .image{
+                    margin-top: 3vh;
+                    transition: 0.8s ease;
+                }
                 .image {
                     display: flex;
-                    justify-content: center;                 
+                    justify-content: center;     
+                    transition: 0.8s ease;
+
                 }
 
                 img {
@@ -899,88 +1132,74 @@ body {
                     align-content: space-between;
 
                     .item:hover .hoverCircle {
-                        position: absolute;
-                        left: -1vw;
-                        top: 2vh;
-                        display: block;
-                        opacity: 1;
-                        animation: fade 1s;
-                        animation-duration: 0.8s;
+                        // position: absolute;
+                        // left: -1vw;
+                        // top: 2vh;
+                        // // display: block;
+                        // opacity: 1;
+                        // animation: fade 1s;
+                        // animation-duration: 0.8s;
                     }
 
                     .item2:hover .hoverCircle {
-                        display: block;
-                        position: absolute;
-                        top: 0vh;
-                        left: -1vw;
-                        opacity: 1;
-                        animation: fade 1s;
-                        animation-duration: 0.8s;
+                        // display: block;
+                        // position: absolute;
+                        // top: 0vh;
+                        // left: -1vw;
+                        // opacity: 1;
+                        // animation: fade 1s;
+                        // animation-duration: 0.8s;
                     }
 
                     .content:hover .sec6-definition {
-                        padding-top: -2vh;
+                        // padding-top: 1.5vh;
                         display: block;
                         visibility: visible;
                         text-align: justify;
                         font-family: 'Quicksand', sans-serif;
                         font-size: 2vh;
                         // opacity: 1;
-                        // animation: fade 1s;
-                        // animation-duration: 0.8s;
+                        animation: fade 0.8s;
+                        animation-duration: 0.8s;
                         // animation-fill-mode: initial;
                         
                     }
-                    
-                    @keyframes fade {
-                        0% {
-                            opacity: 0;
-                        }
-                    
-                        100% {
-                            opacity: 1;
-                        }
-                    }
-                    
+
 
                     .content:hover .sub-heading {
-                        // display: none;
-                        // visibility: hidden;
-                    //    opacity: 0;
-                       color: rgb(168, 24, 24);
-                       transform: translate(0px, -25vh);
+                       color: #333333;
+                       transform: translate(0px, -2vh);
                        transition-duration: 0.9s;
-                       opacity: 0;
-                       height: 0vh;
+                       opacity: 1;
+                       padding-top: 3vh;
+                       height: 5vh;
                        visibility: visible;
-                       transition-property: all;
-                        animation: fader 0.5s;
-                        font-size: 2vh;
+                       transition-property: all;    
+                       color:#333333;
+                        // animation: fader 1.2s;
+                        font-size: 2.5vh;
                     }
 
-
-
-                    @keyframes fader {
-                        0% {
-                            opacity: 1;
-                            visibility: visible;
-                            height: 1vh;
-                        }
-                    
-                        100% {
-                            opacity: 0;
-                            visibility: visible;
-                            display: none;
-                            height: 0vh;
-                        }
-                    }
                     
                     .content:hover .image
                     {
                         opacity: 1;
-                        animation: fade 1s;
-                        animation-duration: 0.5s;
-                        // max-height: 11vh;
+                        max-height: 11vh;
+                        height: 11vh;
+                        -webkit-transform: scale(0.7) rotate(0.01deg);
+                        transform: scale(0.8) rotate(0.01deg);
+                        transition: 0.8s ease;
+
+                    }
+
+                    .content:hover img
+                    {
+                        max-height: 11vh;
+                        height: 11vh;
+                        -webkit-transform: scale(0.7) rotate(0.01deg);
+                        transform: scale(0.7) rotate(0.01deg);
+                        transition: all 0.8s ease;
+
                     }
 
                     .content {
@@ -1000,20 +1219,30 @@ body {
                             font-family: 'Exo', sans-serif;
                             display: block;
                             opacity: 0.82;
+                            transition: all 0.9s ease;
                         }
 
                         .sec6-definition {
                             display: none;
+                            transition: all 0.8s ease;
+
                             
                         }
 
                         .image {
                             height: 20vh;
                             position: relative;
-                            opacity: 0.82;
+                            opacity: 0.98;
+                            -webkit-transform: scale(1) ;
+                            transform: scale(1);
+                             transition: all 0.8s ease;
+
 
                             img {
                                 max-height: 20vh;
+                                -webkit-transform: scale(1) ;
+                                transform: scale(1);
+                                 transition: all 0.8s ease;
                             }
                         }
 
@@ -1032,6 +1261,9 @@ body {
 
     #hidden {
         display: none;
+        // visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
     }
 
     #btnShowLess {
@@ -2138,14 +2370,14 @@ body {
                             position: absolute;
                             left: -1vw;
                             top: 2vh;
-                            display: block;
+                            // display: block;
                             opacity: 1;
                             animation: fade 1s;
                             animation-duration: 0.8s;
                         }
     
                         .item2:hover .hoverCircle {
-                            display: block;
+                            // display: block;
                             position: absolute;
                             top: 0vh;
                             left: -1vw;
@@ -2168,17 +2400,7 @@ body {
                             
                         }
                         
-                        @keyframes fade {
-                            0% {
-                                opacity: 0;
-                            }
-                        
-                            100% {
-                                opacity: 1;
-                            }
-                        }
-                        
-    
+      
                         .content:hover .sub-heading {
                             // display: none;
                             // visibility: hidden;
@@ -2190,7 +2412,7 @@ body {
                            height: 0vh;
                            visibility: visible;
                            transition-property: all;
-                            animation: fader 0.5s;
+                            animation: fader 0.8s;
                             font-size: 2vh;
                         }
     
@@ -2213,11 +2435,10 @@ body {
                         
                         .content:hover .image
                         {
-                            opacity: 1;
-                            animation: fade 1s;
-                            animation-duration: 0.5s;
+                            opacity: 1;                           
                             // max-height: 11vh;
                         }
+
     
                         .content {
                             height: 32vh;
@@ -2246,7 +2467,7 @@ body {
                             .image {
                                 height: 20vh;
                                 position: relative;
-                                opacity: 0.82;
+                                opacity: 0.95;
     
                                 img {
                                     max-height: 20vh;
