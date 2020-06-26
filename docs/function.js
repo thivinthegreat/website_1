@@ -276,6 +276,7 @@ function changeModuleText(e)
     currentActiveModuleId = id_name;
     currentActiveModule = e;
 
+
     // console.log("Current Vec name  "  , vecName);
     // console.log("Current text name  "  , textName);
     // console.log("Current id name  "  , currentActiveModuleId);
@@ -299,13 +300,7 @@ function changeModuleText(e)
 
 
 
-    
-
-
-
-
-    
-    // alert(id_name);
+       // alert(id_name);
     if (id_name === "modules_Mainframe")
    {
         document.getElementById("modules_tspan_head1").textContent = "";
@@ -526,14 +521,15 @@ function modulesPopupClose(e)
 
     
     window.setTimeout( function() {
+        document.getElementsByClassName(className_content)[0].style.opacity = "0";
+        document.getElementsByClassName(className_header)[0].style.opacity = "0";
         document.getElementsByClassName(className_1)[0].style.visibility = "hidden";
         document.getElementsByClassName(className_1)[0].style.opacity = "0";
         document.getElementsByClassName(className_1)[0].style.height = "0vh";
         document.getElementsByClassName(className_1)[0].style.width = "0vw";
         document.getElementsByClassName(className_1)[0].style.borderRadius = "80vh";
         document.getElementsByClassName(className_1)[0].style.backgroundColor = "#e54e57";
-        document.getElementsByClassName(className_content)[0].style.opacity = "0";
-        document.getElementsByClassName(className_header)[0].style.opacity = "0";
+        
     } , 100 );
 
 }

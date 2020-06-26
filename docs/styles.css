@@ -594,6 +594,10 @@ body {
   cursor: pointer;
 }
 
+#main-container .section3 .lower .modules-img svg .modulesIconGroup {
+  cursor: pointer;
+}
+
 #main-container .section3 .lower .modules-img svg .modulesSvgCircleBack {
   fill: white;
   cursor: pointer;
@@ -652,8 +656,8 @@ body {
   stroke-dashoffset: 400px;
   stroke: #ffffff;
   cursor: pointer;
-  -webkit-animation: dash 1s ease-in-out forwards;
-          animation: dash 1s ease-in-out forwards;
+  -webkit-animation: dash 1.5s ease-in-out forwards;
+          animation: dash 1.5s ease-in-out forwards;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -681,8 +685,8 @@ body {
   stroke-width: 1.9px;
   stroke-dashoffset: 400;
   stroke: white;
-  -webkit-animation: dash1 1.5s ease-in-out forwards;
-          animation: dash1 1.5s ease-in-out forwards;
+  -webkit-animation: dash1 1.9s ease-in-out forwards;
+          animation: dash1 1.9s ease-in-out forwards;
 }
 
 @-webkit-keyframes dash1 {
@@ -1459,7 +1463,7 @@ body {
   visibility: visible;
   -webkit-transition-property: all;
   transition-property: all;
-  color: #E33E54;
+  color: #333333;
   font-size: 2.5vh;
 }
 
@@ -1467,6 +1471,8 @@ body {
   opacity: 1;
   max-height: 11vh;
   height: 11vh;
+  -webkit-transform: scale(0.7) rotate(0.01deg);
+  transform: scale(0.8) rotate(0.01deg);
   -webkit-transition: 0.8s ease;
   transition: 0.8s ease;
 }
@@ -1474,8 +1480,10 @@ body {
 #main-container .section6 .sec6-content .benifits .list .content:hover img {
   max-height: 11vh;
   height: 11vh;
-  -webkit-transition: height 0.8s ease;
-  transition: height 0.8s ease;
+  -webkit-transform: scale(0.7) rotate(0.01deg);
+  transform: scale(0.7) rotate(0.01deg);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content {
@@ -1502,24 +1510,32 @@ body {
   font-family: 'Exo', sans-serif;
   display: block;
   opacity: 0.82;
-  -webkit-transition: all 1.2s ease;
-  transition: all 1.2s ease;
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content .sec6-definition {
   display: none;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content .image {
   height: 20vh;
   position: relative;
-  opacity: 0.82;
+  opacity: 0.98;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content .image img {
   max-height: 20vh;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content .hoverCircle {

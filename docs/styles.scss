@@ -460,6 +460,11 @@ body {
                         cursor: pointer;
                     }
 
+                    .modulesIconGroup
+                    {
+                        cursor: pointer;
+                    }
+
                     .modulesSvgCircleBack
                     {
                         fill: white;
@@ -504,7 +509,7 @@ body {
                         stroke-dashoffset: 400px;
                         stroke: #ffffff;
                         cursor: pointer;
-                        animation: dash 1s ease-in-out forwards ;
+                        animation: dash 1.5s ease-in-out forwards ;
                         transform-origin: center;
                         // transition-duration: 300ms;
                         // transition: all 0.35s ease-in-out;
@@ -530,7 +535,7 @@ body {
                         stroke: rgba(255, 255, 255, 1);
                         
 
-                        animation: dash1 1.5s ease-in-out forwards ;
+                        animation: dash1 1.9s ease-in-out forwards ;
                         
 
                     }
@@ -1155,8 +1160,8 @@ body {
                        padding-top: 3vh;
                        height: 5vh;
                        visibility: visible;
-                       transition-property: all;
-                       color:#E33E54;
+                       transition-property: all;    
+                       color:#333333;
                         // animation: fader 1.2s;
                         font-size: 2.5vh;
                     }
@@ -1167,6 +1172,8 @@ body {
                         opacity: 1;
                         max-height: 11vh;
                         height: 11vh;
+                        -webkit-transform: scale(0.7) rotate(0.01deg);
+                        transform: scale(0.8) rotate(0.01deg);
                         transition: 0.8s ease;
 
                     }
@@ -1175,7 +1182,9 @@ body {
                     {
                         max-height: 11vh;
                         height: 11vh;
-                        transition: height 0.8s ease;
+                        -webkit-transform: scale(0.7) rotate(0.01deg);
+                        transform: scale(0.7) rotate(0.01deg);
+                        transition: all 0.8s ease;
 
                     }
 
@@ -1196,12 +1205,12 @@ body {
                             font-family: 'Exo', sans-serif;
                             display: block;
                             opacity: 0.82;
-                            transition: all 1.2s ease;
+                            transition: all 0.9s ease;
                         }
 
                         .sec6-definition {
                             display: none;
-                            transition: all 0.6s ease;
+                            transition: all 0.8s ease;
 
                             
                         }
@@ -1209,10 +1218,17 @@ body {
                         .image {
                             height: 20vh;
                             position: relative;
-                            opacity: 0.82;
+                            opacity: 0.98;
+                            -webkit-transform: scale(1) ;
+                            transform: scale(1);
+                             transition: all 0.8s ease;
+
 
                             img {
                                 max-height: 20vh;
+                                -webkit-transform: scale(1) ;
+                                transform: scale(1);
+                                 transition: all 0.8s ease;
                             }
                         }
 
