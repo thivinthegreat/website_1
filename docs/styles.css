@@ -2543,6 +2543,9 @@ body {
     height: 125vh;
     width: 100%;
   }
+  #main-container .section4 .sec4-content .carousel-indicators {
+    margin: 0 !important;
+  }
   #main-container .section4 .sec4-content .carousel-indicators .carouselCircleIndicator {
     border: 2px solid #e33e55 !important;
     border-radius: 50%;
@@ -2550,6 +2553,12 @@ body {
   }
   #main-container .section4 .sec4-content .carousel-indicators .active {
     background: #e33e55 !important;
+  }
+  #main-container .section4 .sec4-content .carousel-control-prev {
+    display: none;
+  }
+  #main-container .section4 .sec4-content .carousel-control-next {
+    display: none;
   }
   #main-container .section4 .sec4-content .heading {
     padding-top: 2vh;
@@ -2626,12 +2635,15 @@ body {
   #main-container .section4 .sec4-content .list2-sub3:hover .elk {
     max-height: 15vh;
   }
-  #main-container .section4 .sec4-content .carouselContainerHeight {
-    min-height: 51vh;
-    max-height: 51vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    position: relative;
+  #main-container .section4 .sec4-content #carouselExampleIndicators {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  #main-container .section4 .sec4-content .content1Slider {
+    height: 50vh;
+  }
+  #main-container .section4 .sec4-content .content2Slider {
+    height: 50vh;
   }
   #main-container .section4 .sec4-content img {
     max-height: 14vh;

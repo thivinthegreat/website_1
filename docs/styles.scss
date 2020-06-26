@@ -2055,6 +2055,8 @@ body {
                 width: 100%;
 
                 .carousel-indicators {
+                    margin: 0 !important;
+
                     .carouselCircleIndicator {
                         border: 2px solid #e33e55 !important;
                         border-radius: 50%;
@@ -2064,6 +2066,14 @@ body {
                         background: #e33e55 !important;
                     }
                 } 
+
+                .carousel-control-prev {
+                    display: none;
+                }
+
+                .carousel-control-next {
+                    display: none;
+                }
     
                 .heading {
                     padding-top: 2vh;
@@ -2137,12 +2147,17 @@ body {
                     max-height: 15vh;
                 }
 
-                .carouselContainerHeight {
-                    min-height: 51vh;
-                    max-height: 51vh;
-                    padding-left: 5vw;
-                    padding-right: 5vw;
-                    position: relative;
+                #carouselExampleIndicators {
+                    padding-left: 4vw;  
+                    padding-right: 4vw;
+                }
+
+                .content1Slider {
+                    height: 50vh;
+                }
+
+                .content2Slider {
+                    height: 50vh;
                 }
 
                 img {
