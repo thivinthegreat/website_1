@@ -1555,7 +1555,6 @@ body {
                     .logo {
                         display: flex;
                         align-items: center;
-                        padding-left: 4vw;
     
                         .title {
                             display: none;
@@ -1633,7 +1632,6 @@ body {
             .sec2-heading1 {
                 padding-left: 3%;
                 padding-right: 6%;
-                font-size: 5vw;
                 padding-top: 5vh;
                 height: 10vh;
                 width: 100%;
@@ -1641,6 +1639,7 @@ body {
 
                 h3 {
                     padding-left: 0%;
+                    font-size: 6vw;
                 }
             }
     
@@ -1701,9 +1700,10 @@ body {
     
         .section3 {
             margin-top: 2vh;
-            height: 250vh;
+            height: 240vh;
             position: relative;
             overflow-x: hidden;
+            overflow: hidden;
     
             .sec3-img2 {
                 position: absolute;
@@ -1823,7 +1823,7 @@ body {
     
                         p {
                             margin: 0;
-                            font-size: 4.5vw;
+                            font-size: 4vw;
                             color: white;
 
                             .m_sec3_text1 {

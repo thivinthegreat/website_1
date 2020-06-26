@@ -1964,7 +1964,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 4vw;
   }
   #main-container .section1 .content .navbar .logo .title {
     display: none;
@@ -2043,7 +2042,6 @@ body {
   #main-container .section2 .sec2-heading1 {
     padding-left: 3%;
     padding-right: 6%;
-    font-size: 5vw;
     padding-top: 5vh;
     height: 10vh;
     width: 100%;
@@ -2051,6 +2049,7 @@ body {
   }
   #main-container .section2 .sec2-heading1 h3 {
     padding-left: 0%;
+    font-size: 6vw;
   }
   #main-container .section2 .sec2-container {
     display: -webkit-box;
@@ -2117,9 +2116,10 @@ body {
   }
   #main-container .section3 {
     margin-top: 2vh;
-    height: 250vh;
+    height: 240vh;
     position: relative;
     overflow-x: hidden;
+    overflow: hidden;
   }
   #main-container .section3 .sec3-img2 {
     position: absolute;
@@ -2281,7 +2281,7 @@ body {
   }
   #main-container .section3 .upper .sec3-content .sec3-text p {
     margin: 0;
-    font-size: 4.5vw;
+    font-size: 4vw;
     color: white;
   }
   #main-container .section3 .upper .sec3-content .sec3-text p .m_sec3_text1 {
