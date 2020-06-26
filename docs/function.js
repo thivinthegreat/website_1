@@ -129,6 +129,24 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
                 document.getElementById("nav-title").style.display = "none";
             }
         }
+        if (isMobile) {
+            document.getElementById("nav-title").style.display = "block";
+            // document.getElementsByClassName("mobile").forEach(m => {
+            //     m.style.display = block;
+            // });
+            // document.getElementsByClassName("desk").forEach(m => {
+            //     m.style.display = none;
+            // });
+        }
+        else {
+            document.getElementById("nav-title").style.display = "none";
+            // document.getElementsByClassName("mobile").forEach(m => {
+            //     m.style.display = none;
+            // });
+            // document.getElementsByClassName("desk").forEach(m => {
+            //     m.style.display = block;
+            // });
+        }
     })
 }, sectionOneOptions);
 // Observation call Function
