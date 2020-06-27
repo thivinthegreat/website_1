@@ -2831,6 +2831,9 @@ body {
   #main-container .section5 .sec5-container .sec5-subcontent .content .details .imgContainer {
     height: 40vh;
   }
+  #main-container .section5 .sec5-container .sec5-subcontent .content .details .imgContainer img {
+    width: 100%;
+  }
   #main-container .section5 .sec5-container .sec5-subcontent .content .details .list {
     width: 100%;
   }
