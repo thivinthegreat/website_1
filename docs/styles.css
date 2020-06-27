@@ -488,12 +488,12 @@ body {
           justify-content: center;
 }
 
-#main-container .section3 .upper .sec3-content .sec3-img svg {
+#main-container .section3 .upper .sec3-content .sec3-img img {
   max-height: 95%;
   width: 95%;
 }
 
-#main-container .section3 .upper .sec3-content .sec3-img svg .rotate {
+#main-container .section3 .upper .sec3-content .sec3-img img .rotate {
   -webkit-animation: rotate 5s linear infinite;
           animation: rotate 5s linear infinite;
   transform-box: fill-box;
@@ -1521,10 +1521,7 @@ body {
   text-align: justify;
   font-family: 'Quicksand', sans-serif;
   font-size: 2vh;
-  -webkit-animation: fade 0.8s;
-          animation: fade 0.8s;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  opacity: 1;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content:hover .sub-heading {
@@ -1537,8 +1534,8 @@ body {
   padding-top: 3vh;
   height: 5vh;
   visibility: visible;
-  -webkit-transition-property: all;
-  transition-property: all;
+  -webkit-transition-property: visibility opacity;
+  transition-property: visibility opacity;
   color: #333333;
   font-size: 2.5vh;
 }
@@ -1549,8 +1546,8 @@ body {
   height: 11vh;
   -webkit-transform: scale(0.7) rotate(0.01deg);
   transform: scale(0.8) rotate(0.01deg);
-  -webkit-transition: 0.8s ease;
-  transition: 0.8s ease;
+  -webkit-transition: 1.2s ease;
+  transition: 1.2s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content:hover img {
@@ -1558,8 +1555,8 @@ body {
   height: 11vh;
   -webkit-transform: scale(0.7) rotate(0.01deg);
   transform: scale(0.7) rotate(0.01deg);
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content {

@@ -354,7 +354,7 @@ body {
                     align-items: flex-end;
                     justify-content: center;
 
-                    svg {
+                    img {
                         max-height: 95%;
                         width: 95%;
 
@@ -1170,9 +1170,9 @@ body {
                         text-align: justify;
                         font-family: 'Quicksand', sans-serif;
                         font-size: 2vh;
-                        // opacity: 1;
-                        animation: fade 0.8s;
-                        animation-duration: 0.8s;
+                        opacity: 1;
+                        // animation: fade 0.8s;
+                        // animation-duration: 0.8s;
                         // animation-fill-mode: initial;
                         
                     }
@@ -1186,7 +1186,7 @@ body {
                        padding-top: 3vh;
                        height: 5vh;
                        visibility: visible;
-                       transition-property: all;    
+                       transition-property: visibility opacity ;    
                        color:#333333;
                         // animation: fader 1.2s;
                         font-size: 2.5vh;
@@ -1200,7 +1200,7 @@ body {
                         height: 11vh;
                         -webkit-transform: scale(0.7) rotate(0.01deg);
                         transform: scale(0.8) rotate(0.01deg);
-                        transition: 0.8s ease;
+                        transition: 1.2s ease;
 
                     }
 
@@ -1210,7 +1210,7 @@ body {
                         height: 11vh;
                         -webkit-transform: scale(0.7) rotate(0.01deg);
                         transform: scale(0.7) rotate(0.01deg);
-                        transition: all 0.8s ease;
+                        transition: all 1.2s ease;
 
                     }
 

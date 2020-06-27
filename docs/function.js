@@ -1,7 +1,3 @@
-// Defined Functions
-
-
-
 var ModuletimeDelay = 7000;
 function loadMore() {
     window.setTimeout( function() { 
@@ -102,13 +98,8 @@ const sectionSix = document.querySelector(".section7");
 const heading_underline = document.querySelector(".heading-underline");
 
 
-
-
-
-var sectionOneOptions;
 var sectionTitleOptions;
-
-
+var sectionOneOptions;
 
 /////--------- Observation for Nav Bar to change color upon Scrolling --------------  ////// 
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
@@ -130,14 +121,13 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             }
         }
     })
-}, {threshold: 0.9785});
-// Observation call Function
+},sectionOneOptions);
+// Observation call Function    
 sectionOneObserver.observe(sectionOne);
 
 ////// - END -- ///////////
 
-
-
+var options1;
 // Observation function to Change the color of heading of nav bar based on position
 const sectionTitleObserver = new IntersectionObserver(function(entries, sectionTitleObserver) {
     entries.forEach(entry => {
@@ -172,7 +162,7 @@ const sectionTitleObserver = new IntersectionObserver(function(entries, sectionT
 
         }
     })
-}, {threshold: 0.35,rootMargin: "0px 0px -200px 0px"});
+}, {rootMargin: '-400px'}   );
 
 sectionTitleObserver.observe(sectionTwo);
 sectionTitleObserver.observe(sectionThree);
@@ -196,7 +186,7 @@ function orientationLockFunction()
 {
     if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
     {
-        alert("Device is in Potrait mode, Please change it to landscape mode");
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
         screen.orientation = "landscape";
     }   screen.rotate = 90;
     
@@ -205,7 +195,7 @@ function orientationLockFunction()
 function orientationChangeDetect()
 {
     if(window.innerHeight <  window.innerWidth*0.8) {
-        alert("Device is in Potrait mode, Please change it to landscape mode");
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
         sectionOneOptions = {
             rootMargin: "-200px 0px 0px 0px"
         };

@@ -82,15 +82,15 @@
 
       }
       40% {
-         fill : #FFE603;
+         fill : #ffffff;
          stroke-width: 0.8px;
-         stroke: #FFE603;
+         stroke: #ffffff;
          stroke-opacity: 0.5;
       }
       70% {
-         fill : #FFE603;
+         fill : #ffffff;
          stroke-width: 1px;
-         stroke: #FFE603;
+         stroke: #ffffff;
          stroke-opacity: 0.5;
       }
       100% {
