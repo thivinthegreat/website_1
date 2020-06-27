@@ -2672,23 +2672,24 @@ body {
     font-size: 4.5vw;
   }
   #main-container .section5 {
-    margin-top: 10vh;
+    margin-top: 6vh;
   }
   #main-container .section5 .sec5-container {
-    height: 130vh;
+    height: 310vh;
     width: 100%;
     position: relative;
   }
   #main-container .section5 .sec5-container .sec5-background {
-    height: 130vh;
+    height: 310vh;
     width: 100%;
     position: absolute;
   }
   #main-container .section5 .sec5-container .devops {
-    height: 24vh;
-    width: 22vw;
+    height: 20vh;
+    width: 60vw;
     position: absolute;
-    left: 38.3vw;
+    left: 21vw;
+    top: -12vh;
   }
   #main-container .section5 .sec5-container .bottom-circle {
     border-radius: 50%;
@@ -2718,10 +2719,10 @@ body {
             align-items: stretch;
     -ms-flex-line-pack: stretch;
         align-content: stretch;
-    height: 83vh;
+    height: 300vh;
     width: 100%;
     position: absolute;
-    top: 25vh;
+    top: 11vh;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .sub-list1:hover .testing {
     font-size: 3vh;
@@ -2747,13 +2748,12 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2803,17 +2803,17 @@ body {
     height: 35vh;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .content {
-    height: 40vh;
+    height: 280vh;
     width: 100%;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .content .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -ms-flex-pack: distribute;
@@ -2823,11 +2823,16 @@ body {
             align-items: flex-start;
     padding-left: 6%;
     padding-right: 6%;
+    height: 280vh;
+  }
+  #main-container .section5 .sec5-container .sec5-subcontent .content .details .textContainer {
+    height: 30vh;
+  }
+  #main-container .section5 .sec5-container .sec5-subcontent .content .details .imgContainer {
     height: 40vh;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .content .details .list {
-    height: 32vh;
-    width: 20vw;
+    width: 100%;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .content .details .list .sub-heading {
     display: -webkit-box;

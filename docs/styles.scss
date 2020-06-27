@@ -2191,23 +2191,24 @@ body {
         }
     
         .section5{
-            margin-top: 10vh;
+            margin-top: 6vh;
             .sec5-container {
-                height: 130vh;
+                height: 310vh;
                 width: 100%;
                 position: relative;
     
                 .sec5-background {
-                    height: 130vh;
+                    height: 310vh;
                     width: 100%;
                     position: absolute;
                 }
         
                 .devops {
-                    height: 24vh;
-                    width: 22vw;
+                    height: 20vh;
+                    width: 60vw;
                     position: absolute;
-                    left: 38.3vw;
+                    left: 21vw;
+                    top: -12vh;
                 }
     
                 .bottom-circle {
@@ -2227,10 +2228,10 @@ body {
                     justify-content: flex-start;
                     align-items: stretch;
                     align-content: stretch;
-                    height: 83vh;
+                    height: 300vh;
                     width: 100%;
                     position: absolute;
-                    top: 25vh;
+                    top: 11vh;
     
                     .sub-list1:hover .testing {
                         font-size: 3vh;
@@ -2256,11 +2257,11 @@ body {
                         color: white;
                         display: flex;
                         justify-content: center;
-                        align-content: center;
+                        align-items: center;
                     }
     
                     .image {
-                        display: flex;
+                        display: none;
                         flex-direction: row;
                         flex-wrap: nowrap;
                         justify-content: center;
@@ -2294,22 +2295,29 @@ body {
                     }
     
                     .content {
-                        height: 40vh;
+                        height: 280vh;
                         width: 100%;
     
                         .details {
                             display: flex;
-                            flex-direction: row;
+                            flex-direction: column;
                             flex-wrap: nowrap;
                             justify-content: space-around;
                             align-items: flex-start;
                             padding-left: 6%;
                             padding-right: 6%;
-                            height: 40vh;
+                            height: 280vh;
+
+                            .textContainer {
+                                height: 30vh;
+                            }
+
+                            .imgContainer {
+                                height: 40vh;
+                            }
     
                             .list {
-                                height: 32vh;
-                                width: 20vw;
+                                width: 100%;
     
                                 .sub-heading {
                                     display: flex;
