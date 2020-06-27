@@ -8,6 +8,14 @@ body {
   --background: transparent;
 }
 
+#main-container .desk {
+  display: block;
+}
+
+#main-container .mobile {
+  display: none;
+}
+
 #main-container .sub-container {
   scroll-behavior: smooth;
 }
@@ -103,7 +111,7 @@ body {
 #main-container .section1 .content .navbar .logo .title {
   color: var(--text);
   padding-left: 0.5vw;
-  font-size: 2.3vh;
+  font-size: 2.1vh;
   font-family: 'Exo', sans-serif;
   display: block;
 }
@@ -163,7 +171,7 @@ body {
   margin-left: 15px;
   font-family: 'Exo', sans-serif;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 #main-container .section1 .content .navbar .right-content .nav-items li a {
@@ -249,6 +257,10 @@ body {
   height: 20vh;
   width: 100%;
   font-family: 'Exo', sans-serif;
+}
+
+#main-container .section2 .sec2-heading1 h3 {
+  padding-left: 10%;
 }
 
 #main-container .section2 .sec2-container {
@@ -490,9 +502,13 @@ body {
   color: white;
 }
 
+#main-container .section3 .upper .sec3-content .sec3-text .sec3-list ul {
+  margin-bottom: 0;
+}
+
 #main-container .section3 .upper .sec3-content .sec3-text .sec3-list li {
   color: white;
-  font-size: 1.9vh;
+  font-size: 2.2vh;
   opacity: 1;
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
@@ -514,19 +530,26 @@ body {
 }
 
 #main-container .section3 .upper .sec3-content .sec3-text .learnMore button {
-  background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-  background-image: linear-gradient(to right, #d23174, #f34938);
+  background: white;
   border: none;
-  color: white;
+  color: #e33e55;
   padding: 8px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 35px;
   height: 8vh;
   font-size: 2.2vh;
   font-weight: bold;
   width: 10vw;
+}
+
+#main-container .section3 .upper .sec3-content .sec3-text .learnMore button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  color: white;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 #main-container .section3 .lower {
@@ -1282,7 +1305,7 @@ body {
 }
 
 #main-container .section5 .sec5-container .sec5-subcontent .image .img-container img {
-  height: 35vh;
+  height: 38vh;
   width: 20vw;
   width: 100%;
 }
@@ -1294,6 +1317,7 @@ body {
 #main-container .section5 .sec5-container .sec5-subcontent .content {
   height: 40vh;
   width: 100%;
+  margin-top: 3vh;
 }
 
 #main-container .section5 .sec5-container .sec5-subcontent .content .details {
@@ -1759,6 +1783,7 @@ body {
   background: white;
   font-size: 2vh;
   padding-left: 1vw;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #main-container .section7 .content .right-session textarea {
@@ -1771,6 +1796,7 @@ body {
   font-size: 2vh;
   padding-left: 1vw;
   padding-top: 1vh;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #main-container .section7 .content img {
@@ -1792,19 +1818,26 @@ body {
 
 #main-container .section7 .send .button {
   padding: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-  background-image: linear-gradient(to right, #d23174, #f34938);
+  background: white;
   border: none;
-  color: white;
+  color: #e33e55;
   padding: 8px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 35px;
   height: 8vh;
   font-size: 2.2vh;
   font-weight: bold;
   width: 10vw;
+}
+
+#main-container .section7 .send .button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
+  background-image: linear-gradient(to right, #d23174, #f34938);
+  color: white;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 #main-container .section7 .send button:focus {
@@ -1822,7 +1855,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 3vh;
+  font-size: 2vh;
+  font-weight: 300;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -1846,6 +1880,12 @@ body {
     --text: white;
     --background: transparent;
   }
+  #main-container .mobile {
+    display: block;
+  }
+  #main-container .desk {
+    display: none;
+  }
   #main-container .sub-container {
     scroll-behavior: smooth;
   }
@@ -1854,7 +1894,7 @@ body {
     height: 90vh;
     width: 100%;
   }
-  #main-container .section1 .bgImg {
+  #main-container .section1 .m_bgImg {
     max-height: 85vh;
     min-height: 85vh;
     width: 100%;
@@ -1941,7 +1981,7 @@ body {
     display: none;
   }
   #main-container .section1 .content .heading {
-    height: 15vh;
+    height: 18vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1970,27 +2010,27 @@ body {
             align-items: flex-start;
   }
   #main-container .section1 .content .icon svg {
-    max-height: 55vh;
-    min-height: 55vh;
+    max-height: 60vh;
+    min-height: 60vh;
     width: 100%;
     z-index: 2;
   }
   #main-container .section1 .left-circle {
     position: absolute;
-    height: 7vw;
-    width: 7vw;
-    top: 108vh;
-    left: 25vh;
+    height: 10vw;
+    width: 10vw;
+    top: 82vh;
+    left: 5vh;
     background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
     background-image: linear-gradient(to right, #d23174, #f34938);
     border-radius: 50%;
   }
   #main-container .section1 .right-circle {
     position: absolute;
-    height: 15vw;
-    width: 15vw;
-    top: 80vh;
-    right: 16vh;
+    height: 25vw;
+    width: 25vw;
+    top: 72vh;
+    right: 0vh;
     background-image: -webkit-gradient(linear, left top, right top, from(#97134a), to(#f34938));
     background-image: linear-gradient(to right, #97134a, #f34938);
     border-radius: 50%;
@@ -2001,13 +2041,16 @@ body {
     overflow-x: hidden;
   }
   #main-container .section2 .sec2-heading1 {
-    padding-left: 4%;
+    padding-left: 3%;
     padding-right: 6%;
     font-size: 3vh;
     padding-top: 5vh;
     height: 10vh;
     width: 100%;
     font-family: 'Exo', sans-serif;
+  }
+  #main-container .section2 .sec2-heading1 h3 {
+    padding-left: 0%;
   }
   #main-container .section2 .sec2-container {
     display: -webkit-box;
@@ -2036,6 +2079,8 @@ body {
     height: 90vh;
     width: 90vw;
     font-family: 'Exo', sans-serif;
+  }
+  #main-container .section2 .sec2-container .left-session {
     padding-left: 7vw;
   }
   #main-container .section2 .sec2-container .left-session h3 {
@@ -2072,21 +2117,21 @@ body {
   }
   #main-container .section3 {
     margin-top: 10vh;
-    height: 222vh;
+    height: 250vh;
     position: relative;
     overflow-x: hidden;
   }
   #main-container .section3 .sec3-img2 {
     position: absolute;
-    top: 125vh;
-    height: 120vh;
+    top: 155vh;
+    height: 95vh;
     width: 100%;
   }
   #main-container .section3 .sec3-backimg1 {
     width: 100%;
-    max-height: 150vh;
+    max-height: 163vh;
     position: absolute;
-    min-height: 150vh;
+    min-height: 163vh;
   }
   #main-container .section3 .sec3-backimg2 {
     width: 100%;
@@ -2095,7 +2140,7 @@ body {
   }
   #main-container .section3 .upper {
     position: absolute;
-    height: 115vh;
+    height: 160vh;
     width: 100%;
   }
   #main-container .section3 .upper .sec3-heading {
@@ -2156,7 +2201,7 @@ body {
             align-items: flex-start;
     -ms-flex-line-pack: justify;
         align-content: space-between;
-    height: 95vh;
+    height: 130vh;
     padding-left: 10%;
     padding-right: 10%;
     position: relative;
@@ -2165,18 +2210,18 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 60vh;
-    width: 50vw;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    width: 100%;
+    height: 35vh;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   #main-container .section3 .upper .sec3-content .sec3-img svg {
-    max-height: 95%;
-    width: 95%;
+    max-height: 30vh;
+    width: 55vw;
   }
   #main-container .section3 .upper .sec3-content .sec3-img svg .rotate {
     -webkit-animation: rotate 5s linear infinite;
@@ -2206,7 +2251,9 @@ body {
     }
   }
   #main-container .section3 .upper .sec3-content #sec2-content2 {
+    width: 100%;
     display: none;
+    text-align: justify;
   }
   #main-container .section3 .upper .sec3-content #sec2-content1 {
     display: -webkit-box;
@@ -2214,9 +2261,12 @@ body {
     display: flex;
     width: 100%;
     text-align: justify;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   #main-container .section3 .upper .sec3-content .sec3-text {
-    height: 60vh;
+    height: 90vh;
     width: 60vw;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2233,6 +2283,9 @@ body {
     margin: 0;
     font-size: 2.5vh;
     color: white;
+  }
+  #main-container .section3 .upper .sec3-content .sec3-text p .m_sec3_text1 {
+    display: block;
   }
   #main-container .section3 .upper .sec3-content .sec3-text .sec3-list li {
     color: white;
@@ -2256,28 +2309,31 @@ body {
     font-family: 'Exo', sans-serif;
   }
   #main-container .section3 .upper .sec3-content .sec3-text .learnMore button {
-    background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-    background-image: linear-gradient(to right, #d23174, #f34938);
+    background-color: white;
     border: none;
-    color: white;
+    color: #e33e55;
     padding: 8px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 35px;
     height: 8vh;
     font-size: 2.2vh;
     font-weight: bold;
-    width: 10vw;
+    width: 35vw;
+  }
+  #main-container .section3 .upper .sec3-content .sec3-text .learnMore button:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
+    background-image: linear-gradient(to right, #d23174, #f34938);
+    color: white;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   #main-container .section3 .lower {
     position: absolute;
-    top: 91vh;
-    height: 120vh;
+    top: 150vh;
+    height: 90vh;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2308,24 +2364,27 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  #main-container .section3 .lower .modules h3 {
+    margin-bottom: 0;
+  }
   #main-container .section3 .lower .modules-img {
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
   }
   #main-container .section3 .lower .modules-img svg {
-    height: 90vh;
-    max-height: 90vh;
+    height: 74vh;
+    max-height: 74vh;
     z-index: 2;
-    padding-top: 7.2vh;
+    padding-top: 0px;
   }
   #main-container .section3 .lower .modules-img svg .modules_centerButton {
     cursor: pointer;
@@ -2456,7 +2515,7 @@ body {
   }
   #main-container .section3 .lower .modules-img img {
     position: absolute;
-    max-height: 110vh;
+    max-height: 69vh;
   }
   #main-container .section3 .lower .modules-img .circleImg {
     position: absolute;
@@ -3008,15 +3067,15 @@ body {
     font-family: 'Exo', sans-serif;
   }
   #main-container .loadmore .button {
-    background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-    background-image: linear-gradient(to right, #d23174, #f34938);
+    background: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
+    background: linear-gradient(to right, #d23174, #f34938);
     border: none;
     color: white;
     padding: 8px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 35px;
     height: 8vh;
     font-size: 2.2vh;
     font-weight: bold;
@@ -3177,6 +3236,7 @@ body {
     background: white;
     font-size: 2vh;
     padding-left: 1vw;
+    font-family: 'Quicksand', sans-serif;
   }
   #main-container .section7 .content .right-session textarea {
     width: 89%;
@@ -3188,6 +3248,8 @@ body {
     font-size: 2vh;
     padding-left: 1vw;
     padding-top: 1vh;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
   }
   #main-container .section7 .content img {
     max-height: 65vh;
@@ -3206,19 +3268,25 @@ body {
   }
   #main-container .section7 .send .button {
     padding: 0;
-    background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-    background-image: linear-gradient(to right, #d23174, #f34938);
+    background-image: white;
     border: none;
-    color: white;
+    color: #e33e55;
     padding: 8px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 35px;
     height: 8vh;
     font-size: 2.2vh;
     font-weight: bold;
     width: 10vw;
+  }
+  #main-container .section7 .send .button:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
+    background-image: linear-gradient(to right, #d23174, #f34938);
+    color: white;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   #main-container .section7 .send button:focus {
     outline: 0 !important;
@@ -3234,7 +3302,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 3vh;
+    font-size: 2vh;
+    font-weight: 300;
     font-family: 'Quicksand', sans-serif;
   }
   #main-container #particles-js {
