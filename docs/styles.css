@@ -94,8 +94,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -webkit-animation: slidefromtop 0.6s linear;
+          animation: slidefromtop 0.6s linear;
+}
+
+@-webkit-keyframes slidefromtop {
+  from {
+    -webkit-transform: translateY(-8vh);
+            transform: translateY(-8vh);
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
+}
+
+@keyframes slidefromtop {
+  from {
+    -webkit-transform: translateY(-8vh);
+            transform: translateY(-8vh);
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
 }
 
 #main-container .section1 .content .navbar .logo {
@@ -202,6 +226,34 @@ body {
   font-size: 8vh;
   padding-top: 4vh;
   font-family: 'Exo', sans-serif;
+  -webkit-animation: slidefromright 0.9s ease-in-out;
+          animation: slidefromright 0.9s ease-in-out;
+}
+
+@-webkit-keyframes slidefromright {
+  from {
+    -webkit-transform: translateY(16vh);
+            transform: translateY(16vh);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
+    opacity: 1;
+  }
+}
+
+@keyframes slidefromright {
+  from {
+    -webkit-transform: translateY(16vh);
+            transform: translateY(16vh);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0vw);
+            transform: translateY(0vw);
+    opacity: 1;
+  }
 }
 
 #main-container .section1 .content .icon {
@@ -217,7 +269,7 @@ body {
           align-items: flex-end;
 }
 
-#main-container .section1 .content .icon svg {
+#main-container .section1 .content .icon img {
   max-height: 80vh;
   min-height: 80vh;
   width: 50vw;
@@ -1865,6 +1917,32 @@ body {
   height: 92vh;
   position: absolute;
   top: 10vh;
+  -webkit-animation: blurry 2.5s ease;
+          animation: blurry 2.5s ease;
+}
+
+@-webkit-keyframes blurry {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blurry {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #main-container #particles-js:hover svg path {
@@ -1956,6 +2034,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-animation: appearFromtop 1s ease;
+            animation: appearFromtop 1s ease;
   }
   #main-container .section1 .content .navbar .logo {
     display: -webkit-box;
