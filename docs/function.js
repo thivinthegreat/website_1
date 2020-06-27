@@ -93,7 +93,7 @@ function sendEmail() {
 var isMobile = false;
 
 const header = document.querySelector(".navbar");
-const sectionOne = document.querySelector(".firstSession");
+const sectionOne = document.querySelector(".particles-js-canvas-el");
 const sectionTwo = document.querySelector(".section2");
 const sectionThree = document.querySelector(".lower");
 const sectionFour = document.querySelector(".section5");
@@ -130,7 +130,7 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             }
         }
     })
-}, sectionOneOptions);
+}, {threshold: 0.9785});
 // Observation call Function
 sectionOneObserver.observe(sectionOne);
 
@@ -172,7 +172,7 @@ const sectionTitleObserver = new IntersectionObserver(function(entries, sectionT
 
         }
     })
-}, sectionTitleOptions);
+}, {threshold: 0.35,rootMargin: "0px 0px -200px 0px"});
 
 sectionTitleObserver.observe(sectionTwo);
 sectionTitleObserver.observe(sectionThree);
