@@ -1574,6 +1574,10 @@ body {
   max-height: 19vh;
 }
 
+#main-container .section6 .sec6-content .benifits .sec6-mobileList2 {
+  display: none;
+}
+
 #main-container #hidden {
   display: none;
   opacity: 0;
@@ -2862,16 +2866,17 @@ body {
     overflow-x: hidden;
   }
   #main-container .section6 .height1 {
-    height: 85vh;
+    height: 137vh;
   }
   #main-container .section6 .height2 {
-    height: 107vh;
+    height: 465vh;
+    overflow: hidden;
   }
   #main-container .section6 .benifits1 {
-    height: 75vh;
+    height: 125vh;
   }
   #main-container .section6 .benifits2 {
-    height: 107vh;
+    height: 465vh;
   }
   #main-container .section6 .sec6-content {
     display: -webkit-box;
@@ -2892,6 +2897,7 @@ body {
     -ms-flex-line-pack: stretch;
         align-content: stretch;
     width: 100%;
+    margin-top: 5vh;
   }
   #main-container .section6 .sec6-content .heading {
     font-family: 'Exo', sans-serif;
@@ -2929,15 +2935,15 @@ body {
     padding-left: 8%;
   }
   #main-container .section6 .sec6-content .benifits .list {
-    height: 74vh;
+    height: 130vh;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -ms-flex-pack: distribute;
@@ -3022,7 +3028,7 @@ body {
   }
   #main-container .section6 .sec6-content .benifits .list .content {
     height: 32vh;
-    width: 18vw;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3061,6 +3067,18 @@ body {
   #main-container .section6 .sec6-content .benifits .list .content .hoverCircle img {
     max-height: 19vh;
   }
+  #main-container .section6 .sec6-content .benifits .list .hideList {
+    display: none;
+  }
+  #main-container .section6 .sec6-content .benifits .moblieList {
+    height: 73vh;
+  }
+  #main-container .section6 .sec6-content .benifits .sec6-mobileList1 {
+    display: none;
+  }
+  #main-container .section6 .sec6-content .benifits .sec6-mobileList2 {
+    display: block;
+  }
   #main-container #hidden {
     display: none;
   }
@@ -3098,16 +3116,16 @@ body {
     height: 8vh;
     font-size: 2.2vh;
     font-weight: bold;
-    width: 10vw;
+    width: 33vw;
   }
   #main-container .loadmore button:focus {
     outline: 0 !important;
   }
   #main-container .section7 {
-    height: 115vh;
+    height: 140vh;
   }
   #main-container .section7 img {
-    height: 115vh;
+    height: 140vh;
   }
   #main-container .section7 .sec7-container {
     display: -webkit-box;
@@ -3127,19 +3145,19 @@ body {
             align-items: stretch;
     -ms-flex-line-pack: stretch;
         align-content: stretch;
-    height: 115vh;
+    height: 140vh;
     width: 100%;
     position: absolute;
   }
   #main-container .section7 .sec7-content {
     position: absolute;
-    height: 115vh;
+    height: 135vh;
     width: 100%;
   }
   #main-container .section7 .heading {
     font-family: 'Exo', sans-serif;
     font-size: 3.6vh;
-    height: 20vh;
+    height: 15vh;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3156,14 +3174,14 @@ body {
     color: white;
   }
   #main-container .section7 .content {
-    height: 80vh;
+    height: 110vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -ms-flex-pack: distribute;
@@ -3180,14 +3198,18 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 80vh;
-    width: 47vw;
+    height: 40vh;
+    width: 100%;
+  }
+  #main-container .section7 .content .left-session img {
+    max-height: 30vh;
+    width: 55vw;
   }
   #main-container .section7 .content .right-session {
     display: -webkit-box;
@@ -3204,16 +3226,13 @@ body {
         justify-content: space-around;
     -ms-flex-line-pack: justify;
         align-content: space-between;
-    height: 75vh;
-    width: 50vw;
+    height: 85vh;
+    width: 100%;
     margin-top: 2vh;
-    margin-left: 2vw;
+    margin-left: 13vw;
   }
   #main-container .section7 .content .right-session .form {
     width: 100%;
-  }
-  #main-container .section7 .content .right-session .captcha {
-    display: none;
   }
   #main-container .section7 .content .right-session .policy {
     font-family: 'Quicksand', sans-serif;
@@ -3238,9 +3257,9 @@ body {
     color: white;
   }
   #main-container .section7 .content .right-session .policy input {
-    width: 1vw;
-    height: 1vw;
-    margin-right: 1vw;
+    width: 6vw;
+    height: 6vw;
+    margin-right: 3vw;
   }
   #main-container .section7 .content .right-session .policy a {
     text-decoration: underline;
@@ -3278,9 +3297,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3298,7 +3317,7 @@ body {
     height: 8vh;
     font-size: 2.2vh;
     font-weight: bold;
-    width: 10vw;
+    width: 30vw;
   }
   #main-container .section7 .send .button:hover {
     background-image: -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
@@ -3321,7 +3340,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 2vh;
+    font-size: 1.5vh;
     font-weight: 300;
     font-family: 'Quicksand', sans-serif;
   }

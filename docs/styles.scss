@@ -1259,6 +1259,10 @@ body {
                         }
                     }
                 }
+
+                .sec6-mobileList2 {
+                    display:none;
+                }
             }
         }
     }
@@ -2351,19 +2355,20 @@ body {
             overflow-x: hidden;
 
             .height1 {
-                height: 85vh;
+                height: 137vh;
             }
     
             .height2 {
-                height: 107vh;
+                height: 465vh;
+                overflow: hidden;
             }
     
             .benifits1 {
-                height: 75vh;
+                height: 125vh;
             }
     
             .benifits2 {
-                height: 107vh;
+                height: 465vh;
             }
     
             .sec6-content {
@@ -2373,9 +2378,9 @@ body {
                 justify-content: flex-start;
                 align-items: stretch;
                 align-content: stretch;
-                
                 width: 100%;
-    
+                margin-top: 5vh;
+
                 .heading {
                     font-family: 'Exo', sans-serif;
                     font-size: 3.6vh;
@@ -2398,10 +2403,10 @@ body {
                     padding-left: 8%;
     
                     .list {
-                        height: 74vh;
+                        height: 130vh;
                         width: 100%;
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         flex-wrap: nowrap;
                         justify-content: space-around;
                         align-items: center;
@@ -2483,7 +2488,7 @@ body {
     
                         .content {
                             height: 32vh;
-                            width: 18vw;
+                            width: 100%;
                             display: flex;
                             flex-direction: column;
                             flex-wrap: nowrap;
@@ -2523,6 +2528,22 @@ body {
                                 }
                             }
                         }
+
+                        .hideList {
+                            display: none;
+                        }
+                    }
+
+                    .moblieList {
+                        height: 73vh;
+                    }
+
+                    .sec6-mobileList1 {
+                        display:none;
+                    }
+
+                    .sec6-mobileList2 {
+                        display:block;
                     }
                 }
             }
@@ -2559,7 +2580,7 @@ body {
                 height: 8vh;
                 font-size: 2.2vh;
                 font-weight: bold;
-                width: 10vw;
+                width: 33vw;
             }
     
             button:focus {
@@ -2568,9 +2589,9 @@ body {
         }
     
         .section7 {
-            height: 115vh;
+            height: 140vh;
             img {
-                height: 115vh;
+                height: 140vh;
             }
     
             .sec7-container {
@@ -2580,21 +2601,21 @@ body {
                 justify-content: flex-start;
                 align-items: stretch;
                 align-content: stretch;
-                height: 115vh;
+                height: 140vh;
                 width: 100%;
                 position: absolute;
             }
     
             .sec7-content {
                 position: absolute;
-                height: 115vh;
+                height: 135vh;
                 width : 100%;
             }
     
             .heading {
                 font-family: 'Exo', sans-serif;
                 font-size: 3.6vh;
-                height: 20vh;
+                height: 15vh;
                 text-align: center;
                 display: flex;
                 justify-content: center;
@@ -2607,9 +2628,9 @@ body {
             }
     
             .content {
-                height: 80vh;
+                height: 110vh;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: nowrap;
                 justify-content: space-around;
                 align-items: center;
@@ -2619,10 +2640,15 @@ body {
     
                 .left-session {
                     display: flex;
-                    justify-content: flex-end;
+                    justify-content: center;
                     align-items: center;
-                    height: 80vh;
-                    width:  47vw;
+                    height: 40vh;
+                    width:  100%;
+
+                    img {
+                        max-height: 30vh;
+                        width: 55vw;
+                    }
                 }
     
                 .right-session {
@@ -2631,17 +2657,13 @@ body {
                     flex-direction: column;
                     justify-content: space-around;
                     align-content: space-between;
-                    height: 75vh;
-                    width:  50vw;
+                    height: 85vh;
+                    width:  100%;
                     margin-top: 2vh;
-                    margin-left: 2vw;
+                    margin-left: 13vw;
     
                     .form {
                         width: 100%;
-                    }
-
-                    .captcha {
-                        display: none;
                     }
     
                     .policy {
@@ -2656,9 +2678,9 @@ body {
                         color: white;
     
                         input {
-                            width: 1vw;
-                            height: 1vw;
-                            margin-right: 1vw;
+                            width: 6vw;
+                            height: 6vw;
+                            margin-right: 3vw;
                         }
     
                         a {
@@ -2702,7 +2724,7 @@ body {
             .send {
                 height: 12vh;
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: center;
     
                 .button {
@@ -2718,7 +2740,7 @@ body {
                     height: 8vh;
                     font-size: 2.2vh;
                     font-weight: bold;
-                    width: 10vw;
+                    width: 30vw;
                     
                     &:hover {
                         background-image: linear-gradient(to right, #d23174, #f34938);
@@ -2738,7 +2760,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2vh;
+            font-size: 1.5vh;
             font-weight: 300;
             font-family: 'Quicksand', sans-serif;
         }
