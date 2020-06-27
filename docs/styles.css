@@ -88,7 +88,7 @@ body {
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   width: 100%;
-  z-index: 10;
+  z-index: 60;
   background: var(--background);
   display: flex;
   -webkit-box-align: center;
@@ -1037,6 +1037,10 @@ body {
           justify-content: center;
 }
 
+#main-container .section4 .sec4-content .content1Slider, #main-container .section4 .sec4-content .content2Slider {
+  display: none;
+}
+
 #main-container .section4 .sec4-content .sec4row {
   height: 53vh;
   display: -webkit-box;
@@ -1075,7 +1079,7 @@ body {
 }
 
 #main-container .section4 .sec4-content .shell {
-  height: 50vh;
+  height: 52vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1154,16 +1158,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 3vh;
+  font-size: 2vh;
   text-align: center;
   padding-top: 3vh;
 }
 
 #main-container .section4 .sec4-content .shell .definition {
   font-family: 'Quicksand', sans-serif;
-  font-size: 2.2vh;
+  font-size: 2.1vh;
   text-align: center;
-  padding-top: 3vh;
+  padding-top: 2vh;
   padding-right: 1vw;
   padding-left: 1vw;
 }
@@ -1950,7 +1954,7 @@ body {
     -ms-flex-line-pack: stretch;
         align-content: stretch;
     width: 100%;
-    z-index: 10;
+    z-index: 60;
     background: var(--background);
     display: flex;
     -webkit-box-align: center;
@@ -2578,6 +2582,7 @@ body {
             justify-content: center;
   }
   #main-container .section4 .sec4-content .sec4row {
+    display: none;
     height: 53vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2607,6 +2612,9 @@ body {
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
     border-radius: 2vh;
+  }
+  #main-container .section4 .sec4-content .list2 {
+    display: none;
   }
   #main-container .section4 .sec4-content .list2 .shell {
     width: 18vw;
@@ -2640,9 +2648,12 @@ body {
     padding-right: 4vw;
   }
   #main-container .section4 .sec4-content .content1Slider {
+    display: block;
     height: 50vh;
   }
   #main-container .section4 .sec4-content .content2Slider {
+    display: block;
+    margin-top: 5vh;
     height: 50vh;
   }
   #main-container .section4 .sec4-content img {
