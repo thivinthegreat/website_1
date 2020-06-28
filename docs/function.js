@@ -16,6 +16,21 @@
 // });
 // });
 
+
+// Preloading SVG
+$(document).ready(function() {
+    //Preloader
+    var preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.spinner-wrapper');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+ });
+
+
+
+
 // get height of input box
 
 var isMobile = false;
@@ -373,7 +388,7 @@ const sectionTitleObserver = new IntersectionObserver(function(entries, sectionT
 
         }
     })
-}, {rootMargin: '-400px'}   );
+}, {rootMargin: '-300px'}   );
 
 sectionTitleObserver.observe(sectionTwo);
 sectionTitleObserver.observe(sectionThree);
@@ -480,7 +495,7 @@ function changeModuleText(e)
     if (id_name === "modules_Mainframe")
    {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0        MainFrame";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0    MainFrame";
         document.getElementById("modules_tspan1").textContent = " Used for larger scale purposes ";
         document.getElementById("modules_tspan2").textContent = " that requires great availability";
         document.getElementById("modules_tspan3").textContent = " and security. This make  ";
@@ -494,7 +509,7 @@ function changeModuleText(e)
     if (id_name === "modules_Infrastructure")
     {
          document.getElementById("modules_tspan_head1").textContent = "";
-         document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0     Infrastructure";
+         document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0  Infrastructure";
          document.getElementById("modules_tspan1").textContent = "    Running on multi-cloud  ";
          document.getElementById("modules_tspan2").textContent = "    infrastructure, automation   ";
          document.getElementById("modules_tspan3").textContent = "    infrastructure is designed to   ";

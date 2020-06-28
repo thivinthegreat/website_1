@@ -3,6 +3,24 @@ body {
   color: #333333;
 }
 
+body .spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff4747;
+  z-index: 999999;
+}
+
+body .spinner-wrapper img {
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+}
+
 #main-container {
   --text: white;
   --background: transparent;
@@ -920,6 +938,14 @@ body {
   to {
     opacity: 1;
   }
+}
+
+#main-container .section3 .lower .modules-img svg .modulesInnerCircleText {
+  font-size: 0.8vw;
+}
+
+#main-container .section3 .lower .modules-img svg .modulesInnerCircleText-heading {
+  font-size: 1vw;
 }
 
 #main-container .section3 .lower .modules-img .modulesPopUp-container {
@@ -2867,6 +2893,12 @@ body {
       opacity: 1;
     }
   }
+  #main-container .section3 .lower .modules-img svg .modulesInnerCircleText {
+    font-size: 4vw;
+  }
+  #main-container .section3 .lower .modules-img svg .modulesInnerCircleText-heading {
+    font-size: 5.4vw;
+  }
   #main-container .section3 .lower .modules-img .modulesPopUp-container {
     background-color: #e54e57;
     height: 0vh;
@@ -2950,14 +2982,14 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 4vh;
+    height: 3vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
     font-family: 'Exo', sans-serif;
-    font-size: 2.2vh;
+    font-size: 1.8vh;
     color: #EB4E4E;
     opacity: 0;
     -webkit-transition: all 2s ease;
@@ -2972,7 +3004,7 @@ body {
     padding-left: 3vw;
     padding-right: 3vw;
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.8vh;
+    font-size: 1.6vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
