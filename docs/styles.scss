@@ -217,6 +217,8 @@ body {
 
             h3 {
                 padding-left: 10%;
+                padding-top: 2vw;
+                font-size: 4vh;
             }
         }
 
@@ -986,19 +988,23 @@ body {
                 top: 25vh;
 
                 .sub-list1:hover .testing {
-                    font-size: 3vh;
+                    transition: all 0.8s ease-in-out;
+                    transform: scale(1.1);
                 }
 
                 .sub-list2:hover .fixing {
-                    font-size: 3vh;
+                    transition: all 0.8s ease-in-out;
+                    transform: scale(1.1);
                 }
 
                 .sub-list3:hover .autoTC {
-                    font-size: 3vh;
+                    transition: all 0.8s ease-in-out;
+                    transform: scale(1.1);
                 }
 
                 .sub-list4:hover .ra {
-                    font-size: 3vh;
+                    transition: all 0.8s ease-in-out;
+                    transform: scale(1.1);
                 }
 
                 .heading {
@@ -1010,6 +1016,8 @@ body {
                     display: flex;
                     justify-content: center;
                     align-content: center;
+                    transition: all 0.8s ease-in-out;
+                    transform: scale(1);
                 }
 
                 .image {
@@ -1073,6 +1081,8 @@ body {
                                 font-size: 2.5vh;
                                 margin-top: 3vh;
                                 font-family: 'Exo', sans-serif;
+                                transition: all 0.8s ease-in-out;
+                                transform: scale(1);
                             }
 
                             .description {
@@ -1081,6 +1091,10 @@ body {
                                 font-size: 2.3vh;
                                 text-align: center;
                                 font-family: 'Quicksand', sans-serif;
+                                transition: all 0.8s ease-in-out;
+                                transform: scale(1);
+
+
                             }
                         }
                     }
@@ -1134,8 +1148,8 @@ body {
                 justify-content: space-around;
                 align-items: center;
                 align-content: space-between;
-                padding-right: 8%;
-                padding-left: 8%;
+                // padding-right: 8%;
+                // padding-left: 8%;
 
                 .list {
                     height: 74vh;
@@ -1168,16 +1182,30 @@ body {
                     }
 
                     .content:hover .sec6-definition {
-                        // padding-top: 1.5vh;
+                        padding-top: 1.8vh;
                         display: block;
                         visibility: visible;
                         text-align: justify;
                         font-family: 'Quicksand', sans-serif;
                         font-size: 2vh;
                         opacity: 1;
-                        // animation: fade 0.8s;
+                        // transition: opacity visibility 0.9s ease-in-out;
+                        animation: sec6def 0.8s ease-in-out;
                         // animation-duration: 0.8s;
                         // animation-fill-mode: initial;
+
+                        @keyframes sec6def
+                        {
+                            0%{ 
+                                padding-top: 4.5vh;
+                                opacity: 0;
+                            }
+                            100%
+                            {
+                                padding-top: 1.8vh;
+                                opacity: 1;
+                            }
+                        }
                         
                     }
 
@@ -1185,15 +1213,15 @@ body {
                     .content:hover .sub-heading {
                        color: #333333;
                        transform: translate(0px, -2vh);
-                       transition-duration: 0.9s;
+                       transition-duration: 0.8s;
                        opacity: 1;
-                       padding-top: 3vh;
-                       height: 5vh;
+                    //    padding-top: 3vh;
+                       height: 4vh;
                        visibility: visible;
                        transition-property: visibility opacity ;    
                        color:#333333;
                         // animation: fader 1.2s;
-                        font-size: 2.5vh;
+                        font-size: 2.2vh;
                     }
 
                     
@@ -1204,7 +1232,7 @@ body {
                         height: 11vh;
                         -webkit-transform: scale(0.7) rotate(0.01deg);
                         transform: scale(0.8) rotate(0.01deg);
-                        transition: 1.2s ease;
+                        transition: 0.8s ease;
 
                     }
 
@@ -1214,7 +1242,7 @@ body {
                         height: 11vh;
                         -webkit-transform: scale(0.7) rotate(0.01deg);
                         transform: scale(0.7) rotate(0.01deg);
-                        transition: all 1.2s ease;
+                        transition: all 0.8s ease;
 
                     }
 
@@ -1240,6 +1268,8 @@ body {
 
                         .sec6-definition {
                             display: none;
+                            opacity: 0;
+                            visibility: hidden;
                             transition: all 0.8s ease;
 
                             
@@ -1429,7 +1459,7 @@ body {
                     {
                         visibility: visible;
                         opacity: 1;
-                        -webkit-transition: all 0.8s ease;
+                        -webkit-transition: all 1.3s ease;
                         transition: all 0.8s ease;
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -1624,7 +1654,7 @@ body {
                 align-content: stretch;
     
                 .nav-scrolled {
-                    --text:white;
+                    --text: #333333;
                     --background: white;
                     box-shadow: 0 3px 20px rgba(black, 0.2)
                 }
@@ -2046,7 +2076,7 @@ body {
                     display: flex;
                     align-items: flex-end;
                     justify-content: center;
-                    margin-top: 2vh;
+                    margin-top: 15vh;
                     
                     h3 {
                         margin-bottom: 0;
@@ -2056,134 +2086,310 @@ body {
                 .modules-img {
                     height: 100vh;
                     display: flex;
-                    align-items: flex-start;
+                    align-items: center;
                     justify-content: center;
                     position: relative;
-                    margin-top: 6vh;
+                    margin-top: -16vh;
     
                     svg 
+                {
+
+                    height: 90vh;
+                    max-height: 90vh;
+                    z-index: 5;
+                    padding-top: 5.2vh;
+
+                    .modules_centerButton
                     {
-    
-                        height: 61vh;
-                        max-height: 74vh;
-                        z-index: 2;
-                        padding-top: 0px;
-    
-                        .modules_centerButton
+                        cursor: pointer;
+                    }
+
+                    .modulesIconGroup
+                    {
+                        cursor: pointer;
+                    }
+
+                    .modulesSvgCircleBack
+                    {
+                        fill: white;
+                        cursor: pointer;
+                        transition: all 0.6s ease-in-out;
+
+                        &:hover
                         {
-                            cursor: pointer;
-                        }
-    
-                        .modulesSvgCircleBack
-                        {
-                            fill: white;
-    
-                            &:hover
-                            {
-                                stroke-width: 11px;
-                                stroke-opacity: 0.5;
-                                stroke: rgb(248, 254, 255);
-                                cursor: pointer;
-                                transition: all 0.35s ease-in-out;
-    
-                            }
-                        }
-    
-                        .modulesSvgMainCircle
-                        {
-                            fill:white;
-                        }
-    
-                        .modulesSvgCircleBack_Active
-                        {
-                            transition-duration: 300ms;
-                            transition: all 0.35s ease-in-out;
-                            fill: white;
                             stroke-width: 11px;
                             stroke-opacity: 0.5;
-                            stroke: rgb(255, 240, 240);
+                            stroke: rgb(248, 254, 255);
                             cursor: pointer;
-                        }
-                        
-                        .moduleCenterCircle_heading
-                        {
-                            transition: ease-in;
-                            animation-name: fadein;
-                            animation-duration: 1s;
-                            opacity: 1;
-                        }
-    
-                        @keyframes fadein {
-                            from { opacity: 0; }
-                            to   { opacity: 1; }
+                            transition: all 0.35s ease-in-out;
+
                         }
                     }
-    
-                    .modulesPopUp-container
+
+                    .modulesSvgMainCircle
                     {
-                                background-color: white;
-                                height: 40vh;
-                                width: 40vw;
-                                visibility: hidden;
-                                position: absolute;
-                                display: flex;
-                                flex-wrap: nowrap;
-                                justify-content: center;
-                                flex-direction: column;
-                                z-index: 2;
-                                border-radius: 2vh;
-                                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-            
-            
-                                .modulesPopUp-closebutton
-                                {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: flex-end;
-                                    height: 2vh;
-                                    padding-right: 3vw;
-                                    padding-top: 2vh;
-                                    font-family: 'Exo', sans-serif;
-            
-                                    p {
-                                        margin: 0em;
-                                        font-size: large;
-                                        text-shadow: 1px 1px 1px #625757;
-                                        cursor: pointer;
-                                    }
-            
-                                }
-            
-                                .modulesPopUp-heading
-                                {
-                                    display: flex;
-                                    height: 4vh;
-                                    justify-content: center;
-                                    align-content: center;
-                                    font-family: 'Exo', sans-serif;
-                                    font-size: 2.2vh;
-                                    color: #EB4E4E;
-            
-                                    
-                                }
-            
-                                .modulesPopUp-content
-                                {
-                                    height: 25vh;
-                                    align-items: center;
-                                    padding-top: 2vh;
-                                    padding-left: 3vw;
-                                    padding-right: 3vw;
-                                    font-family: 'Quicksand', sans-serif;
-                                    font-size: 1.8vh;
-                                    justify-content: center;
-                                    text-align: justify;
-                                }
+                        fill:white;
+                        transform-origin: center center;
                     }
+
+                    .modulesSvgMainCircleStroke
+                    {
+                        transform-origin: 50.45% 45.75%;
+                        animation: spin 3s infinite linear;
+                        @keyframes spin {
+                            from {transform:rotate(0deg);}
+                            to {transform:rotate(360deg);}
+                        }
+                    }
+
+
+                    .modulesSvgCircleBack_Active
+                    {
+     
+                        fill: rgba(233, 51, 105, 1);
+                        stroke-width: 3px;
+                        // stroke-opacity: 0.95;
+                        stroke-dasharray: 400;
+                        stroke-dashoffset: 400px;
+                        stroke: #ffffff;
+                        cursor: pointer;
+                        animation: dash 1.5s ease-in-out forwards ;
+                        transform-origin: center;
+                        // transition-duration: 300ms;
+                        // transition: all 0.35s ease-in-out;
+                        
+                    }
+
+                    @keyframes dash {
+                        from {
+                          stroke-dashoffset: 400;
+                        }
+                        to {
+                          stroke-dashoffset: 0;
+                        }
+                    }
+                    
+
+                    .modulesSvgVector_Active
+                    {
+                        // fill:rgb(255, 255, 255);
+                        stroke-dasharray: 400;
+                        stroke-width: 1.9px;
+                        stroke-dashoffset: 400;
+                        stroke: rgba(255, 255, 255, 1);
+                        
+
+                        animation: dash1 1.9s ease-in-out forwards ;
+                        
+
+                    }
+
+                    @keyframes dash1 {
+                        0% {
+                          stroke-dashoffset: 400;
+                         fill: none;
+
+                        }
+                        100% {
+                          stroke-dashoffset: 0;
+                          stroke-width: 0;
+                          fill:rgb(255, 255, 255);
+                        }
+                    }
+
+                    .modulesSvgText_Active
+                    {
+                        stroke-dasharray: 400;
+                        stroke-width: 2px;
+                        stroke-dashoffset: 400;
+                        stroke: rgba(255, 255, 255, 1);
+                        
+
+                        animation: dash1 0.5s ease-in-out alternate ;
+                    }
+
+                    .modulesGroup1-
+                    {
+                        animation: floating 4s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(0.3vh,0.3vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+                    
+
+                    .modulesGroup2-
+                    {
+                        animation: floating 4s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(-0.3vh,0.3vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+
+                    .modulesGroup3-
+                    {
+                        animation: floating 5s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(-0.3vh,-0.4vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+
+                    .modulesGroup4-
+                    {
+                        animation: floating 6s ease-in-out infinite;
+
+                        @keyframes floating {
+                            0% {
+                              transform: translate(0vh,0vh);
+                            }
+                            50% {
+                              transform: translate(0.3vh,-0.3vh);
+                            }
+                            100% {
+                              transform: translate(0vh,0vh);
+                            }
+                          }
+                    }
+                    .moduleCenterCircle_heading
+                    {
+                        transition: ease-in;
+                        animation-name: fadein;
+                        animation-duration: 1s;
+                        opacity: 1;
+                    }
+
+                    @keyframes fadein {
+                        from { opacity: 0; }
+                        to   { opacity: 1; }
+                    }
+                }
+    
+                .modulesPopUp-container
+                {
+                            background-color: #e54e57;
+                            height: 0vh;
+                            width: 0vw;
+                            visibility: hidden;
+                            opacity: 0;
+                            position: absolute;
+                            display: flex;
+                            flex-wrap: nowrap;
+                            justify-content: center;
+                            flex-direction: column;
+                            z-index: 6;
+                            border-radius: 80vh;
+                            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+                            transition: all 0.6s ease-in-out;
+                            // transition: height 0.8s ease-in-out;
+                            // transition: width 0.8s ease-in-out;
+
+                            // animation: grow 1s linear;  
+        
+        
+                            .modulesPopUp-closebutton
+                            {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                height: 2vh;
+                                padding-right: 3vw;
+                                padding-top: 2vh;
+                                font-family: 'Exo', sans-serif;
+        
+                                img {
+                                    margin: 0em;
+                                    height: 3vh;
+                                    width: 3vh;
+                                    cursor: pointer;
+                                    transition: all 1s ease;
+                                }
+
+                                &:hover{
+                                    transform-origin: 91% 91%;
+                                    animation: spint 0.5s ease forwards;
+                                    animation-iteration-count: 1;
+                                    
+                                    @keyframes spint { 
+                                        from { 
+                                            transform: scale(1);
+                                            // transform: rotate(0deg);
+                                        } to { 
+                                            transform: scale(1.1);
+                                            // transform: rotate(90deg);
+
+
+                                        }
+                                    }
+                                }
+        
+                            }
+        
+                            .modulesPopUp-heading
+                            {
+                                display: flex;
+                                height: 4vh;
+                                justify-content: center;
+                                align-content: center;
+                                font-family: 'Exo', sans-serif;
+                                font-size: 2.2vh;
+                                color: #EB4E4E;
+                                opacity: 0;
+                                transition: all 2s ease;
+
+                                // visibility: visible;
+                                // transition: visibility 1s ease;
+                                // transition-delay: 1s;
+        
+                                
+                            }
+        
+                            .modulesPopUp-content
+                            {
+                                height: 25vh;
+                                align-items: center;
+                                padding-top: 2vh;
+                                padding-left: 3vw;
+                                padding-right: 3vw;
+                                font-family: 'Quicksand', sans-serif;
+                                font-size: 1.8vh;
+                                justify-content: center;
+                                text-align: justify;
+                                opacity: 0;
+                                transition: all 2s ease;
+                                // animation: popupcontent 2s ease-in-out;
+
+                            }
+                }
     
                     img {
                         position: absolute;
-                        max-height: 69vh;
+                        max-height: 110vh;
                     }
     
                     .circleImg {
@@ -2379,19 +2585,23 @@ body {
                     top: 11vh;
     
                     .sub-list1:hover .testing {
-                        font-size: 3vh;
+                        transition: all 0.8s ease-in-out;
+                        transform: scale(1.1);
                     }
     
                     .sub-list2:hover .fixing {
-                        font-size: 3vh;
+                        transition: all 0.8s ease-in-out;
+                        transform: scale(1.1);
                     }
     
                     .sub-list3:hover .autoTC {
-                        font-size: 3vh;
+                        transition: all 0.8s ease-in-out;
+                        transform: scale(1.1);
                     }
     
                     .sub-list4:hover .ra {
-                        font-size: 3vh;
+                        transition: all 0.8s ease-in-out;
+                        transform: scale(1.1);
                     }
     
                     .heading {
@@ -2476,6 +2686,8 @@ body {
                                     font-size: 2.5vh;
                                     margin-top: 3vh;
                                     font-family: 'Exo', sans-serif;
+                                    transform: scale(1);
+                                    transition: all 1.2s ease-in-out;
                                 }
     
                                 .description {
@@ -2484,6 +2696,9 @@ body {
                                     font-size: 2.3vh;
                                     text-align: center;
                                     font-family: 'Quicksand', sans-serif;
+                                    transform: scale(1);
+                                    transition: all 1.2s ease-in-out;
+
                                 }
                             }
                         }
@@ -2540,8 +2755,8 @@ body {
                     justify-content: space-around;
                     align-items: center;
                     align-content: space-between;
-                    padding-right: 8%;
-                    padding-left: 8%;
+                    // padding-right: 8%;
+                    // padding-left: 8%;
     
                     .list {
                         height: 130vh;
@@ -2554,76 +2769,76 @@ body {
                         align-content: space-between;
     
                         .item:hover .hoverCircle {
-                            position: absolute;
-                            left: -1vw;
-                            top: 2vh;
-                            // display: block;
-                            opacity: 1;
-                            animation: fade 1s;
-                            animation-duration: 0.8s;
+                            // position: absolute;
+                            // left: -1vw;
+                            // top: 2vh;
+                            // // display: block;
+                            // opacity: 1;
+                            // animation: fade 1s;
+                            // animation-duration: 0.8s;
                         }
     
                         .item2:hover .hoverCircle {
                             // display: block;
-                            position: absolute;
-                            top: 0vh;
-                            left: -1vw;
-                            opacity: 1;
-                            animation: fade 1s;
-                            animation-duration: 0.8s;
+                            // position: absolute;
+                            // top: 0vh;
+                            // left: -1vw;
+                            // opacity: 1;
+                            // animation: fade 1s;
+                            // animation-duration: 0.8s;
                         }
     
                         .content:hover .sec6-definition {
-                            padding-top: -2vh;
+                            padding-top: 1.8vh;
                             display: block;
                             visibility: visible;
                             text-align: justify;
                             font-family: 'Quicksand', sans-serif;
                             font-size: 2vh;
-                            // opacity: 1;
-                            // animation: fade 1s;
+                            opacity: 1;
+                            // transition: opacity visibility 0.9s ease-in-out;
+                            animation: sec6def 0.8s ease-in-out;
                             // animation-duration: 0.8s;
                             // animation-fill-mode: initial;
+
+                                @keyframes sec6def
+                                {
+                                    0%{ 
+                                        padding-top: 4.5vh;
+                                        opacity: 0;
+                                    }
+                                    100%
+                                    {
+                                        padding-top: 1.8vh;
+                                        opacity: 1;
+                                    }
+                                }
                             
                         }
                         
       
                         .content:hover .sub-heading {
-                            // display: none;
-                            // visibility: hidden;
-                        //    opacity: 0;
-                           color: rgb(168, 24, 24);
-                           transform: translate(0px, -25vh);
-                           transition-duration: 0.9s;
-                           opacity: 0;
-                           height: 0vh;
-                           visibility: visible;
-                           transition-property: all;
-                            animation: fader 0.8s;
-                            font-size: 2vh;
+                            color: #333333;
+                            transform: translate(0px, -2vh);
+                            transition-duration: 0.8s;
+                            opacity: 1;
+                         //    padding-top: 3vh;
+                            height: 4vh;
+                            visibility: visible;
+                            transition-property: visibility opacity ;    
+                            color:#333333;
+                             // animation: fader 1.2s;
+                             font-size: 2.2vh;
                         }
     
-    
-    
-                        @keyframes fader {
-                            0% {
-                                opacity: 1;
-                                visibility: visible;
-                                height: 1vh;
-                            }
-                        
-                            100% {
-                                opacity: 0;
-                                visibility: visible;
-                                display: none;
-                                height: 0vh;
-                            }
-                        }
                         
                         .content:hover .image
                         {
-                            opacity: 1;                           
-                            // max-height: 11vh;
+                            max-height: 11vh;
+                            height: 11vh;
+                            -webkit-transform: scale(0.7) rotate(0.01deg);
+                            transform: scale(0.7) rotate(0.01deg);
+                            transition: all 0.8s ease;
                         }
 
     
@@ -2644,20 +2859,30 @@ body {
                                 font-family: 'Exo', sans-serif;
                                 display: block;
                                 opacity: 0.82;
+                                transition: all 0.9s ease;
                             }
     
                             .sec6-definition {
                                 display: none;
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: all 0.8s ease;
                                 
                             }
     
                             .image {
                                 height: 20vh;
                                 position: relative;
-                                opacity: 0.95;
+                                opacity: 0.98;
+                                -webkit-transform: scale(1) ;
+                                transform: scale(1);
+                                 transition: all 0.8s ease;
     
                                 img {
                                     max-height: 20vh;
+                                    -webkit-transform: scale(1) ;
+                                    transform: scale(1);
+                                     transition: all 0.8s ease;
                                 }
                             }
     
@@ -2908,7 +3133,7 @@ body {
 
         #particles-js {
             width: 100%;
-            height: 92vh;
+            height: 87vh;
             position: absolute;
             top: 10vh;
         }
