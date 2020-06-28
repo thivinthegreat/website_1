@@ -1388,6 +1388,54 @@ body {
 
                 .form {
                     width: 100%;
+                    position: relative;
+    
+
+                    .form-slider
+                    {
+                        position: absolute;
+                        color: #ffffff;
+                        background-color: #D64C6E;
+                        width: 8vw;
+                        height: 5vh;
+                        display: block;
+                        top: 0%;
+                        margin-top: 0.9%;
+                        margin-bottom: 0;
+                        right: 11.2%;
+                        border-radius: 0.5vw;
+                        visibility: hidden;
+                        opacity:  0;                       
+                        display: flex;
+                        align-items: center;
+
+
+                        p{
+                            font-family: 'Exo', sans-serif;
+                            font-size: 0.9vw;
+                            padding: 0.2vh;
+                            margin: 0;
+                            text-align: justify;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    &:hover .form-slider
+                    {
+                        visibility: visible;
+                        opacity: 1;
+                        -webkit-transition: all 0.8s ease;
+                        transition: all 0.8s ease;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        /* -webkit-box-align: center; */
+                        -ms-flex-align: center;
+                        align-items: center;
+                        justify-content: center
+
+                    }
                 }
 
                 .policy {
@@ -1424,6 +1472,23 @@ body {
                     padding-left: 1vw;
                     font-family: 'Quicksand', sans-serif;
                 }
+
+                .input_error
+                {
+                    background: rgb(253, 191, 191);
+                    -webkit-input-placeholder : {color: #6d0000;}
+                        
+                }
+
+                .input_error::-webkit-input-placeholder {
+                    color: #951e00
+                 }
+
+                 .input_noerror{
+                    border: none;
+                 }
+
+
 
                 textarea {
                     width: 89%;
@@ -1813,6 +1878,7 @@ body {
                             width: 55vw;
     
                             .rotate {
+
                                 animation: rotate 5s linear infinite;
                                 transform-box: fill-box;
                                 transform-origin: center;

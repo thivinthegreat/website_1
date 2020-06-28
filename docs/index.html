@@ -17,11 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
 
-<body>
+<body id="mybody">
     <div id="main-container">
         <div class="sub-container">
             <div class="section1">
@@ -453,7 +453,7 @@
                             <div class="shell_highlight">
                             </div>
                             <div class="image">
-                                <img class="devops" src="./asserts/5_Devops@web.png" />
+                                <img class="devops" src="./asserts/5_Devops@web.svg" />
                             </div>
                             <div class="sub-heading">
                                 <b>DEVOPS </br>Integration</b>
@@ -465,7 +465,7 @@
                         <div data-aos="flip-right" class="shell list1-sub2">
                             <div class="shell_highlight"></div>
                             <div class="image">
-                                <img class="inSpirit" src="./asserts/5_InSpirit@web.png" />
+                                <img class="inSpirit" src="./asserts/5_InSpirit@web.svg" />
                             </div>
                             <div class="sub-heading">
                                 <b>In-Sprint Progression automation</b>
@@ -489,7 +489,7 @@
                         <div data-aos="flip-right" class="shell list1-sub4">
                             <div class="shell_highlight"></div>
                             <div class="image">
-                                <img class="agile" src="./asserts/5_Agile@web.png" />
+                                <img class="agile" src="./asserts/5_Agile@web.svg" />
                             </div>
                             <div class="sub-heading">
                                 <b>Enabler </br>for Agile</b>
@@ -515,7 +515,7 @@
                         <div data-aos="fade-up" class="shell list2-sub2">
                             <div class="shell_highlight"></div>
                             <div class="image">
-                                <img class="module" src="./asserts/5_Modular@web.png" />
+                                <img class="module" src="./asserts/5_Modular@web.svg" />
                             </div>
                             <div class="sub-heading">
                                 <b>Modular & Serverless </br>architecture</b>
@@ -527,7 +527,7 @@
                         <div data-aos="fade-up" class="shell list2-sub3">
                             <div class="shell_highlight"></div>
                             <div class="image">
-                                <img class="elk" src="./asserts/5_Elk@web.png" />
+                                <img class="elk" src="./asserts/5_Elk@web.svg" />
                             </div>
                             <div class="sub-heading">
                                 <b>AI & Machine Learning</b>
@@ -1014,20 +1014,35 @@
                             </div>
                             <div class="right-session">
                                 <div class="form">
-                                    <input type="text" placeholder="Name" id="name" name="name">
+                                    <input class="input_noerror" type="text" placeholder="Name" id="name" name="name" onclick="changeClassform(this)">
+                                    <div class="form-slider"> 
+                                        <p>Name</p>
+                                    </div>
                                 </div>
                                 <div class="form">
-                                    <input type="text" placeholder="Email" id="mailId" name="mailId">
+                                    <input class="input_noerror"  type="text" placeholder="Email" id="mailId" name="mailId" onclick="changeClassform(this)">
+                                    <div class="form-slider"> 
+                                        <p>Email</p>
+                                    </div>
                                 </div>
                                 <div class="form">
-                                    <input type="number" placeholder="Phone number" id="phone" name="phone">
+                                    <input class="input_noerror" type="number" placeholder="Phone number" id="phone" name="phone" onclick="changeClassform(this)">
+                                    <div class="form-slider"> 
+                                        <p>Phone</p>
+                                    </div>
                                 </div>
                                 <div class="form">
-                                    <input type="text" placeholder="Subject" id="subject" name="subject">
+                                    <input class="input_noerror" type="text" placeholder="Subject" id="subject" name="subject" onclick="changeClassform(this)">
+                                    <div class="form-slider"> 
+                                        <p>Subject</p>
+                                    </div>
                                 </div>
                                 <div class="form">
-                                    <textarea id="msg" placeholder="Message" name="msg" rows="5"
-                                        cols="50"></textarea>
+                                    <textarea class="input_noerror" id="msg" placeholder="Message" name="msg" rows="5"
+                                        cols="50" onclick="changeClassform(this)"></textarea>
+                                        <div class="form-slider"> 
+                                            <p>Message</p>
+                                        </div>
                                 </div>
                                 <div class="policy">
                                     <input type="checkbox" id="policy" name="vehicle1">
@@ -1061,6 +1076,8 @@
         });
     </script>
     <script src="function.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
 </body>
 
 </html>

@@ -16,6 +16,9 @@
 // });
 // });
 
+// get height of input box
+
+
 var ModuletimeDelay = 7000;
 function loadMore() {
     window.setTimeout( function() { 
@@ -44,6 +47,15 @@ function mainContent() {
     document.getElementById("sec2-content2").style.display = "none";
 }
 
+//regex for email validation
+
+function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    
+
 function sendEmail() {
     var name = document.getElementById("name").value;
     var mailId = document.getElementById("mailId").value;
@@ -54,7 +66,113 @@ function sendEmail() {
 
     var response = grecaptcha.getResponse();
 
-    if (response.length > 0 && name.length > 0 && mailId.length > 0 && phoneNumber.length > 0 && subject.length > 0 && message.length > 0 && policy == true) {
+
+    var sendParametersValidation = true;  // responsible for checks on all fields of input from user. 
+
+    console.log("hjsdffffffffff");
+
+    if(!validateEmail(mailId) || !mailId.length || mailId.length>108) 
+    {
+        if(name.length > 108)
+        {
+            console.log("Mail ID  Length Greater than expected");
+            document.getElementById("mailId").placeholder ="e-mail id should be less than 108 charecters";
+        }
+        else
+        {
+            console.log("Invalid Email if provided");
+            document.getElementById("mailId").placeholder ="invalid email id format";
+        }
+ 
+        document.getElementById("mailId").value = "";
+        // add error class list
+        document.getElementById("mailId").classList.add('input_error');
+        document.getElementById("mailId").classList.remove('input_noerror');
+        sendParametersValidation = false;
+
+    }
+
+    var phonepattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if( phoneNumber.length < 7 || phoneNumber.length > 20 )
+    {
+        sendParametersValidation = false;
+        console.log(" INvalid Phone number pattern");
+        ssendParametersValidation = false;
+        document.getElementById("phone").classList.add('input_error');
+        document.getElementById("phone").classList.remove('input_noerror');
+        document.getElementById("phone").placeholder ="Invalid Phone Number ( 7 to 20 digits only ) ";
+        document.getElementById("phone").value = "";
+    } 
+
+    if(!name.length || name.length > 52) 
+    {
+        if(name.length > 52)
+        {
+            console.log("Name  Length Greater than expected");
+            document.getElementById("name").placeholder ="Name should not be greater than 52 charecters";
+
+        }
+        else
+        {
+            document.getElementById("name").placeholder ="Name cannot be empty";
+            console.log("Empty Name in Console");
+
+        }
+        sendParametersValidation = false;
+        document.getElementById("name").classList.add('input_error');
+        document.getElementById("name").classList.remove('input_noerror');
+        document.getElementById("name").value = "";
+    }
+
+    if(!subject.length || subject.length > 1024) 
+    {
+        if(subject.length > 1024)
+        {
+            console.log("subject Length Greater than expected");
+            document.getElementById("subject").placeholder ="Subject length cannot exceed 1024 charecters";
+
+        }
+        else{
+            document.getElementById("subject").placeholder ="Subject cannot be empty";
+
+        }
+
+        console.log("Empty Name in Console");
+        sendParametersValidation = false;
+        document.getElementById("subject").classList.add('input_error');
+        document.getElementById("subject").classList.remove('input_noerror');
+        document.getElementById("subject").value = "";
+    }
+
+    if(!message.length || message.length > 2048) 
+    {
+        if(message.length > 2048)
+        {
+            console.log("Mesage Length Greater than expected");
+            document.getElementById("msg").placeholder ="Message length exceeds 2048 charecters";
+
+        }
+        else{
+            document.getElementById("msg").placeholder ="Message cannot be empty";
+
+        }
+
+        console.log("Empty Name in Console");
+        sendParametersValidation = false;
+        document.getElementById("msg").classList.add('input_error');
+        document.getElementById("msg").classList.remove('input_noerror');
+        document.getElementById("msg").value = "";
+    }
+
+
+    if(!policy) 
+    {
+        sendParametersValidation = false;
+        alert("Please accept Terms and Conditions");
+    }
+    
+
+    if (sendParametersValidation) {
         const url = "https://api.codelessauto.io/send";
 
         // const data = JSON.stringify({
@@ -101,6 +219,14 @@ function sendEmail() {
         document.getElementById("subject").value = "";
         document.getElementById("msg").value = "";
         document.getElementById("policy").checked = "";
+
+        document.getElementById("name").placeholder = "Name";
+        document.getElementById("mailId").placeholder = "Email";
+        document.getElementById("phone").placeholder = "Phone";
+        document.getElementById("subject").placeholder = "Subject";
+        document.getElementById("msg").placeholder = "Message";
+
+        alert(" Message has been sent ")
     }
 }
 
@@ -151,19 +277,21 @@ const sectionTitleObserver = new IntersectionObserver(function(entries, sectionT
     entries.forEach(entry => {
         // get the bounding rect of the current Class
         const className = entry.target.className;
-        console.log(className);
-        console.log(entry);
+        // console.log(className);
+        // console.log(entry);
         const activeAnchor = document.querySelector(`[data-page=${className}]`); // selects the li item from Nav bar based on className
         const width = activeAnchor.getBoundingClientRect().width;
         const left = activeAnchor.getBoundingClientRect().left;
 
         
+        // for MOmentum Scrolling
+        // Update : Not gonna be implemented for this project.
         $(window).bind('mousewheel DOMMouseScroll', function(event){
             if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-                console.log("Wheelup");
+                // console.log("Wheelup");
             }
             else {
-                console.log("WheelDown");
+                // console.log("WheelDown");
 
             }
         });
@@ -476,7 +604,7 @@ function changeModuleText(e)
         document.getElementById("modules_tspan4").textContent = "\xa0  and insights from their ";
         document.getElementById("modules_tspan5").textContent = " \xa0 Elasticsearch data and view  ";
         document.getElementById("modules_tspan6").textContent = "\xa0   machine learning. ";
-        document.getElementById("tspan7").textContent = "  ";
+        // document.getElementById("tspan7").textContent = "  ";
     }
 
     if (id_name === "modules_Performance")
@@ -685,3 +813,12 @@ function moduleCenterButton(e)
   
 
 }   
+
+
+
+
+function changeClassform(e)
+{
+    e.classList.remove("input_error");
+    e.placeholder = "";
+}
