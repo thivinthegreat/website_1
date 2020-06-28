@@ -1079,8 +1079,7 @@ body {
 
                         img {
                             height: 38vh;
-                            width: 20vw;
-                            width: 100%;
+                            width: 22vw;
                         }
                     }
 
@@ -1139,6 +1138,8 @@ body {
     }
 
     .section6 {
+        overflow: hidden;
+        
         .height1 {
             height: 85vh;
         }

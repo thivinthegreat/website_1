@@ -1404,8 +1404,7 @@ body .spinner-wrapper img {
 
 #main-container .section5 .sec5-container .sec5-subcontent .image .img-container img {
   height: 38vh;
-  width: 20vw;
-  width: 100%;
+  width: 22vw;
 }
 
 #main-container .section5 .sec5-container .sec5-subcontent .image div {
@@ -1472,6 +1471,10 @@ body .spinner-wrapper img {
   transition: all 0.8s ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+#main-container .section6 {
+  overflow: hidden;
 }
 
 #main-container .section6 .height1 {
