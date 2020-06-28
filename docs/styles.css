@@ -2561,6 +2561,10 @@ body .spinner-wrapper img {
   #main-container .section3 .upper .sec3-content .sec3-text p .m_sec3_text1 {
     display: block;
   }
+  #main-container .section3 .upper .sec3-content .sec3-text ul {
+    padding-left: 15px;
+    margin-bottom: 0;
+  }
   #main-container .section3 .upper .sec3-content .sec3-text .sec3-list li {
     color: white;
     font-size: 1.8vh;
@@ -2576,7 +2580,7 @@ body .spinner-wrapper img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 5vh;
+    margin-top: 4vh;
     color: white;
     cursor: pointer;
     height: 7vh;

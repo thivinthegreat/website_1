@@ -2047,6 +2047,11 @@ body {
                                 display: block;
                             }
                         }
+
+                        ul {
+                            padding-left: 15px;
+                            margin-bottom: 0;
+                        }
     
                         .sec3-list
                         {
@@ -2063,7 +2068,7 @@ body {
                             width: 100%;
                             display: flex;
                             justify-content: center;
-                            margin-top: 5vh;
+                            margin-top: 4vh;
                             color: white;
                             cursor: pointer;
                             height: 7vh;
