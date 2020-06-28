@@ -2213,7 +2213,7 @@ body .spinner-wrapper img {
   }
   #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items a {
     text-decoration: none;
-    color: var(--text);
+    color: white;
   }
   #main-container .section1 .content .navbar .logo {
     display: -webkit-box;
