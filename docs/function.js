@@ -16,6 +16,67 @@
 // });
 // });
 
+
+// Preloading SVG
+$(document).ready(function() {
+    //Preloader
+    var preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.spinner-wrapper');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+ });
+
+
+
+
+// get height of input box
+
+var isMobile = false;
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    orientationDetectFunction();
+  });
+
+window.addEventListener("orientationchange", function() {
+    orientationChangeDetect();
+  });
+
+function orientationDetectFunction()
+{
+    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
+    {
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
+        isMobile  = true;
+        
+    }   
+
+    else{
+        isMobile = false;
+    }
+
+    
+}
+
+function orientationChangeDetect()
+{
+    if(window.innerHeight <  window.innerWidth*0.8) {
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
+        sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+        isMobile  = true;
+    }
+    else {
+        isMobile = false;
+       sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+    }
+}
+
 var ModuletimeDelay = 7000;
 function loadMore() {
     window.setTimeout( function() { 
@@ -44,6 +105,15 @@ function mainContent() {
     document.getElementById("sec2-content2").style.display = "none";
 }
 
+//regex for email validation
+
+function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    
+
 function sendEmail() {
     var name = document.getElementById("name").value;
     var mailId = document.getElementById("mailId").value;
@@ -54,7 +124,113 @@ function sendEmail() {
 
     var response = grecaptcha.getResponse();
 
-    if (response.length > 0 && name.length > 0 && mailId.length > 0 && phoneNumber.length > 0 && subject.length > 0 && message.length > 0 && policy == true) {
+
+    var sendParametersValidation = true;  // responsible for checks on all fields of input from user. 
+
+    // console.log("hjsdffffffffff");
+
+    if(!validateEmail(mailId) || !mailId.length || mailId.length>108) 
+    {
+        if(name.length > 108)
+        {
+            console.log("Mail ID  Length Greater than expected");
+            document.getElementById("mailId").placeholder ="e-mail id should be less than 108 charecters";
+        }
+        else
+        {
+            console.log("Invalid Email if provided");
+            document.getElementById("mailId").placeholder ="invalid email id format";
+        }
+ 
+        document.getElementById("mailId").value = "";
+        // add error class list
+        document.getElementById("mailId").classList.add('input_error');
+        document.getElementById("mailId").classList.remove('input_noerror');
+        sendParametersValidation = false;
+
+    }
+
+    var phonepattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if( phoneNumber.length < 7 || phoneNumber.length > 20 )
+    {
+        sendParametersValidation = false;
+        console.log(" INvalid Phone number pattern");
+        ssendParametersValidation = false;
+        document.getElementById("phone").classList.add('input_error');
+        document.getElementById("phone").classList.remove('input_noerror');
+        document.getElementById("phone").placeholder ="Invalid Phone Number ( 7 to 20 digits only ) ";
+        document.getElementById("phone").value = "";
+    } 
+
+    if(!name.length || name.length > 52) 
+    {
+        if(name.length > 52)
+        {
+            console.log("Name  Length Greater than expected");
+            document.getElementById("name").placeholder ="Name should not be greater than 52 charecters";
+
+        }
+        else
+        {
+            document.getElementById("name").placeholder ="Name cannot be empty";
+            console.log("Empty Name in Console");
+
+        }
+        sendParametersValidation = false;
+        document.getElementById("name").classList.add('input_error');
+        document.getElementById("name").classList.remove('input_noerror');
+        document.getElementById("name").value = "";
+    }
+
+    if(!subject.length || subject.length > 1024) 
+    {
+        if(subject.length > 1024)
+        {
+            console.log("subject Length Greater than expected");
+            document.getElementById("subject").placeholder ="Subject length cannot exceed 1024 charecters";
+
+        }
+        else{
+            document.getElementById("subject").placeholder ="Subject cannot be empty";
+
+        }
+
+        console.log("Empty Name in Console");
+        sendParametersValidation = false;
+        document.getElementById("subject").classList.add('input_error');
+        document.getElementById("subject").classList.remove('input_noerror');
+        document.getElementById("subject").value = "";
+    }
+
+    if(!message.length || message.length > 2048) 
+    {
+        if(message.length > 2048)
+        {
+            console.log("Mesage Length Greater than expected");
+            document.getElementById("msg").placeholder ="Message length exceeds 2048 charecters";
+
+        }
+        else{
+            document.getElementById("msg").placeholder ="Message cannot be empty";
+
+        }
+
+        console.log("Empty Name in Console");
+        sendParametersValidation = false;
+        document.getElementById("msg").classList.add('input_error');
+        document.getElementById("msg").classList.remove('input_noerror');
+        document.getElementById("msg").value = "";
+    }
+
+
+    if(!policy) 
+    {
+        sendParametersValidation = false;
+        alert("Please accept Terms and Conditions");
+    }
+    
+
+    if (sendParametersValidation) {
         const url = "https://api.codelessauto.io/send";
 
         // const data = JSON.stringify({
@@ -101,10 +277,17 @@ function sendEmail() {
         document.getElementById("subject").value = "";
         document.getElementById("msg").value = "";
         document.getElementById("policy").checked = "";
+
+        document.getElementById("name").placeholder = "Name";
+        document.getElementById("mailId").placeholder = "Email";
+        document.getElementById("phone").placeholder = "Phone";
+        document.getElementById("subject").placeholder = "Subject";
+        document.getElementById("msg").placeholder = "Message";
+
+        alert(" Message has been sent ")
     }
 }
 
-var isMobile = false;
 
 const header = document.querySelector(".navbar");
 const sectionOne = document.querySelector(".firstSession");
@@ -116,13 +299,11 @@ const sectionSix = document.querySelector(".section7");
 const heading_underline = document.querySelector(".heading-underline");
 
 
-
-
-
-var sectionOneOptions;
 var sectionTitleOptions;
+var sectionOneOptions = 
+{
 
-
+};
 
 /////--------- Observation for Nav Bar to change color upon Scrolling --------------  ////// 
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
@@ -134,52 +315,63 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             document.getElementById("white-img").style.display = "none";
             document.getElementById("colorButton").style.display = "block";
             document.getElementById("whiteButton").style.display = "none";
-        } else {
+        } 
+        
+        else 
+        {
             header.classList.remove("nav-scrolled");
             document.getElementById("color-img").style.display = "none";
             document.getElementById("white-img").style.display = "block";
-            document.getElementById("colorButton").style.display = "none";
-            document.getElementById("whiteButton").style.display = "block";
+            if (!isMobile) {
+                document.getElementById("nav-title").style.display = "block";
+            }
+            else {
+                document.getElementById("nav-title").style.display = "block";
+
+                document.getElementById("colorButton").style.display = "none";
+                document.getElementById("whiteButton").style.display = "block";
+            }
             // if (!isMobile) {
             //     document.getElementById("nav-title").style.display = "block";
-            // }
+            // }    
             // else {
             //     document.getElementById("nav-title").style.display = "none";
             // }
-        }
         // if (isMobile) {
         //     document.getElementById("nav-title").style.display = "block";
         // }
         // else {
         //     document.getElementById("nav-title").style.display = "none";
         // }
+        }
     })
-}, sectionOneOptions);
-// Observation call Function
+},sectionOneOptions);
+// Observation call Function    
 sectionOneObserver.observe(sectionOne);
 
 ////// - END -- ///////////
 
-
-
+var options1;
 // Observation function to Change the color of heading of nav bar based on position
 const sectionTitleObserver = new IntersectionObserver(function(entries, sectionTitleObserver) {
     entries.forEach(entry => {
         // get the bounding rect of the current Class
         const className = entry.target.className;
-        console.log(className);
-        console.log(entry);
+        // console.log(className);
+        // console.log(entry);
         const activeAnchor = document.querySelector(`[data-page=${className}]`); // selects the li item from Nav bar based on className
         const width = activeAnchor.getBoundingClientRect().width;
         const left = activeAnchor.getBoundingClientRect().left;
 
         
+        // for MOmentum Scrolling
+        // Update : Not gonna be implemented for this project.
         $(window).bind('mousewheel DOMMouseScroll', function(event){
             if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-                console.log("Wheelup");
+                // console.log("Wheelup");
             }
             else {
-                console.log("WheelDown");
+                // console.log("WheelDown");
 
             }
         });
@@ -196,7 +388,7 @@ const sectionTitleObserver = new IntersectionObserver(function(entries, sectionT
 
         }
     })
-}, sectionTitleOptions);
+}, {rootMargin: '-300px'}   );
 
 sectionTitleObserver.observe(sectionTwo);
 sectionTitleObserver.observe(sectionThree);
@@ -208,40 +400,15 @@ sectionTitleObserver.observe(sectionSix);
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    orientationLockFunction();
-  });
 
-window.addEventListener("orientationchange", function() {
-    orientationChangeDetect();
-  });
 
-function orientationLockFunction()
-{
-    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
-    {
-        alert("Device is in Potrait mode, Please change it to landscape mode");
-        screen.orientation = "landscape";
-    }   screen.rotate = 90;
-    
-}
+// Variables needed for Modukes Popup size
 
-function orientationChangeDetect()
-{
-    if(window.innerHeight <  window.innerWidth*0.8) {
-        alert("Device is in Potrait mode, Please change it to landscape mode");
-        sectionOneOptions = {
-            rootMargin: "-200px 0px 0px 0px"
-        };
-        isMobile  = true;
-    }
-    else {
-        isMobile = false;
-       sectionOneOptions = {
-            rootMargin: "-200px 0px 0px 0px"
-        };
-    }
-}
+var d_mod_height ;
+var d_mod_width ;
+var m_mod_height;
+var m_mod_width;
+
 
 var prevActiveModuleId ="modules_Mobile";
 var prevActiveModule = document.getElementById("Mobile");
@@ -328,7 +495,7 @@ function changeModuleText(e)
     if (id_name === "modules_Mainframe")
    {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0        MainFrame";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0    MainFrame";
         document.getElementById("modules_tspan1").textContent = " Used for larger scale purposes ";
         document.getElementById("modules_tspan2").textContent = " that requires great availability";
         document.getElementById("modules_tspan3").textContent = " and security. This make  ";
@@ -342,7 +509,7 @@ function changeModuleText(e)
     if (id_name === "modules_Infrastructure")
     {
          document.getElementById("modules_tspan_head1").textContent = "";
-         document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0     Infrastructure";
+         document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0  Infrastructure";
          document.getElementById("modules_tspan1").textContent = "    Running on multi-cloud  ";
          document.getElementById("modules_tspan2").textContent = "    infrastructure, automation   ";
          document.getElementById("modules_tspan3").textContent = "    infrastructure is designed to   ";
@@ -492,7 +659,7 @@ function changeModuleText(e)
         document.getElementById("modules_tspan4").textContent = "\xa0  and insights from their ";
         document.getElementById("modules_tspan5").textContent = " \xa0 Elasticsearch data and view  ";
         document.getElementById("modules_tspan6").textContent = "\xa0   machine learning. ";
-        document.getElementById("tspan7").textContent = "  ";
+        // document.getElementById("tspan7").textContent = "  ";
     }
 
     if (id_name === "modules_Performance")
@@ -541,8 +708,16 @@ function modulesPopupClose(e)
     var className_1 = "modulesPopUp-container";
     var className_header = "modulesPopUp-heading";
     var className_content = "modulesPopUp-content";
-
-
+    
+    
+    window.setTimeout( function() {
+        document.getElementsByClassName(className_content)[0].style.opacity = "0";
+        document.getElementsByClassName(className_header)[0].style.opacity = "0";
+        document.getElementsByClassName(className_1)[0].style.visibility = "hidden";
+        document.getElementById("modulesPopUp-heading").innerHTML = "";
+        document.getElementById("modulesPopup-content").innerHTML = "";
+    } , 100 );
+    
     
     window.setTimeout( function() {
         document.getElementsByClassName(className_content)[0].style.opacity = "0";
@@ -579,17 +754,42 @@ function moduleCenterButton(e)
     var className_content = "modulesPopUp-content";
     // alert(currentActiveModuleId);
     var className_1 = "modulesPopUp-container";
+
+        document.getElementById("modulesPopUp-heading").innerHTML = "";
+        document.getElementById("modulesPopup-content").innerHTML = ""; 
+
+
     window.setTimeout( function() { 
-        document.getElementsByClassName(className_1)[0].style.visibility = "visible";
-        document.getElementsByClassName(className_1)[0].style.opacity = "1";
-        document.getElementsByClassName(className_1)[0].style.height = "40vh";
-        document.getElementsByClassName(className_1)[0].style.width = "40vw";
-        document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
-        document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
-        document.getElementsByClassName(className_content)[0].style.opacity = "1";
-        document.getElementsByClassName(className_header)[0].style.opacity = "1";
+
+        if(!isMobile)
+        {
+            document.getElementsByClassName(className_1)[0].style.visibility = "visible";
+            document.getElementsByClassName(className_1)[0].style.opacity = "1";
+            document.getElementsByClassName(className_1)[0].style.height = "40vh";
+            document.getElementsByClassName(className_1)[0].style.width = "40vw";
+            document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
+            document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
+            document.getElementsByClassName(className_content)[0].style.opacity = "1";
+            document.getElementsByClassName(className_header)[0].style.opacity = "1";
+        }
+
+        else{
+            document.getElementsByClassName(className_1)[0].style.visibility = "visible";
+            document.getElementsByClassName(className_1)[0].style.opacity = "1";
+            document.getElementsByClassName(className_1)[0].style.height = "43vh";
+            document.getElementsByClassName(className_1)[0].style.width = "50vh";
+            document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
+            document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
+            document.getElementsByClassName(className_content)[0].style.opacity = "1";
+            document.getElementsByClassName(className_header)[0].style.opacity = "1";
+        }
+
+
 
     }, 100 );  
+
+    document.getElementById("modulesPopUp-heading").innerHTML = "";
+    document.getElementById("modulesPopup-content").innerHTML = ""; 
 
         if(id_name === "modules_Mainframe" )
         {
@@ -699,6 +899,28 @@ function moduleCenterButton(e)
     
     
   
+
+}   
+
+
+
+
+function changeClassform(e)
+{
+    e.placeholder = "";
+    e.classList.remove("input_error");
+
+
+    // if(e.placeholder = "")
+    // {
+        if(e.id == "name") e.placeholder = "Name";
+        if(e.id == "phone") e.placeholder = "Phone";
+        if(e.id == "mailId") e.placeholder = "Email";
+        if(e.id == "subject") e.placeholder = "Subject";
+        if(e.id == "msg") e.placeholder = "Message";
+    // }
+
+        
 
 }
 
