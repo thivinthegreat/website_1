@@ -368,8 +368,6 @@ body .spinner-wrapper img {
 #main-container .section2 .sec2-container .left-session ul {
   padding-left: 1.3vw;
   font-size: 3vh;
-  list-style: square outside -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-  list-style: square outside linear-gradient(to right, #d23174, #f34938);
 }
 
 #main-container .section2 .sec2-container .left-session ul li {
@@ -1406,8 +1404,7 @@ body .spinner-wrapper img {
 
 #main-container .section5 .sec5-container .sec5-subcontent .image .img-container img {
   height: 38vh;
-  width: 20vw;
-  width: 100%;
+  width: 22vw;
 }
 
 #main-container .section5 .sec5-container .sec5-subcontent .image div {
@@ -1474,6 +1471,10 @@ body .spinner-wrapper img {
   transition: all 0.8s ease-in-out;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+#main-container .section6 {
+  overflow: hidden;
 }
 
 #main-container .section6 .height1 {
@@ -2231,7 +2232,7 @@ body .spinner-wrapper img {
   }
   #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items a {
     text-decoration: none;
-    color: var(--text);
+    color: white;
   }
   #main-container .section1 .content .navbar .logo {
     display: -webkit-box;
@@ -2284,27 +2285,27 @@ body .spinner-wrapper img {
         -ms-flex-pack: center;
             justify-content: center;
     color: white;
-    font-size: 5vh;
-    padding-top: 7vh;
+    font-size: 9vw;
+    padding-top: 18vh;
     font-family: 'Exo', sans-serif;
     text-align: center;
   }
   #main-container .section1 .content .icon {
-    height: 60vh;
+    height: 65vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
-  #main-container .section1 .content .icon svg {
-    max-height: 60vh;
-    min-height: 60vh;
-    width: 100%;
+  #main-container .section1 .content .icon img {
+    max-height: 55vh;
+    min-height: 55vh;
+    width: 75vw;
     z-index: 2;
   }
   #main-container .section1 .left-circle {
@@ -2361,14 +2362,14 @@ body .spinner-wrapper img {
             align-items: center;
     -ms-flex-line-pack: justify;
         align-content: space-between;
-    height: 120vh;
+    height: 125vh;
     padding-left: 0%;
     padding-right: 4%;
     overflow-x: hidden;
     overflow-y: hidden;
   }
   #main-container .section2 .sec2-container .list {
-    height: 90vh;
+    height: 93vh;
     width: 90vw;
     font-family: 'Exo', sans-serif;
   }
@@ -2384,8 +2385,7 @@ body .spinner-wrapper img {
   #main-container .section2 .sec2-container .left-session ul {
     padding-left: 1.3vw;
     font-size: 5vw;
-    list-style: square outside -webkit-gradient(linear, left top, right top, from(#d23174), to(#f34938));
-    list-style: square outside linear-gradient(to right, #d23174, #f34938);
+    margin-top: 1.5vh;
   }
   #main-container .section2 .sec2-container .left-session ul li {
     font-family: 'Quicksand', sans-serif;
@@ -2580,9 +2580,13 @@ body .spinner-wrapper img {
   #main-container .section3 .upper .sec3-content .sec3-text p .m_sec3_text1 {
     display: block;
   }
+  #main-container .section3 .upper .sec3-content .sec3-text ul {
+    padding-left: 15px;
+    margin-bottom: 0;
+  }
   #main-container .section3 .upper .sec3-content .sec3-text .sec3-list li {
     color: white;
-    font-size: 1.9vh;
+    font-size: 1.8vh;
     opacity: 1;
     -webkit-transition: all linear 0.5s;
     transition: all linear 0.5s;
@@ -2595,7 +2599,7 @@ body .spinner-wrapper img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 5vh;
+    margin-top: 4vh;
     color: white;
     cursor: pointer;
     height: 7vh;
@@ -3032,6 +3036,7 @@ body .spinner-wrapper img {
   #main-container .section3 .lower .modules-img img {
     position: absolute;
     max-height: 110vh;
+    left: 1vw;
   }
   #main-container .section3 .lower .modules-img .circleImg {
     position: absolute;
@@ -3059,11 +3064,13 @@ body .spinner-wrapper img {
   }
   #main-container .section4 .sec4-content .carousel-indicators {
     margin: 0 !important;
+    bottom: 55px;
   }
   #main-container .section4 .sec4-content .carousel-indicators .carouselCircleIndicator {
     border: 2px solid #e33e55 !important;
     border-radius: 50%;
-    height: 4vh;
+    height: 2vh;
+    width: 2vh;
   }
   #main-container .section4 .sec4-content .carousel-indicators .active {
     background: #e33e55 !important;
@@ -3160,10 +3167,11 @@ body .spinner-wrapper img {
   #main-container .section4 .sec4-content .content1Slider {
     display: block;
     height: 50vh;
+    margin-top: 2vh;
   }
   #main-container .section4 .sec4-content .content2Slider {
     display: block;
-    margin-top: 5vh;
+    margin-top: 3vh;
     height: 50vh;
   }
   #main-container .section4 .sec4-content img {
@@ -3196,9 +3204,9 @@ body .spinner-wrapper img {
   }
   #main-container .section5 .sec5-container .devops {
     height: 20vh;
-    width: 60vw;
+    width: 75vw;
     position: absolute;
-    left: 21vw;
+    left: 14vw;
     top: -12vh;
   }
   #main-container .section5 .sec5-container .bottom-circle {
