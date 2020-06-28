@@ -3017,6 +3017,7 @@ body .spinner-wrapper img {
   #main-container .section3 .lower .modules-img img {
     position: absolute;
     max-height: 110vh;
+    left: 1vw;
   }
   #main-container .section3 .lower .modules-img .circleImg {
     position: absolute;
