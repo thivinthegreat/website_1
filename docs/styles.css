@@ -1972,13 +1972,14 @@ body {
     display: none;
   }
   #main-container .section1 .content .navbar .hamburgerList img {
-    height: 40vh;
+    height: 70vw;
   }
   #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items {
     position: absolute;
     margin: 0;
     height: 35vh;
     list-style-type: none;
+    font-size: 4vw;
   }
   #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items li {
     margin-left: 15px;
