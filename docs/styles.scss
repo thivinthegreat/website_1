@@ -270,7 +270,7 @@ body {
                 ul {
                     padding-left: 1.3vw;
                     font-size: 3vh;
-                    list-style: square outside linear-gradient(to right, #d23174, #f34938);
+                    // list-style: square outside linear-gradient(to right, #d23174, #f34938);
 
                     li {
                         font-family: 'Quicksand', sans-serif;
@@ -1797,22 +1797,22 @@ body {
                     align-items: center;
                     justify-content: center;
                     color: white;
-                    font-size: 5vh;
-                    padding-top: 7vh;
+                    font-size: 9vw;
+                    padding-top: 18vh;
                     font-family: 'Exo', sans-serif;
                     text-align: center;
                 }
     
                 .icon {
-                    height: 60vh;
+                    height: 65vh;
                     display: flex;
                     justify-content: center;
-                    align-items: flex-start;
+                    align-items: flex-end;
     
-                    svg {
-                        max-height: 60vh;
-                        min-height: 60vh;
-                        width: 100%;
+                    img {
+                        max-height: 55vh;
+                        min-height: 55vh;
+                        width: 75vw;
                         z-index: 2;
                     }
                 }
@@ -1865,14 +1865,14 @@ body {
                 justify-content: space-around;
                 align-items: center;
                 align-content: space-between;
-                height: 120vh;
+                height: 125vh;
                 padding-left: 0%;
                 padding-right: 4%;
                 overflow-x: hidden;
                 overflow-y: hidden;
     
                 .list {
-                    height: 90vh;
+                    height: 93vh;
                     width: 90vw;
                     font-family: 'Exo', sans-serif;
                 }
@@ -1890,7 +1890,8 @@ body {
                     ul {
                         padding-left: 1.3vw;
                         font-size: 5vw;
-                        list-style: square outside linear-gradient(to right, #d23174, #f34938);
+                        margin-top: 1.5vh;
+                        // list-style: square outside linear-gradient(to right, #d23174, #f34938);
     
                         li {
                             font-family: 'Quicksand', sans-serif;
@@ -2052,7 +2053,7 @@ body {
                             li 
                             {
                                 color: white;
-                                font-size: 1.9vh;
+                                font-size: 1.8vh;
                                 opacity: 1;
                                 transition: all linear 0.5s;
                             }
@@ -2459,11 +2460,13 @@ body {
 
                 .carousel-indicators {
                     margin: 0 !important;
+                    bottom: 55px;
 
                     .carouselCircleIndicator {
                         border: 2px solid #e33e55 !important;
                         border-radius: 50%;
-                        height: 4vh;
+                        height: 2vh;
+                        width: 2vh;
                     }
                     .active {
                         background: #e33e55 !important;
@@ -2560,11 +2563,12 @@ body {
                 .content1Slider {
                     display: block;
                     height: 50vh;
+                    margin-top: 2vh;
                 }
 
                 .content2Slider {
                     display: block;
-                    margin-top: 5vh;
+                    margin-top: 3vh;
                     height: 50vh;
                 }
 
@@ -2604,9 +2608,9 @@ body {
         
                 .devops {
                     height: 20vh;
-                    width: 60vw;
+                    width: 75vw;
                     position: absolute;
-                    left: 21vw;
+                    left: 14vw;
                     top: -12vh;
                 }
     
