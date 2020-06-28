@@ -36,7 +36,7 @@
                                 <a href="#main-container"><b>CODELESS AUTOMATION ACCELERATOR</b></a>
                             </div>
                         </div>
-                        <div class="right-content">
+                        <div class="right-content desk">
                             <ul class="nav-items">
                                 <li class="item">
                                     <a data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top }, 1000);
@@ -52,10 +52,44 @@
                                 </li>
                                 <li class="item">
                                     <a data-page="section6" href="#" onclick="$('html, body').animate({ scrollTop: $('#benifits').offset().top }, 1000);
-                                    return false;"">BENEFITS</a>
+                                    return false;">BENEFITS</a>
                                 </li>       
                                <li class="item">
                                     <a data-page="section7" href="#" onclick="$('html, body').animate({ scrollTop: $('#contactUs').offset().top }, 'slow');
+                                    return false;">CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile right-content">
+                            <img id ="whiteButton" src="./asserts/m_0_Menu_Button_White.png" onclick="hamburger()"/>
+                            <img id ="colorButton" src="./asserts/m_0_Menu_Button_Color.png" onclick="hamburger()"/>
+                        </div>
+                        <div id="hamburgerList" class="hamburgerList mobile">
+                            <img src="./asserts/m_0_Dropdown.png" />
+                            <ul class="hamburger-nav-items">
+                                <li class="item">
+                                    <a data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top }, 1000);
+                                    $('#hamburgerList').css(`'display','none'`);
+                                    return false;">WHY CODELESS ACCELERATOR</a>
+                                </li>
+                                <li class="item">
+                                    <a  data-page="lower"  href="#" onclick="$('html, body').animate({ scrollTop: $('#modules').offset().top + 150 }, 1000);
+                                    document.getElementById('hamburgerList').style.display = 'none';
+                                    return false;">MODULES</a>
+                                </li>
+                                <li class="item">
+                                    <a id="ttgg" data-page="section5" href="#" onclick="$('html, body').animate({ scrollTop: $('#devops').offset().top +100}, 1000);
+                                    document.getElementById('hamburgerList').style.display = 'none';
+                                    return false;">DEVOPS</a>
+                                </li>
+                                <li class="item">
+                                    <a data-page="section6" href="#" onclick="$('html, body').animate({ scrollTop: $('#benifits').offset().top }, 1000);
+                                    document.getElementById('hamburgerList').style.display = 'none';
+                                    return false;">BENEFITS</a>
+                                </li>       
+                               <li class="item">
+                                    <a data-page="section7" href="#" onclick="$('html, body').animate({ scrollTop: $('#contactUs').offset().top }, 'slow');
+                                    document.getElementById('hamburgerList').style.display = 'none';
                                     return false;">CONTACT US</a>
                                 </li>
                             </ul>
@@ -662,7 +696,8 @@
 
             <div class="section5" id="devops">
                 <div class="sec5-container">
-                    <img class="sec5-background" src="./asserts/6_BG@web.png">
+                    <img class="desk sec5-background" src="./asserts/6_BG@web.png">
+                    <img class="mobile sec5-background" src="./asserts/m_6_BG.png">
                     <img class="devops" src="./asserts/devops.png" />
                     <div class="sec5-subcontent">
                         <div class="heading">
@@ -675,7 +710,10 @@
                         </div>
                         <div class="content">
                             <div class="details">
-                                <div data-aos="zoom-in" class="list sub-list1">
+                                <div data-aos="zoom-in" class="mobile list imgContainer sub-list1">
+                                    <img src="./asserts/m_6_Testing.png" />
+                                </div>
+                                <div data-aos="zoom-in" class="list textContainer sub-list1">
                                     <div class="sub-heading">
                                         <b class="testing">Test Automation</b>
                                     </div>
@@ -683,7 +721,10 @@
                                         Automation Engineers, manual test engineers will write progression/ regression test cases by utilising the provided executable specification templates. For this there is no coding required. 
                                     </div>
                                 </div>
-                                <div data-aos="zoom-in" class="list sub-list2">
+                                <div data-aos="zoom-in" class="mobile list imgContainer sub-list1">
+                                    <img src="./asserts/m_6_Fixing.png" />
+                                </div>
+                                <div data-aos="zoom-in" class="list textContainer sub-list2">
                                     <div class="sub-heading">
                                         <b class="fixing">Refactor</b>
                                     </div>
@@ -691,7 +732,10 @@
                                         Codeless Automation capability team maintain and enhance the core accelerator capability to make the source code from the automation engineers, manual test engineers as executables.
                                     </div>
                                 </div>
-                                <div data-aos="zoom-in" class="list sub-list3">
+                                <div data-aos="zoom-in" class="mobile list imgContainer sub-list1">
+                                    <img src="./asserts/m_6_Cloud.png" />
+                                </div>
+                                <div data-aos="zoom-in" class="list textContainer sub-list3">
                                     <div class="sub-heading">
                                         <b class="autoTC">Autonomous Execution</b>
                                     </div>
@@ -699,7 +743,10 @@
                                         All tests are triggered from the orchestration layer via any CI/CD Server and the execution will run on cloud services (AWS, GCP & Azure) which can be scheduled or triggered. 
                                     </div>
                                 </div>
-                                <div data-aos="zoom-in" class="list sub-list4">
+                                <div data-aos="zoom-in" class="mobile list imgContainer sub-list1">
+                                    <img src="./asserts/m_6_Report_Analytics.png" />
+                                </div>
+                                <div data-aos="zoom-in" class="list textContainer sub-list4">
                                     <div class="sub-heading">
                                         <b class="ra  65255333333">Reports & Analytics</b>
                                     </div>
@@ -778,7 +825,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-session list">
+                        <div class="right-session list sec6-mobileList1">
                             <div data-aos="fade-up-right" class="content item">
                                 <div class="image">
                                     <img src="./asserts/7_Improved@web.png" />
@@ -843,6 +890,64 @@
             <div class="section6" id="hidden">
                 <div class="sec6-content height2">
                     <div class="benifits benifits2">
+                        <div class="left-session list sec6-mobileList2">
+                            <div data-aos="fade-up-right" class="content item">
+                                <div class="image">
+                                    <img src="./asserts/7_Improved@web.png" />
+                                    <div class="hoverCircle">
+                                        <img src="./asserts/7_Mouse_Orbit_4_1@web.png" />
+                                    </div>
+                                </div>
+                                <div class="sub-heading">
+                                    <b>Improved Throughput</b>
+                                </div>
+                                <div class="sec6-definition">
+                                    Run tests 24x7x365 across application. To accelerates build and release cycles.
+                                </div>
+                            </div>
+                            <div data-aos="fade-up-right" class="content item">
+                                <div class="image">
+                                    <img src="./asserts/7_Reporting@web.png" />
+                                    <div class="hoverCircle">
+                                        <img src="./asserts/7_Mouse_Orbit_4_1@web.png" />
+                                    </div>
+                                </div>
+                                <div class="sub-heading">
+                                    <b>Reporting & Traceability</b>
+                                </div>
+                                <div class="sec6-definition">
+                                    Provides the latest reporting capabilities via easily understood and manageable dashboards, from Program Manager level to developer level.
+                                </div>
+                            </div>
+                            <div data-aos="fade-up-left" class="content item2">
+                                <div class="image">
+                                    <img src="./asserts/7_Flexible@web.png" />
+                                    <div class="hoverCircle">
+                                        <img src="./asserts/7_Mouse_Orbit_2@web.png" />
+                                    </div>
+                                </div>
+                                <div class="sub-heading">
+                                    <b>Flexable Architecture</b>
+                                </div>
+                                <div class="sec6-definition">
+                                    Provides scalable solutions. Software packages are modularised and new automation technology modules can be added as they become available.
+                                </div>
+                            </div>
+                            <div data-aos="fade-up-left" class="content item2">
+                                <div class="image">
+                                    <img src="./asserts/7_Full stack@web.png" />
+                                    <div class="hoverCircle">
+                                        <img src="./asserts/7_Mouse_Orbit_2@web.png" />
+                                    </div>
+                                </div>
+                                <div class="sub-heading">
+                                    <b>Full stack Automation</b>
+                                </div>
+                                <div class="sec6-definition">
+                                    Automate all systems under test including, Micro-Services, APIs, WEB UI, Desktop, Mobile and Apps, DB SQLs, IVR, Batch, Mainframe, Shell, File Transfers & Service Virtualization.
+                                </div>
+                            </div>
+                        </div>
                         <div class="left-session list">
                             <div data-aos="fade-down-right" class="content item">
                                 <div class="image">
@@ -959,8 +1064,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list">
-                            <div class="content item"></div>
+                        <div class="list moblieList">
+                            <div class="content item hideList"></div>
                             <div data-aos="fade-up-right" class="content item">
                                 <div class="image">
                                     <img src="./asserts/7_Support@web.png" />
@@ -989,7 +1094,7 @@
                                     Centralized management and administration to give access to more team members.
                                 </div>
                             </div>
-                            <div class="content item"></div>
+                            <div class="content item desk hideList"></div>
                         </div>
                     </div>
 
@@ -1003,7 +1108,8 @@
             </div>
             <div id="contactUs" class="section7">
                 <div class="sec7-container">
-                    <img src="./asserts/8_BG@web.png" />
+                    <img class="desk" src="./asserts/8_BG@web.png" />
+                    <img class="mobile" src="./asserts/m_8_BG.png" />
                     <div class="sec7-content">
                         <div class="heading">
                             <h3><b>Ask Us Anything</b></h3>

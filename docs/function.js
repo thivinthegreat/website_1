@@ -69,7 +69,7 @@ function sendEmail() {
 
     var sendParametersValidation = true;  // responsible for checks on all fields of input from user. 
 
-    console.log("hjsdffffffffff");
+    // console.log("hjsdffffffffff");
 
     if(!validateEmail(mailId) || !mailId.length || mailId.length>108) 
     {
@@ -233,7 +233,7 @@ function sendEmail() {
 var isMobile = false;
 
 const header = document.querySelector(".navbar");
-const sectionOne = document.querySelector(".particles-js-canvas-el");
+const sectionOne = document.querySelector(".firstSession");
 const sectionTwo = document.querySelector(".section2");
 const sectionThree = document.querySelector(".lower");
 const sectionFour = document.querySelector(".section5");
@@ -243,7 +243,10 @@ const heading_underline = document.querySelector(".heading-underline");
 
 
 var sectionTitleOptions;
-var sectionOneOptions;
+var sectionOneOptions = 
+{
+
+};
 
 /////--------- Observation for Nav Bar to change color upon Scrolling --------------  ////// 
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
@@ -253,7 +256,12 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             header.classList.add("nav-scrolled");
             document.getElementById("color-img").style.display = "block";
             document.getElementById("white-img").style.display = "none";
-        } else {
+            document.getElementById("colorButton").style.display = "block";
+            document.getElementById("whiteButton").style.display = "none";
+        } 
+        
+        else 
+        {
             header.classList.remove("nav-scrolled");
             document.getElementById("color-img").style.display = "none";
             document.getElementById("white-img").style.display = "block";
@@ -261,8 +269,23 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
                 document.getElementById("nav-title").style.display = "block";
             }
             else {
-                document.getElementById("nav-title").style.display = "none";
+                document.getElementById("nav-title").style.display = "block";
+
+                document.getElementById("colorButton").style.display = "none";
+                document.getElementById("whiteButton").style.display = "block";
             }
+            // if (!isMobile) {
+            //     document.getElementById("nav-title").style.display = "block";
+            // }    
+            // else {
+            //     document.getElementById("nav-title").style.display = "none";
+            // }
+        // if (isMobile) {
+        //     document.getElementById("nav-title").style.display = "block";
+        // }
+        // else {
+        //     document.getElementById("nav-title").style.display = "none";
+        // }
         }
     })
 },sectionOneOptions);
@@ -819,6 +842,28 @@ function moduleCenterButton(e)
 
 function changeClassform(e)
 {
-    e.classList.remove("input_error");
     e.placeholder = "";
+    e.classList.remove("input_error");
+
+
+    // if(e.placeholder = "")
+    // {
+        if(e.id == "name") e.placeholder = "Name";
+        if(e.id == "phone") e.placeholder = "Phone";
+        if(e.id == "mailId") e.placeholder = "Email";
+        if(e.id == "subject") e.placeholder = "Subject";
+        if(e.id == "msg") e.placeholder = "Message";
+    // }
+
+        
+
+}
+
+function hamburger() {
+    if (document.getElementById('hamburgerList').style.display == "flex") {
+        document.getElementById("hamburgerList").style.display = "none";
+    }
+    else {
+        document.getElementById("hamburgerList").style.display = "flex";
+    }
 }
