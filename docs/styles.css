@@ -1932,7 +1932,7 @@ body {
         align-content: stretch;
   }
   #main-container .section1 .content .nav-scrolled {
-    --text: #333333;
+    --text:white;
     --background: white;
     -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
@@ -1965,6 +1965,34 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  #main-container .section1 .content .navbar .hamburgerList {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    display: none;
+  }
+  #main-container .section1 .content .navbar .hamburgerList img {
+    height: 40vh;
+  }
+  #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items {
+    position: absolute;
+    margin: 0;
+    height: 35vh;
+    list-style-type: none;
+  }
+  #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items li {
+    margin-left: 15px;
+    font-family: 'Exo', sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    margin-top: 2.5vh;
+    margin-left: 0;
+  }
+  #main-container .section1 .content .navbar .hamburgerList .hamburger-nav-items a {
+    text-decoration: none;
+    color: var(--text);
+  }
   #main-container .section1 .content .navbar .logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1972,20 +2000,37 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0;
   }
   #main-container .section1 .content .navbar .logo .title {
-    display: none;
+    color: var(--text);
+    padding-left: 0.5vw;
+    font-size: 1.8vh;
+    font-family: 'Exo', sans-serif;
+    padding-left: 2vw;
   }
   #main-container .section1 .content .navbar .logo #color-img {
-    height: 5vh;
+    height: 4vh;
     display: block;
   }
   #main-container .section1 .content .navbar .logo #white-img {
-    height: 5vh;
+    height: 4vh;
     display: none;
   }
   #main-container .section1 .content .navbar .right-content {
+    position: absolute;
+    left: 90vw;
+    top: 1.7vh;
+    width: 10vw;
+  }
+  #main-container .section1 .content .navbar .right-content img {
+    height: 2.5vh;
+  }
+  #main-container .section1 .content .navbar .right-content #colorButton {
     display: none;
+  }
+  #main-container .section1 .content .navbar .right-content #whiteButton {
+    display: block;
   }
   #main-container .section1 .content .heading {
     height: 18vh;

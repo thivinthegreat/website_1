@@ -35,7 +35,7 @@
                                 <a href="#main-container"><b>CODELESS AUTOMATION ACCELERATOR</b></a>
                             </div>
                         </div>
-                        <div class="right-content">
+                        <div class="right-content desk">
                             <ul class="nav-items">
                                 <li class="item">
                                     <a data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top }, 1000);
@@ -51,10 +51,44 @@
                                 </li>
                                 <li class="item">
                                     <a data-page="section6" href="#" onclick="$('html, body').animate({ scrollTop: $('#benifits').offset().top }, 1000);
-                                    return false;"">BENEFITS</a>
+                                    return false;">BENEFITS</a>
                                 </li>       
                                <li class="item">
                                     <a data-page="section7" href="#" onclick="$('html, body').animate({ scrollTop: $('#contactUs').offset().top }, 'slow');
+                                    return false;">CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile right-content">
+                            <img id ="whiteButton" src="./asserts/m_0_Menu_Button_White.png" onclick="hamburger()"/>
+                            <img id ="colorButton" src="./asserts/m_0_Menu_Button_Color.png" onclick="hamburger()"/>
+                        </div>
+                        <div id="hamburgerList" class="hamburgerList mobile">
+                            <img src="./asserts/m_0_Dropdown.png" />
+                            <ul class="hamburger-nav-items">
+                                <li class="item">
+                                    <a data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top }, 1000);
+                                    $('#hamburgerList').css(`'display','none'`);
+                                    return false;">WHY CODELESS ACCELERATOR</a>
+                                </li>
+                                <li class="item">
+                                    <a  data-page="lower"  href="#" onclick="$('html, body').animate({ scrollTop: $('#modules').offset().top + 150 }, 1000);
+                                    document.getElementById('hamburgerList').style.display = 'none';
+                                    return false;">MODULES</a>
+                                </li>
+                                <li class="item">
+                                    <a id="ttgg" data-page="section5" href="#" onclick="$('html, body').animate({ scrollTop: $('#devops').offset().top +100}, 1000);
+                                    document.getElementById('hamburgerList').style.display = 'none';
+                                    return false;">DEVOPS</a>
+                                </li>
+                                <li class="item">
+                                    <a data-page="section6" href="#" onclick="$('html, body').animate({ scrollTop: $('#benifits').offset().top }, 1000);
+                                    document.getElementById('hamburgerList').style.display = 'none';
+                                    return false;">BENEFITS</a>
+                                </li>       
+                               <li class="item">
+                                    <a data-page="section7" href="#" onclick="$('html, body').animate({ scrollTop: $('#contactUs').offset().top }, 'slow');
+                                    document.getElementById('hamburgerList').style.display = 'none';
                                     return false;">CONTACT US</a>
                                 </li>
                             </ul>

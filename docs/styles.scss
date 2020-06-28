@@ -1540,7 +1540,7 @@ body {
                 align-content: stretch;
     
                 .nav-scrolled {
-                    --text: #333333;
+                    --text:white;
                     --background: white;
                     box-shadow: 0 3px 20px rgba(black, 0.2)
                 }
@@ -1559,28 +1559,81 @@ body {
                     background: var(--background);
                     display: flex;
                     align-items: center;
+
+                    .hamburgerList {
+                        position: absolute;
+                        top: 5vh;
+                        right: 0;
+                        display: none;
+
+                        img {
+                            height: 40vh;
+                        }
+
+                        .hamburger-nav-items {
+                            position: absolute;
+                            margin: 0;
+                            height: 35vh;
+                            list-style-type: none;
+
+                            li {
+                                margin-left: 15px;
+                                font-family: 'Exo', sans-serif;
+                                cursor: pointer;
+                                font-weight: 500;
+                                margin-bottom: 2vh;
+                                margin-top: 2.5vh;
+                                margin-left: 0;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: var(--text);
+                            }
+                        }
+                    }
     
                     .logo {
                         display: flex;
                         align-items: center;
+                        padding: 0;
     
                         .title {
-                            display: none;
+                            color: var(--text);
+                            padding-left: 0.5vw;
+                            font-size: 1.8vh;
+                            font-family: 'Exo', sans-serif;
+                            padding-left: 2vw;
                         }
     
                         #color-img {
-                            height: 5vh;
+                            height: 4vh;
                             display: block;
                         }
     
                         #white-img {
-                            height: 5vh;
+                            height: 4vh;
                             display: none;
                         }
                     }
     
                     .right-content {
-                        display: none;
+                        position: absolute;
+                        left: 90vw;
+                        top: 1.7vh;
+                        width: 10vw;
+
+                        img {
+                            height: 2.5vh;
+                        }
+
+                        #colorButton {
+                            display: none;
+                        }
+
+                        #whiteButton {
+                            display: block;
+                        }
                     }
                 }
     

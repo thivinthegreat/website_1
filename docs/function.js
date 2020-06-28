@@ -132,35 +132,27 @@ const sectionOneObserver = new IntersectionObserver(function(entries, sectionOne
             header.classList.add("nav-scrolled");
             document.getElementById("color-img").style.display = "block";
             document.getElementById("white-img").style.display = "none";
+            document.getElementById("colorButton").style.display = "block";
+            document.getElementById("whiteButton").style.display = "none";
         } else {
             header.classList.remove("nav-scrolled");
             document.getElementById("color-img").style.display = "none";
             document.getElementById("white-img").style.display = "block";
-            if (!isMobile) {
-                document.getElementById("nav-title").style.display = "block";
-            }
-            else {
-                document.getElementById("nav-title").style.display = "none";
-            }
+            document.getElementById("colorButton").style.display = "none";
+            document.getElementById("whiteButton").style.display = "block";
+            // if (!isMobile) {
+            //     document.getElementById("nav-title").style.display = "block";
+            // }
+            // else {
+            //     document.getElementById("nav-title").style.display = "none";
+            // }
         }
-        if (isMobile) {
-            document.getElementById("nav-title").style.display = "block";
-            // document.getElementsByClassName("mobile").forEach(m => {
-            //     m.style.display = block;
-            // });
-            // document.getElementsByClassName("desk").forEach(m => {
-            //     m.style.display = none;
-            // });
-        }
-        else {
-            document.getElementById("nav-title").style.display = "none";
-            // document.getElementsByClassName("mobile").forEach(m => {
-            //     m.style.display = none;
-            // });
-            // document.getElementsByClassName("desk").forEach(m => {
-            //     m.style.display = block;
-            // });
-        }
+        // if (isMobile) {
+        //     document.getElementById("nav-title").style.display = "block";
+        // }
+        // else {
+        //     document.getElementById("nav-title").style.display = "none";
+        // }
     })
 }, sectionOneOptions);
 // Observation call Function
@@ -708,4 +700,13 @@ function moduleCenterButton(e)
     
   
 
-}   
+}
+
+function hamburger() {
+    if (document.getElementById('hamburgerList').style.display == "flex") {
+        document.getElementById("hamburgerList").style.display = "none";
+    }
+    else {
+        document.getElementById("hamburgerList").style.display = "flex";
+    }
+}
