@@ -1649,6 +1649,26 @@ body {
     body {
         margin: 0px;
         color: #333333;
+
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ff4747;
+            z-index: 999999;
+    
+                img
+                {
+                    width: 60%;
+                    height: 70%; 
+                    position: absolute;
+                    top: 15%;
+                    left: 20%;
+                }
+    
+            }
     }
     #main-container {
 

@@ -29,11 +29,13 @@ $(document).ready(function() {
  });
 
 
+ //Set Default Zoom Size
 
 
 // get height of input box
 
 var isMobile = false;
+var hambugerOn = false;
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -304,6 +306,26 @@ var sectionOneOptions =
 {
 
 };
+
+
+
+// hide the fHamburger on Scroll
+window.addEventListener('scroll', function() {
+    document.getElementById('hamburgerList').style.display = 'none';
+    hambugerOn = false;
+  });
+
+window.addEventListener('click', function() {
+    console.log(hambugerOn);
+    if(hambugerOn)
+    {
+        document.getElementById('hamburgerList').style.display = 'none';
+        hambugerOn = false;
+    }
+    
+  });
+
+
 
 /////--------- Observation for Nav Bar to change color upon Scrolling --------------  ////// 
 const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
@@ -907,18 +929,47 @@ function moduleCenterButton(e)
 
 function changeClassform(e)
 {
-    e.placeholder = "";
     e.classList.remove("input_error");
 
 
-    // if(e.placeholder = "")
-    // {
-        if(e.id == "name") e.placeholder = "Name";
-        if(e.id == "phone") e.placeholder = "Phone";
-        if(e.id == "mailId") e.placeholder = "Email";
-        if(e.id == "subject") e.placeholder = "Subject";
-        if(e.id == "msg") e.placeholder = "Message";
-    // }
+    if(e.placeholder = "name")
+    {
+        document.getElementById("phone").placeholder = "Phone";
+        document.getElementById("mailId").placeholder = "Email";
+        document.getElementById("subject").placeholder = "Subject";
+        document.getElementById("msg").placeholder = "Message";
+    }
+    if(e.placeholder = "phone")
+    {
+        document.getElementById("name").placeholder = "Name";
+        document.getElementById("mailId").placeholder = "Email";
+        document.getElementById("subject").placeholder = "Subject";
+        document.getElementById("msg").placeholder = "Message";
+    }
+    if(e.placeholder = "mailId")
+    {
+        document.getElementById("phone").placeholder = "Phone";
+        document.getElementById("name").placeholder = "Name";
+        document.getElementById("subject").placeholder = "Subject";
+        document.getElementById("msg").placeholder = "Message";
+    }
+    if(e.placeholder = "subject")
+    {
+        document.getElementById("phone").placeholder = "Phone";
+        document.getElementById("mailId").placeholder = "Email";
+        document.getElementById("name").placeholder = "Name";
+        document.getElementById("msg").placeholder = "Message";
+    }
+
+    if(e.placeholder = "msg")
+    {
+        document.getElementById("phone").placeholder = "Phone";
+        document.getElementById("name").placeholder = "Name";
+        document.getElementById("subject").placeholder = "Subject";
+        document.getElementById("mailId").placeholder = "Email";
+    }
+
+    e.placeholder = "";
 
         
 
