@@ -1520,6 +1520,8 @@ body {
           align-items: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 #main-container .section6 .sec6-content .benifits .list {
@@ -2906,6 +2908,7 @@ body {
     padding-right: 3vw;
     padding-top: 2vh;
     font-family: 'Exo', sans-serif;
+    margin-top: -8vh;
   }
   #main-container .section3 .lower .modules-img .modulesPopUp-container .modulesPopUp-closebutton img {
     margin: 0em;

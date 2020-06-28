@@ -18,6 +18,49 @@
 
 // get height of input box
 
+var isMobile = false;
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    orientationDetectFunction();
+  });
+
+window.addEventListener("orientationchange", function() {
+    orientationChangeDetect();
+  });
+
+function orientationDetectFunction()
+{
+    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
+    {
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
+        isMobile  = true;
+        
+    }   
+
+    else{
+        isMobile = false;
+    }
+
+    
+}
+
+function orientationChangeDetect()
+{
+    if(window.innerHeight <  window.innerWidth*0.8) {
+        // alert("Device is in Potrait mode, Please change it to landscape mode");
+        sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+        isMobile  = true;
+    }
+    else {
+        isMobile = false;
+       sectionOneOptions = {
+            rootMargin: "-200px 0px 0px 0px"
+        };
+    }
+}
 
 var ModuletimeDelay = 7000;
 function loadMore() {
@@ -230,7 +273,6 @@ function sendEmail() {
     }
 }
 
-var isMobile = false;
 
 const header = document.querySelector(".navbar");
 const sectionOne = document.querySelector(".firstSession");
@@ -343,40 +385,15 @@ sectionTitleObserver.observe(sectionSix);
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    orientationLockFunction();
-  });
 
-window.addEventListener("orientationchange", function() {
-    orientationChangeDetect();
-  });
 
-function orientationLockFunction()
-{
-    if (window.innerHeight > window.innerWidth*0.8)   // Some kind of potrait mode 
-    {
-        // alert("Device is in Potrait mode, Please change it to landscape mode");
-        screen.orientation = "landscape";
-    }   screen.rotate = 90;
-    
-}
+// Variables needed for Modukes Popup size
 
-function orientationChangeDetect()
-{
-    if(window.innerHeight <  window.innerWidth*0.8) {
-        // alert("Device is in Potrait mode, Please change it to landscape mode");
-        sectionOneOptions = {
-            rootMargin: "-200px 0px 0px 0px"
-        };
-        isMobile  = true;
-    }
-    else {
-        isMobile = false;
-       sectionOneOptions = {
-            rootMargin: "-200px 0px 0px 0px"
-        };
-    }
-}
+var d_mod_height ;
+var d_mod_width ;
+var m_mod_height;
+var m_mod_width;
+
 
 var prevActiveModuleId ="modules_Mobile";
 var prevActiveModule = document.getElementById("Mobile");
@@ -676,8 +693,16 @@ function modulesPopupClose(e)
     var className_1 = "modulesPopUp-container";
     var className_header = "modulesPopUp-heading";
     var className_content = "modulesPopUp-content";
-
-
+    
+    
+    window.setTimeout( function() {
+        document.getElementsByClassName(className_content)[0].style.opacity = "0";
+        document.getElementsByClassName(className_header)[0].style.opacity = "0";
+        document.getElementsByClassName(className_1)[0].style.visibility = "hidden";
+        document.getElementById("modulesPopUp-heading").innerHTML = "";
+        document.getElementById("modulesPopup-content").innerHTML = "";
+    } , 100 );
+    
     
     window.setTimeout( function() {
         document.getElementsByClassName(className_content)[0].style.opacity = "0";
@@ -714,17 +739,42 @@ function moduleCenterButton(e)
     var className_content = "modulesPopUp-content";
     // alert(currentActiveModuleId);
     var className_1 = "modulesPopUp-container";
+
+        document.getElementById("modulesPopUp-heading").innerHTML = "";
+        document.getElementById("modulesPopup-content").innerHTML = ""; 
+
+
     window.setTimeout( function() { 
-        document.getElementsByClassName(className_1)[0].style.visibility = "visible";
-        document.getElementsByClassName(className_1)[0].style.opacity = "1";
-        document.getElementsByClassName(className_1)[0].style.height = "40vh";
-        document.getElementsByClassName(className_1)[0].style.width = "40vw";
-        document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
-        document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
-        document.getElementsByClassName(className_content)[0].style.opacity = "1";
-        document.getElementsByClassName(className_header)[0].style.opacity = "1";
+
+        if(!isMobile)
+        {
+            document.getElementsByClassName(className_1)[0].style.visibility = "visible";
+            document.getElementsByClassName(className_1)[0].style.opacity = "1";
+            document.getElementsByClassName(className_1)[0].style.height = "40vh";
+            document.getElementsByClassName(className_1)[0].style.width = "40vw";
+            document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
+            document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
+            document.getElementsByClassName(className_content)[0].style.opacity = "1";
+            document.getElementsByClassName(className_header)[0].style.opacity = "1";
+        }
+
+        else{
+            document.getElementsByClassName(className_1)[0].style.visibility = "visible";
+            document.getElementsByClassName(className_1)[0].style.opacity = "1";
+            document.getElementsByClassName(className_1)[0].style.height = "43vh";
+            document.getElementsByClassName(className_1)[0].style.width = "50vh";
+            document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
+            document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
+            document.getElementsByClassName(className_content)[0].style.opacity = "1";
+            document.getElementsByClassName(className_header)[0].style.opacity = "1";
+        }
+
+
 
     }, 100 );  
+
+    document.getElementById("modulesPopUp-heading").innerHTML = "";
+    document.getElementById("modulesPopup-content").innerHTML = ""; 
 
         if(id_name === "modules_Mainframe" )
         {
