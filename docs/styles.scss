@@ -12,16 +12,16 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ff4747;
+        background-color: #ffb7b7;
         z-index: 999999;
 
             img
             {
-                width: 40%;
-                height: 50%; 
+                width: 45%;
+                height: 52%; 
                 position: absolute;
-                top: 15%;
-                left: 30%;
+                top: 17%;
+                left: 32%;
             }
 
         }
@@ -699,7 +699,7 @@ body {
 
                     .modulesInnerCircleText
                     {
-                        font-size: 0.8vw;
+                        font-size: 0.75vw;
                     }
 
                     .modulesInnerCircleText-heading
@@ -1466,20 +1466,19 @@ body {
                     .form-slider
                     {
                         position: absolute;
-                        color: #ffffff;
-                        background-color: #D64C6E;
-                        width: 30%;
-                        height: 5vh;
-                        display: block;
-                        top: 0%;
-                        margin-top: 0.9%;
-                        margin-bottom: 0;
-                        right: 11.2%;
-                        border-radius: 0.5vw;
+                        color: #333333;
+                        background-color: #ffffff;
+                        width: 10%;
+                        height: 3vh;
                         visibility: hidden;
-                        opacity:  0;                       
-                        display: flex;
-                        align-items: center;
+                        top: 0%;
+                        margin-top: -1.32%;
+                        margin-bottom: 0;
+                        left: 0%;
+                        top: 3vh;
+                        opacity: 0;
+                        border-radius: 0.2vw 0.2vw 0vw 0vw;
+                        transition: all 0.8s ease-in-out;
 
 
                         p{
@@ -1491,13 +1490,15 @@ body {
                             display: flex;
                             align-items: center;
                         }
-                    }
 
+                    }
                     &:hover .form-slider
                     {
                         visibility: visible;
                         opacity: 1;
-                        -webkit-transition: all 1.3s ease;
+                        left: 0%;
+                        top: 0%;
+                        -webkit-transition: all 0.8s ease;
                         transition: all 0.8s ease;
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -1543,7 +1544,12 @@ body {
                     font-size: 2vh;
                     padding-left: 1vw;
                     font-family: 'Quicksand', sans-serif;
+
+ 
                 }
+ 
+
+
 
                 .input_error
                 {
@@ -1630,7 +1636,7 @@ body {
         height: 92vh;
         position: absolute;
         top: 10vh;
-        animation: blurry 2.5s ease;
+        animation: blurry 3.5s ease;
 
         @keyframes blurry{
             0% {opacity: 0;}
@@ -1657,16 +1663,16 @@ body {
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ff4747;
+            background-color: #ffb7b7;
             z-index: 999999;
     
                 img
                 {
-                    width: 60%;
-                    height: 70%; 
+                    width: 80%;
+                    height: 85%; 
                     position: absolute;
-                    top: 15%;
-                    left: 20%;
+                    top: -3%;
+                    left: 15%;
                 }
     
             }
@@ -3111,6 +3117,60 @@ body {
     
                     .form {
                         width: 100%;
+
+
+                    .form-slider
+                    {
+                        position: absolute;
+                        color: #333333;
+                        background-color: #ffffff;
+                        width: 10%;
+                        height: 3vh;
+                        visibility: hidden;
+                        top: 0%;
+                        margin-top: -1.32%;
+                        margin-bottom: 0;
+                        left: 0%;
+                        top: 3vh;
+                        opacity: 0;
+                        border-radius: 0.2vw 0.2vw 0vw 0vw;
+                        transition: all 0.8s ease-in-out;
+
+
+                        p{
+                            font-family: 'Exo', sans-serif;
+                            font-size: 2vh;
+                            padding: 0.2vh;
+                            margin: 0;
+                            text-align: justify;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                    }
+                    &:hover .form-slider
+                    {
+                        visibility: visible;
+                        opacity: 1;
+                        left: 0%;
+                        top: 0%;
+                        -webkit-transition: all 0.8s ease;
+                        transition: all 0.8s ease;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        /* -webkit-box-align: center; */
+                        -ms-flex-align: center;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        width: 15vw;
+                        top: -11%;
+                        border-radius: 5px 3px 0 0;
+
+                    }
                     }
     
                     .policy {
@@ -3217,6 +3277,14 @@ body {
             height: 87vh;
             position: absolute;
             top: 10vh;
+            animation: blurry 3.5s ease;
+
+            @keyframes blurry{
+                0% {opacity: 0;}
+                70%{opacity: 0;}
+                100%{opacity: 1;}
+            }
+
         }
         
         #particles-js:hover {

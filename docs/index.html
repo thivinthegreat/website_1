@@ -76,7 +76,7 @@
                             <ul class="hamburger-nav-items">
                                 <li class="item">
                                     <a data-page="section2" href="#" onclick="$('html, body').animate({ scrollTop: $('#section2').offset().top - 40}, 1000);
-                                    document.getElementById('hamburgerList').style.display = 'none'; hambugerOn = true;console.log('LOGGING', hambugerOn);
+                                    document.getElementById('hamburgerList').style.display = 'none'; hambugerOn = true;console.log('LOGGING', hambugerOn);testfn();
                                     return false;">WHY CODELESS ACCELERATOR</a>
                                 </li>
                                 <li class="item">
@@ -239,9 +239,9 @@
 
                             </text>
                             <text class="modulesInnerCircleText-heading" fill="#D43371" xml:space="preserve" style="white-space: pre" font-family="'Quicksand', sans-serif"  letter-spacing="0em">
-                                <tspan id="modules_tspan_head1"  x="295" y="248.652"> &nbsp&nbsp&nbsp      API &</tspan></text>
+                                <tspan id="modules_tspan_head1"  x="295" y="248.652"> &nbsp&nbsp&nbsp   API &</tspan></text>
                             <text class="modulesInnerCircleText-heading" fill="#D43371" xml:space="preserve" style="white-space: pre" font-family="'Quicksand', sans-serif"  letter-spacing="0em">
-                                <tspan id="modules_tspan_head2"  x="273" y="272.652">&nbsp&nbsp        Microservices</tspan></text>
+                                <tspan id="modules_tspan_head2"  x="273" y="272.652">&nbsp&nbsp  Microservices</tspan></text>
                            
                            
                             <g class="modulesGroup1  modulesIconGroup" id="Database" onclick="changeModuleText(this)">
@@ -712,10 +712,10 @@
                         </div>
                         <div class="image">
                             <div class="img-container">
-                                <img src="./asserts/m_6_Testing.png" />
-                                <img src="./asserts/m_6_Fixing.png" />
-                                <img src="./asserts/m_6_Cloud.png" />
-                                <img src="./asserts/m_6_Report_Analytics.png" />
+                                <img src="./asserts/6_Testing@web.svg" />
+                                <img src="./asserts/6_Fixing@web.svg" />
+                                <img src="./asserts/6_Cloud@web.svg" />
+                                <img src="./asserts/6_Reports@web.svg" />
                             </div>
                         </div>
                         <div class="content">
@@ -1130,33 +1130,37 @@
                             </div>
                             <div class="right-session">
                                 <div class="form">
-                                    <input class="input_noerror" type="text" placeholder="Name" id="name" name="name" onclick="changeClassform(this)">
-                                    <div class="form-slider"> 
+                                    <input class="input_noerror" type="text" placeholder="Name" id="name" name="name" onclick="changeClassform(this)"
+                                    onmouseover="this.placeholder=''" onmouseleave=" myTimer=setTimeout(function(){document.getElementById('name').placeholder='Name'},300)">
+                                    <div id="form_name" class="form-slider"> 
                                         <p>Name</p>
                                     </div>
                                 </div>
                                 <div class="form">
-                                    <input class="input_noerror"  type="text" placeholder="Email" id="mailId" name="mailId" onclick="changeClassform(this)">
-                                    <div class="form-slider"> 
+                                    <input class="input_noerror"  type="text" placeholder="Email" id="mailId" name="mailId" onclick="changeClassform(this)"
+                                    onmouseover="this.placeholder=''" onmouseleave=" myTimer=setTimeout(function(){document.getElementById('mailId').placeholder='Email'},300)">
+                                    <div id="form_mail" class="form-slider"> 
                                         <p>Email</p>
                                     </div>
                                 </div>
                                 <div class="form">
-                                    <input class="input_noerror" type="number" placeholder="Phone number" id="phone" name="phone" onclick="changeClassform(this)">
-                                    <div class="form-slider"> 
+                                    <input class="input_noerror" type="number" placeholder="Phone number" id="phone" name="phone" onclick="changeClassform(this)"
+                                   >
+                                    <div id="form_phone" class="form-slider"> 
                                         <p>Phone</p>
                                     </div>
                                 </div>
                                 <div class="form">
-                                    <input class="input_noerror" type="text" placeholder="Subject" id="subject" name="subject" onclick="changeClassform(this)">
-                                    <div class="form-slider"> 
+                                    <input class="input_noerror" type="text" placeholder="Subject" id="subject" name="subject" onclick="changeClassform(this)"
+                                    onmouseover="this.placeholder=''" onmouseleave=" myTimer=setTimeout(function(){document.getElementById('subject').placeholder='Subject'},300)" >
+                                    <div id="form_subject" class="form-slider"> 
                                         <p>Subject</p>
                                     </div>
                                 </div>
                                 <div class="form">
                                     <textarea class="input_noerror" id="msg" placeholder="Message" name="msg" rows="5"
-                                        cols="50" onclick="changeClassform(this)"></textarea>
-                                        <div class="form-slider"> 
+                                        cols="50" onclick="changeClassform(this)"  onmouseover="this.placeholder=''" onmouseleave=" myTimer=setTimeout(function(){document.getElementById('msg').placeholder='Messages'},300)"></textarea>
+                                        <div id="form_msg" class="form-slider"> 
                                             <p>Message</p>
                                         </div>
                                 </div>

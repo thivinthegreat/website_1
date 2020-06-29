@@ -37,7 +37,7 @@
           .translate-from-bottom
          {
 
-             animation: transFromBottom 1.9s ease-in-out ;
+             animation: transFromBottom 2.8s ease-in-out ;
 
          }  
 
@@ -55,7 +55,7 @@
                stroke-dashoffset: 400;
                stroke: #ffffff;
                fill: none;
-               animation: dash1 2.5s ease-in-out forwards, floatAnim 3s ease infinite 2.1s; 
+               animation: dash1 3.5s ease-in-out forwards, floatAnim 3s ease infinite 3.1s; 
                transform-box: fill-box;
                transform-origin: center;
          }  
