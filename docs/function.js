@@ -21,14 +21,14 @@
 setTimeout(function(){   
 $(document).ready(function() {
     //Preloader
-    var preloaderFadeOutTime = 400;
+    var preloaderFadeOutTime = 500;
     function hidePreloader() {
     var preloader = $('.spinner-wrapper');
     preloader.fadeOut(preloaderFadeOutTime);
     }
     hidePreloader();
  });
-}, 100); // Preload SVG delay time
+}, 400); // Preload SVG delay time
 
 // Delay for Loading Html
 $(document).ready(function() {
