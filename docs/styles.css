@@ -1690,6 +1690,7 @@ body .spinner-wrapper img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 2vh;
 }
 
 #main-container .section6 .sec6-content .benifits .list .content .sub-heading {
@@ -1901,7 +1902,7 @@ body .spinner-wrapper img {
       justify-content: space-around;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  height: 75vh;
+  height: 35vw;
   width: 50vw;
   margin-top: 2vh;
   margin-left: 2vw;
@@ -2649,7 +2650,7 @@ body .spinner-wrapper img {
     cursor: pointer;
     border-radius: 35px;
     height: 8vh;
-    font-size: 2.2vh;
+    font-size: 1.9vh;
     font-weight: bold;
     width: 35vw;
   }
@@ -3862,8 +3863,8 @@ body .spinner-wrapper img {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 15vw;
-    top: -11%;
+    width: 20vw;
+    top: -7%;
     border-radius: 5px 3px 0 0;
   }
   #main-container .section7 .content .right-session .policy {
