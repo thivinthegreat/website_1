@@ -548,10 +548,10 @@ function changeModuleText(e)
    {
         document.getElementById("modules_tspan_head1").textContent = "";
         document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0 MainFrame";
-        document.getElementById("modules_tspan1").textContent = " Used for larger scale purposes ";
-        document.getElementById("modules_tspan2").textContent = " that requires great availability";
-        document.getElementById("modules_tspan3").textContent = " and security. This make  ";
-        document.getElementById("modules_tspan4").textContent = " mainframe automation a reality.   ";
+        document.getElementById("modules_tspan1").textContent = "\xa0\xa0Used for larger scale purposes ";
+        document.getElementById("modules_tspan2").textContent = "\xa0\xa0that requires great availability";
+        document.getElementById("modules_tspan3").textContent = "\xa0\xa0and security. This make  ";
+        document.getElementById("modules_tspan4").textContent = "\xa0\xa0mainframe automation a reality.   ";
         document.getElementById("modules_tspan5").textContent = " ";
         document.getElementById("modules_tspan6").textContent = " ";
 //         document.getElementById("tspan7").textContent = " ";
@@ -586,13 +586,13 @@ function changeModuleText(e)
 
     if (id_name === "modules_API")
     {
-        document.getElementById("modules_tspan_head1").textContent = " \xa0\xa0\xa0\xa0   API &";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0    Microservices  ";
-        document.getElementById("modules_tspan1").textContent = "   This supports all types  ";
-        document.getElementById("modules_tspan2").textContent = "   of APIs such as SOAP, REST,";
-        document.getElementById("modules_tspan3").textContent = "   XML, JSON and Response ";
-        document.getElementById("modules_tspan4").textContent = "   Validations including modern  ";
-        document.getElementById("modules_tspan5").textContent = "   cloud microservices.  ";
+        document.getElementById("modules_tspan_head1").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0API &";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0 Microservices  ";
+        document.getElementById("modules_tspan1").textContent = "\xa0\xa0 This supports all types  ";
+        document.getElementById("modules_tspan2").textContent = "\xa0\xa0 of APIs such as SOAP, REST,";
+        document.getElementById("modules_tspan3").textContent = "\xa0\xa0 XML, JSON and Response ";
+        document.getElementById("modules_tspan4").textContent = "\xa0\xa0Validations including modern  ";
+        document.getElementById("modules_tspan5").textContent = "\xa0\xa0cloud microservices.  ";
         document.getElementById("modules_tspan6").textContent = " ";
 //         document.getElementById("tspan7").textContent = "";
     }
