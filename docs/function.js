@@ -65,6 +65,8 @@ function orientationDetectFunction()
     {
         // alert("Device is in Potrait mode, Please change it to landscape mode");
         isMobile  = true;
+        document.getElementById("modules_tspan_head2").setAttribute('x',265);
+        document.getElementById("modules_tspan_head1").setAttribute('x',289);
         
     }   
 
@@ -325,6 +327,8 @@ var sectionOneOptions =
 // hide the fHamburger on Scroll
 window.addEventListener('scroll', function() {
     document.getElementById('hamburgerList').style.display = 'none';
+    document.getElementById('modulesPopUp-containerId').style.visibility = 'hidden';
+    document.getElementById('modulesPopUp-containerId').style.opacity = '0';
     hambugerOn = false;
   });
 
@@ -335,6 +339,9 @@ window.addEventListener('click', function() {
         document.getElementById('hamburgerList').style.display = 'none';
         hambugerOn = false;
     }
+
+    document.getElementById('modulesPopUp-containerId').style.visibility = 'hidden';
+    document.getElementById('modulesPopUp-containerId').style.opacity = '0';
     
   });
 
@@ -502,7 +509,7 @@ function changeModuleText(e)
     currentActiveModuleId = id_name;
     currentActiveModule = e;
 
-
+    // modulesCenterCircleHover = true;
     // console.log("Current Vec name  "  , vecName);
     // console.log("Current text name  "  , textName);
     // console.log("Current id name  "  , currentActiveModuleId);
@@ -513,7 +520,11 @@ function changeModuleText(e)
     var prevtextName    = prevActiveModuleId + "_vector";
     // console.log("Prev  vec name  "  , prevVecName);
     // console.log("Prev  text name  "  , prevtextName);
-
+    window.setTimeout( function() {
+        document.getElementById("modInnerText").className.baseVal = "";
+        document.getElementById("modInnerTextHead1").className.baseVal = "";
+        document.getElementById("modInnerTextHead2").className.baseVal = "";
+    },50);
 
     window.setTimeout( function() {document.getElementById(prevActiveModuleId).className.baseVal = "modulesSvgCircleBack";} , 100 );
     window.setTimeout( function() {document.getElementById(prevVecName).className.baseVal = "";} , 100 );
@@ -524,8 +535,14 @@ function changeModuleText(e)
     window.setTimeout( function() { document.getElementById(vecName).className.baseVal = "modulesSvgVector_Active" } , 100 );
     window.setTimeout( function() { document.getElementById(textName).className.baseVal = "modulesSvgText_Active" } , 100 );
 
+    window.setTimeout( function() {
+        document.getElementById("modInnerText").className.baseVal = "modulesInnerCircleText";
+        document.getElementById("modInnerTextHead1").className.baseVal = "modulesInnerCircleText-heading";
+        document.getElementById("modInnerTextHead2").className.baseVal = "modulesInnerCircleText-heading";
+    },50);
+        
 
-
+    window.setTimeout( function() {
        // alert(id_name);
     if (id_name === "modules_Mainframe")
    {
@@ -735,6 +752,10 @@ function changeModuleText(e)
         document.getElementById("modules_tspan6").textContent = "  provisioning and so on.";
 //         document.getElementById("tspan7").textContent = "";
     }
+
+    },100);
+
+
 }
 
 
@@ -811,8 +832,8 @@ function moduleCenterButton(e)
         else{
             document.getElementsByClassName(className_1)[0].style.visibility = "visible";
             document.getElementsByClassName(className_1)[0].style.opacity = "1";
-            document.getElementsByClassName(className_1)[0].style.height = "43vh";
-            document.getElementsByClassName(className_1)[0].style.width = "50vh";
+            document.getElementsByClassName(className_1)[0].style.height = "45%";
+            document.getElementsByClassName(className_1)[0].style.width = "80%";
             document.getElementsByClassName(className_1)[0].style.borderRadius = "2vh";
             document.getElementsByClassName(className_1)[0].style.backgroundColor = "white";
             document.getElementsByClassName(className_content)[0].style.opacity = "1";
@@ -825,6 +846,9 @@ function moduleCenterButton(e)
 
     document.getElementById("modulesPopUp-heading").innerHTML = "";
     document.getElementById("modulesPopup-content").innerHTML = ""; 
+
+
+    window.setTimeout( function() { 
 
         if(id_name === "modules_Mainframe" )
         {
@@ -932,7 +956,7 @@ function moduleCenterButton(e)
             document.getElementById("modulesPopup-content").innerHTML = "Automation Infrastructure and processes are based on a multi-layer infrastructure like Orchestration engine - CI/CD Engine, Base Infrastructure Support Services - Supports the provisioners, Infrastructure Provisioner and Template Creators.";
         }
     
-    
+    }, 100 ); 
   
 
 }   

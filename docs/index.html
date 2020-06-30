@@ -218,9 +218,9 @@
                             <path d="M591.94 476.185C577.14 476.085 562.44 474.985 547.84 472.985C486.14 464.885 409.04 442.285 330.74 409.485C252.44 376.685 182.44 337.285 133.44 298.885C84.14 260.185 62.04 226.885 71.24 204.985C80.44 183.085 119.74 175.585 181.84 183.685C243.54 191.785 320.64 214.385 398.94 247.285C477.24 280.185 547.24 319.385 596.24 357.885C645.54 396.585 667.64 429.885 658.44 451.785C651.64 467.885 628.54 476.185 591.94 476.185ZM137.34 182.585C101.84 182.585 79.44 190.485 73.04 205.885C64.24 226.885 86.14 259.385 134.64 297.385C183.54 335.685 253.44 374.885 331.54 407.685C409.64 440.485 486.54 462.985 548.14 471.085C609.34 479.085 647.84 471.985 656.64 451.085C665.44 430.185 643.54 397.585 595.04 359.585C546.24 321.285 476.24 282.085 398.14 249.285C320.04 216.485 243.14 193.985 181.54 185.885C166.84 183.785 152.14 182.685 137.34 182.585Z" stroke="white" stroke-width="10" mask="url(#path-4-inside-1)"></path>
                             </g>
                             </g>
-                            <g id="CenterCircle">
+                            <g id="CenterCircle"  style="cursor: pointer;" onclick="moduleCenterButton(this)">
                             <path id="modulesSvgMainCircleStroke" class="modulesSvgMainCircleStroke" d="M364.74 207.185C431.94 207.185 486.44 261.685 486.44 328.985C486.44 396.285 431.94 450.685 364.64 450.685C297.44 450.685 242.94 396.185 242.94 328.885C242.94 296.585 255.74 265.585 278.64 242.785C301.44 219.885 332.44 207.085 364.74 207.185ZM364.74 203.185C295.34 203.185 238.94 259.485 238.94 328.985C238.94 398.485 295.24 454.785 364.74 454.785C434.24 454.785 490.54 398.485 490.54 328.985C490.44 259.485 434.14 203.185 364.74 203.185Z" 
-                                        fill="url(#paint0_linear)" stroke="url(#paint0_linear)" stroke-width="9"></path>
+                                        fill="url(#paint0_linear)" stroke="url(#paint0_linear)" stroke-width="8"></path>
                             <path class="modulesSvgMainCircle" id="modulesSvgMainCircle" d="M364.74 454.585C434.162 454.585 490.44 398.307 490.44 328.885C490.44 259.463 434.162 203.185 364.74 203.185C295.318 203.185 239.04 259.463 239.04 328.885C239.04 398.307 295.318 454.585 364.74 454.585Z" fill="white"></path>
                             <path id="modulesSvgMainCircle_inner" class="modulesSvgMainCircle_inner" d="M364.74 454.585C434.162 454.585 490.44 398.307 490.44 328.885C490.44 259.463 434.162 203.185 364.74 203.185C295.318 203.185 239.04 259.463 239.04 328.885C239.04 398.307 295.318 454.585 364.74 454.585Z"></path>
                             </g>
@@ -228,7 +228,7 @@
                             <path id="Vector_7" d="M374.24 434.885C371.94 437.885 368.44 439.585 364.74 439.585C358.74 439.585 353.64 435.185 352.84 429.185C351.94 422.585 356.54 416.585 363.14 415.685C369.74 414.785 375.74 419.385 376.64 425.985C377.04 429.085 376.24 432.285 374.24 434.885Z" fill="url(#paint1_linear)"></path>
                             <path id="Vector_8" d="M369.34 427.585C369.34 427.885 369.24 428.185 369.04 428.385L362.04 434.685C361.84 434.885 361.54 434.985 361.24 434.985C360.94 434.985 360.74 434.885 360.54 434.685C360.34 434.485 360.24 434.285 360.24 433.985C360.24 433.685 360.34 433.485 360.54 433.285L366.34 428.185C366.44 428.085 366.54 427.885 366.54 427.685C366.54 427.485 366.44 427.285 366.34 427.185L360.54 422.085C360.34 421.885 360.24 421.685 360.24 421.385C360.24 421.085 360.34 420.885 360.54 420.685C360.94 420.285 361.64 420.285 362.04 420.685L369.04 426.985C369.24 426.985 369.34 427.285 369.34 427.585Z" fill="white"></path>
                             </g>
-                            <text  transform="translate(274 285.286) rotate(-0.63075)" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="'Exo', sans-serif" class="modulesInnerCircleText" letter-spacing="0em">
+                            <text id="modInnerText" transform="translate(274 285.286) rotate(-0.63075)" fill="#333333" xml:space="preserve" style="white-space: pre" font-family="'Exo', sans-serif" class="modulesInnerCircleText modulesSvgMainCircleGroup" letter-spacing="0em" onclick="moduleCenterButton(this)">
                                 <tspan id="modules_tspan1" x="-18" y="18.7852">   This supports all types  </tspan>
                                 <tspan id="modules_tspan2" x="-18" y="38.7852">   of APIs such as SOAP, REST, </tspan>
                                 <tspan id="modules_tspan3" x="-18" y="58.7852">   XML, JSON and Response </tspan>
@@ -238,9 +238,9 @@
 
 
                             </text>
-                            <text class="modulesInnerCircleText-heading" fill="#D43371" xml:space="preserve" style="white-space: pre" font-family="'Quicksand', sans-serif"  letter-spacing="0em">
+                            <text id="modInnerTextHead1" class="modulesInnerCircleText-heading " fill="#D43371" xml:space="preserve" style="white-space: pre" font-family="'Quicksand', sans-serif"  letter-spacing="0em" onclick="moduleCenterButton(this)">
                                 <tspan id="modules_tspan_head1"  x="295" y="248.652"> &nbsp&nbsp&nbsp   API &</tspan></text>
-                            <text class="modulesInnerCircleText-heading" fill="#D43371" xml:space="preserve" style="white-space: pre" font-family="'Quicksand', sans-serif"  letter-spacing="0em">
+                            <text id="modInnerTextHead2" class="modulesInnerCircleText-heading" fill="#D43371" xml:space="preserve" style="white-space: pre" font-family="'Quicksand', sans-serif"  letter-spacing="0em" onclick="moduleCenterButton(this)">
                                 <tspan id="modules_tspan_head2"  x="273" y="272.652">&nbsp&nbsp  Microservices</tspan></text>
                            
                            
@@ -465,7 +465,7 @@
                             </defs>
                             </svg>                           
 
-                        <div class="modulesPopUp-container">
+                        <div id = "modulesPopUp-containerId" class="modulesPopUp-container">
                             <div class="modulesPopUp-closebutton" >
                                 <img src="./asserts/4_close.png" onclick="modulesPopupClose(this)"/>
                             </div>

@@ -1,30 +1,31 @@
 body {
     margin: 0px;
     color: #333333;
+    font-size: 100%;
 
     //Preloader 
  
     
 
-      .spinner-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ffb7b7;
-        z-index: 999999;
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffb7b7;
+            z-index: 999999;
 
-            img
-            {
-                width: 45%;
-                height: 52%; 
-                position: absolute;
-                top: 17%;
-                left: 32%;
+                img
+                {
+                    width: 45%;
+                    height: 52%; 
+                    position: absolute;
+                    top: 17%;
+                    left: 32%;
+                }
+
             }
-
-        }
 }
 
 #main-container {
@@ -536,19 +537,21 @@ body {
                     .modulesSvgMainCircle
                     {
                         fill:white;
-                        transform-origin: center center;
+                        transform-origin: center ;
+                        // transform-box: fill;
                     }
 
                     .modulesSvgMainCircleStroke
                     {
-                        transform-origin: 50.45% 45.75%;
-                        animation: spin 3s infinite linear;
+                        transform-origin: 50.50% 45.73%;
+                        animation: spin 2s infinite linear;
                         @keyframes spin {
                             from {transform:rotate(0deg);}
                             to {transform:rotate(360deg);}
                         }
                     }
-
+                    
+     
 
                     .modulesSvgCircleBack_Active
                     {
@@ -560,7 +563,7 @@ body {
                         stroke-dashoffset: 400px;
                         stroke: #ffffff;
                         cursor: pointer;
-                        animation: dash 1.5s ease-in-out forwards ;
+                        animation: dash 2.2s ease-in-out forwards ;
                         transform-origin: center;
                         // transition-duration: 300ms;
                         // transition: all 0.35s ease-in-out;
@@ -586,7 +589,7 @@ body {
                         stroke: rgba(255, 255, 255, 1);
                         
 
-                        animation: dash1 1.9s ease-in-out forwards ;
+                        animation: dash1 2.2s ease-in-out forwards ;
                         
 
                     }
@@ -612,7 +615,7 @@ body {
                         stroke: rgba(255, 255, 255, 1);
                         
 
-                        animation: dash1 0.5s ease-in-out alternate ;
+                        animation: dash1 1.8s ease-in-out alternate ;
                     }
 
                     .modulesGroup1-
@@ -683,6 +686,7 @@ body {
                             }
                           }
                     }
+
                     .moduleCenterCircle_heading
                     {
                         transition: ease-in;
@@ -699,12 +703,35 @@ body {
 
                     .modulesInnerCircleText
                     {
-                        font-size: 0.75vw;
+                        font-size: 0.91em;
+                        transition: ease-in;
+                        animation-name: fadein;
+                        animation-duration: 1s;
+                        opacity: 1;
+                        cursor: pointer;
+                    
+
+                        @keyframes fadein {
+                            from { opacity: 0; }
+                            to   { opacity: 1; }
+                        }
+
                     }
 
                     .modulesInnerCircleText-heading
                     {
-                        font-size: 1vw;
+                        font-size: 1.2em;
+                        transition: ease-in;
+                        animation-name: fadein;
+                        animation-duration: 1s;
+                        opacity: 1;
+                        cursor: pointer;
+                    
+
+                        @keyframes fadein {
+                            from { opacity: 0; }
+                            to   { opacity: 1; }
+                        }
                     }
                 }
 
@@ -795,7 +822,7 @@ body {
                                 padding-left: 3vw;
                                 padding-right: 3vw;
                                 font-family: 'Quicksand', sans-serif;
-                                font-size: 1.8vh;
+                                font-size: 1.0em;
                                 justify-content: center;
                                 text-align: justify;
                                 opacity: 0;
@@ -2088,6 +2115,8 @@ body {
                                 font-size: 1.8vh;
                                 opacity: 1;
                                 transition: all linear 0.5s;
+                                -webkit-perspective: 1000;
+                                -webkit-backface-visibility: hidden;
                             }
                          }
     
@@ -2119,6 +2148,8 @@ body {
                                     background-image: linear-gradient(to right, #d23174, #f34938);
                                     color: white;
                                     transition: all 0.5s ease-in;
+                                    -webkit-perspective: 1000;
+                                    -webkit-backface-visibility: hidden;
                                 }
                             }
                         }
@@ -2184,6 +2215,8 @@ body {
                         fill: white;
                         cursor: pointer;
                         transition: all 0.6s ease-in-out;
+                        -webkit-perspective: 1000;
+                        -webkit-backface-visibility: hidden;
 
                         &:hover
                         {
@@ -2192,6 +2225,8 @@ body {
                             stroke: rgb(248, 254, 255);
                             cursor: pointer;
                             transition: all 0.35s ease-in-out;
+                            -webkit-perspective: 1000;
+                            -webkit-backface-visibility: hidden;
 
                         }
                     }
@@ -2361,12 +2396,12 @@ body {
 
                     .modulesInnerCircleText
                     {
-                        font-size: 4vw;
+                        font-size: 0.87em;
                     }
 
                     .modulesInnerCircleText-heading
                     {
-                        font-size: 5.4vw;
+                        font-size: 1.4em;
                     }
                 }
     
@@ -2773,6 +2808,8 @@ body {
                                     font-family: 'Exo', sans-serif;
                                     transform: scale(1);
                                     transition: all 1.2s ease-in-out;
+                                    -webkit-perspective: 1000;
+                                    -webkit-backface-visibility: hidden;
                                 }
     
                                 .description {
@@ -2783,6 +2820,8 @@ body {
                                     font-family: 'Quicksand', sans-serif;
                                     transform: scale(1);
                                     transition: all 1.2s ease-in-out;
+                                    -webkit-perspective: 1000;
+                                    -webkit-backface-visibility: hidden;
 
                                 }
                             }
@@ -2885,6 +2924,8 @@ body {
                             opacity: 1;
                             // transition: opacity visibility 0.9s ease-in-out;
                             animation: sec6def 0.8s ease-in-out;
+                            -webkit-perspective: 1000;
+                            -webkit-backface-visibility: hidden;
                             // animation-duration: 0.8s;
                             // animation-fill-mode: initial;
 
@@ -2913,6 +2954,8 @@ body {
                             height: 4vh;
                             visibility: visible;
                             transition-property: visibility opacity ;    
+                            -webkit-perspective: 1000;
+                            -webkit-backface-visibility: hidden;
                             color:#333333;
                              // animation: fader 1.2s;
                              font-size: 2.2vh;
@@ -2926,6 +2969,8 @@ body {
                             -webkit-transform: scale(0.7) rotate(0.01deg);
                             transform: scale(0.7) rotate(0.01deg);
                             transition: all 0.8s ease;
+                            -webkit-perspective: 1000;
+                            -webkit-backface-visibility: hidden;
                         }
 
     
@@ -2936,6 +2981,7 @@ body {
                             flex-direction: column;
                             flex-wrap: nowrap;
                             align-items: center;
+
     
     
     
@@ -2964,12 +3010,16 @@ body {
                                 -webkit-transform: scale(1) ;
                                 transform: scale(1);
                                  transition: all 0.8s ease;
+                                 -webkit-perspective: 1000;
+                                 -webkit-backface-visibility: hidden;
     
                                 img {
                                     max-height: 20vh;
                                     -webkit-transform: scale(1) ;
                                     transform: scale(1);
                                      transition: all 0.8s ease;
+                                     -webkit-perspective: 1000;
+                                     -webkit-backface-visibility: hidden;
                                 }
                             }
     

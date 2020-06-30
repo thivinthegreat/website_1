@@ -42,7 +42,7 @@
 
 	.liquid
 	{
-		animation: liquidr 4s ease-in-out infinite;
+		animation: liquidr 2s ease infinite;
 		transform-origin: center center;
 		transform: scale(1,0.98); 
 	}

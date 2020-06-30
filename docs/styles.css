@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   color: #333333;
+  font-size: 100%;
 }
 
 body .spinner-wrapper {
@@ -709,15 +710,15 @@ body .spinner-wrapper img {
 
 #main-container .section3 .lower .modules-img svg .modulesSvgMainCircle {
   fill: white;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 #main-container .section3 .lower .modules-img svg .modulesSvgMainCircleStroke {
-  -webkit-transform-origin: 50.45% 45.75%;
-          transform-origin: 50.45% 45.75%;
-  -webkit-animation: spin 3s infinite linear;
-          animation: spin 3s infinite linear;
+  -webkit-transform-origin: 50.50% 45.73%;
+          transform-origin: 50.50% 45.73%;
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
 }
 
 @-webkit-keyframes spin {
@@ -749,8 +750,8 @@ body .spinner-wrapper img {
   stroke-dashoffset: 400px;
   stroke: #ffffff;
   cursor: pointer;
-  -webkit-animation: dash 1.5s ease-in-out forwards;
-          animation: dash 1.5s ease-in-out forwards;
+  -webkit-animation: dash 2.2s ease-in-out forwards;
+          animation: dash 2.2s ease-in-out forwards;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -778,8 +779,8 @@ body .spinner-wrapper img {
   stroke-width: 1.9px;
   stroke-dashoffset: 400;
   stroke: white;
-  -webkit-animation: dash1 1.9s ease-in-out forwards;
-          animation: dash1 1.9s ease-in-out forwards;
+  -webkit-animation: dash1 2.2s ease-in-out forwards;
+          animation: dash1 2.2s ease-in-out forwards;
 }
 
 @-webkit-keyframes dash1 {
@@ -811,8 +812,8 @@ body .spinner-wrapper img {
   stroke-width: 2px;
   stroke-dashoffset: 400;
   stroke: white;
-  -webkit-animation: dash1 0.5s ease-in-out alternate;
-          animation: dash1 0.5s ease-in-out alternate;
+  -webkit-animation: dash1 1.8s ease-in-out alternate;
+          animation: dash1 1.8s ease-in-out alternate;
 }
 
 #main-container .section3 .lower .modules-img svg .modulesGroup1- {
@@ -939,11 +940,45 @@ body .spinner-wrapper img {
 }
 
 #main-container .section3 .lower .modules-img svg .modulesInnerCircleText {
-  font-size: 0.75vw;
+  font-size: 0.91em;
+  -webkit-transition: ease-in;
+  transition: ease-in;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #main-container .section3 .lower .modules-img svg .modulesInnerCircleText-heading {
-  font-size: 1vw;
+  font-size: 1.2em;
+  -webkit-transition: ease-in;
+  transition: ease-in;
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #main-container .section3 .lower .modules-img .modulesPopUp-container {
@@ -1057,7 +1092,7 @@ body .spinner-wrapper img {
   padding-left: 3vw;
   padding-right: 3vw;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.8vh;
+  font-size: 1.0em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2587,6 +2622,8 @@ body .spinner-wrapper img {
     opacity: 1;
     -webkit-transition: all linear 0.5s;
     transition: all linear 0.5s;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section3 .upper .sec3-content .sec3-text .learnMore {
     width: 100%;
@@ -2622,6 +2659,8 @@ body .spinner-wrapper img {
     color: white;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section3 .lower {
     position: absolute;
@@ -2693,6 +2732,8 @@ body .spinner-wrapper img {
     cursor: pointer;
     -webkit-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section3 .lower .modules-img svg .modulesSvgCircleBack:hover {
     stroke-width: 11px;
@@ -2701,6 +2742,8 @@ body .spinner-wrapper img {
     cursor: pointer;
     -webkit-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section3 .lower .modules-img svg .modulesSvgMainCircle {
     fill: white;
@@ -2911,10 +2954,10 @@ body .spinner-wrapper img {
     }
   }
   #main-container .section3 .lower .modules-img svg .modulesInnerCircleText {
-    font-size: 4vw;
+    font-size: 0.87em;
   }
   #main-container .section3 .lower .modules-img svg .modulesInnerCircleText-heading {
-    font-size: 5.4vw;
+    font-size: 1.4em;
   }
   #main-container .section3 .lower .modules-img .modulesPopUp-container {
     background-color: #e54e57;
@@ -3381,6 +3424,8 @@ body .spinner-wrapper img {
             transform: scale(1);
     -webkit-transition: all 1.2s ease-in-out;
     transition: all 1.2s ease-in-out;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section5 .sec5-container .sec5-subcontent .content .details .list .description {
     margin-top: 3vh;
@@ -3392,6 +3437,8 @@ body .spinner-wrapper img {
             transform: scale(1);
     -webkit-transition: all 1.2s ease-in-out;
     transition: all 1.2s ease-in-out;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section6 {
     overflow-x: hidden;
@@ -3493,6 +3540,8 @@ body .spinner-wrapper img {
     opacity: 1;
     -webkit-animation: sec6def 0.8s ease-in-out;
             animation: sec6def 0.8s ease-in-out;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   @-webkit-keyframes sec6def {
     0% {
@@ -3525,6 +3574,8 @@ body .spinner-wrapper img {
     visibility: visible;
     -webkit-transition-property: visibility opacity;
     transition-property: visibility opacity;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
     color: #333333;
     font-size: 2.2vh;
   }
@@ -3535,6 +3586,8 @@ body .spinner-wrapper img {
     transform: scale(0.7) rotate(0.01deg);
     -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section6 .sec6-content .benifits .list .content {
     height: 32vh;
@@ -3577,6 +3630,8 @@ body .spinner-wrapper img {
     transform: scale(1);
     -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section6 .sec6-content .benifits .list .content .image img {
     max-height: 20vh;
@@ -3584,6 +3639,8 @@ body .spinner-wrapper img {
     transform: scale(1);
     -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
   }
   #main-container .section6 .sec6-content .benifits .list .content .hoverCircle {
     display: none;
