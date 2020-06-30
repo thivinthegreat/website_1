@@ -547,7 +547,7 @@ function changeModuleText(e)
     if (id_name === "modules_Mainframe")
    {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0      MainFrame";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0 MainFrame";
         document.getElementById("modules_tspan1").textContent = " Used for larger scale purposes ";
         document.getElementById("modules_tspan2").textContent = " that requires great availability";
         document.getElementById("modules_tspan3").textContent = " and security. This make  ";
@@ -561,7 +561,7 @@ function changeModuleText(e)
     if (id_name === "modules_Infrastructure")
     {
          document.getElementById("modules_tspan_head1").textContent = "";
-         document.getElementById("modules_tspan_head2").textContent = " \xa0   Infrastructure";
+         document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0 Infrastructure";
          document.getElementById("modules_tspan1").textContent = "    Running on multi-cloud  ";
          document.getElementById("modules_tspan2").textContent = "    infrastructure, automation   ";
          document.getElementById("modules_tspan3").textContent = "    infrastructure is designed to   ";
@@ -574,7 +574,7 @@ function changeModuleText(e)
     if (id_name === "modules_Mobile")
     {
         document.getElementById("modules_tspan_head1").textContent = " ";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0       Mobile";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 Mobile";
         document.getElementById("modules_tspan1").textContent = "Android, IOS and Windows APP ";
         document.getElementById("modules_tspan2").textContent = "APP automation and WEB ";
         document.getElementById("modules_tspan3").textContent = "browser automation testing  ";
@@ -613,13 +613,13 @@ function changeModuleText(e)
     if (id_name === "modules_Desktop")
     {   
         document.getElementById("modules_tspan_head1").textContent = " ";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0   Desktop  ";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0 Desktop  ";
         document.getElementById("modules_tspan1").textContent = "\xa0  Nurtures the development ";
         document.getElementById("modules_tspan2").textContent = "\xa0  of desktop applications";
         document.getElementById("modules_tspan3").textContent = "\xa0  by supporting Microsoft  ";
         document.getElementById("modules_tspan4").textContent = "\xa0  WinAppDriver & UI Automation ";
         document.getElementById("modules_tspan5").textContent = "\xa0  Sikuli, AutoIT and licensed";
-        document.getElementById("modules_tspan6").textContent = "\xa0   SmartBear.  ";
+        document.getElementById("modules_tspan6").textContent = "\xa0\xa0\xa0\xa0\xa0 SmartBear.  ";
 //         document.getElementById("tspan7").textContent = "\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0  TestLeft. ";
     }
     
@@ -627,11 +627,11 @@ function changeModuleText(e)
     {
         document.getElementById("modules_tspan_head1").textContent = "";
         document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0 Companion   ";
-        document.getElementById("modules_tspan1").textContent = " Individuals can carry out all";
-        document.getElementById("modules_tspan2").textContent = " required actions to script,";
-        document.getElementById("modules_tspan3").textContent = " maintain and execute test cases";
-        document.getElementById("modules_tspan4").textContent = " from the simplicity of one     ";
-        document.getElementById("modules_tspan5").textContent = " centralized application.";
+        document.getElementById("modules_tspan1").textContent = "\xa0\xa0 Individuals can carry out all";
+        document.getElementById("modules_tspan2").textContent = "\xa0\xa0 required actions to script,";
+        document.getElementById("modules_tspan3").textContent = "\xa0\xa0 maintain and execute test cases";
+        document.getElementById("modules_tspan4").textContent = "\xa0\xa0 from the simplicity of one     ";
+        document.getElementById("modules_tspan5").textContent = "\xa0\xa0 centralized application.";
         document.getElementById("modules_tspan6").textContent = "";
 //         document.getElementById("tspan7").textContent = "";
     }
@@ -639,7 +639,7 @@ function changeModuleText(e)
     if (id_name === "modules_Accessibility")
     {
         document.getElementById("modules_tspan_head1").textContent = ""; 
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0   Accessibility    ";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0 Accessibility    ";
         document.getElementById("modules_tspan1").textContent = "Allows universal access of the";
         document.getElementById("modules_tspan2").textContent = "web, especially to those who";
         document.getElementById("modules_tspan3").textContent = "have difficulty in understanding,";
@@ -652,7 +652,7 @@ function changeModuleText(e)
     if (id_name === "modules_Security")
     {
         document.getElementById("modules_tspan_head1").textContent = "  ";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0   Security ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0\xa0\xa0Security ";
         document.getElementById("modules_tspan1").textContent = "\xa0 Detection of security risks";
         document.getElementById("modules_tspan2").textContent = "\xa0 in the system which allows";
         document.getElementById("modules_tspan3").textContent = "\xa0 developers to address these";
@@ -671,13 +671,13 @@ function changeModuleText(e)
         document.getElementById("modules_tspan3").textContent = "\xa0 batch processes in distributed";
         document.getElementById("modules_tspan4").textContent = "\xa0 networks and the most efficient";
         document.getElementById("modules_tspan5").textContent = "\xa0 and simple module that heavily";
-        document.getElementById("modules_tspan6").textContent = "  \xa0   relies on shell commands.";
+        document.getElementById("modules_tspan6").textContent = "\xa0\xa0\xa0\xa0  relies on shell commands.";
 //         document.getElementById("tspan7").textContent = "        ";
     }
     if (id_name === "modules_integration")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0 Integration   ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0 Integration   ";
         document.getElementById("modules_tspan1").textContent = "\xa0 This adaptor already built";
         document.getElementById("modules_tspan2").textContent = "\xa0 (via APIs) and available for";
         document.getElementById("modules_tspan3").textContent = "\xa0 common tools and products";
@@ -690,7 +690,7 @@ function changeModuleText(e)
     if (id_name === "modules_elastic")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = "  \xa0 \xa0 \xa0Elastic Stack   ";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0Elastic Stack   ";
         document.getElementById("modules_tspan1").textContent = "\xa0   Helps to reduce the time";
         document.getElementById("modules_tspan2").textContent = "\xa0   in building/generating";
         document.getElementById("modules_tspan3").textContent = "\xa0   the real-time reports and";
@@ -704,39 +704,39 @@ function changeModuleText(e)
     if (id_name === "modules_AI")
     {
         document.getElementById("modules_tspan_head1").textContent = " ";
-        document.getElementById("modules_tspan_head2").textContent = "  \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0  AI     ";
+        document.getElementById("modules_tspan_head2").textContent = "  \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0AI ";
         document.getElementById("modules_tspan1").textContent = "\xa0  Provides integration to AI ";
         document.getElementById("modules_tspan2").textContent = "\xa0  and ML algorithms empowering ";
         document.getElementById("modules_tspan3").textContent = "\xa0  users with  tools to get value";
         document.getElementById("modules_tspan4").textContent = "\xa0  and insights from their ";
         document.getElementById("modules_tspan5").textContent = " \xa0 Elasticsearch data and view  ";
-        document.getElementById("modules_tspan6").textContent = "\xa0   machine learning. ";
+        document.getElementById("modules_tspan6").textContent = "\xa0\xa0\xa0\xa0\xa0machine learning. ";
         // document.getElementById("tspan7").textContent = "  ";
     }
 
     if (id_name === "modules_Performance")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0Performance  ";
-        document.getElementById("modules_tspan1").textContent = " \xa0 Implemented to test Rest";
-        document.getElementById("modules_tspan2").textContent = " \xa0 API Performance and Web";
-        document.getElementById("modules_tspan3").textContent = " \xa0 Application load test by";
-        document.getElementById("modules_tspan4").textContent = " \xa0 enabling testers to calculate";
-        document.getElementById("modules_tspan5").textContent = " \xa0 the performance time of test";
-        document.getElementById("modules_tspan6").textContent = " \xa0   cases using this module.";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0Performance  ";
+        document.getElementById("modules_tspan1").textContent = "\xa0\xa0\xa0Implemented to test Rest";
+        document.getElementById("modules_tspan2").textContent = "\xa0\xa0\xa0API Performance and Web";
+        document.getElementById("modules_tspan3").textContent = "\xa0\xa0\xa0Application load test by";
+        document.getElementById("modules_tspan4").textContent = "\xa0\xa0\xa0enabling testers to calculate";
+        document.getElementById("modules_tspan5").textContent = "\xa0\xa0\xa0the performance time of test";
+        document.getElementById("modules_tspan6").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0cases using this module.";
         // document.getElementById("tspan7").textContent = "";
     }
 
     if (id_name === "modules_Database")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0Database    ";
-        document.getElementById("modules_tspan1").textContent = " This supports Java JDBC, ";
-        document.getElementById("modules_tspan2").textContent = "SQL server, Oracle database,";
-        document.getElementById("modules_tspan3").textContent = " MariaDB, MySQL.It additionally";
-        document.getElementById("modules_tspan4").textContent = " supports AWS database such  ";
-        document.getElementById("modules_tspan5").textContent = " as AWS Aurora DB and RDS. ";
-        document.getElementById("modules_tspan6").textContent = " ";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0Database ";
+        document.getElementById("modules_tspan1").textContent = "\xa0\xa0This supports Java JDBC, ";
+        document.getElementById("modules_tspan2").textContent = "\xa0\xa0SQL server, Oracle database,";
+        document.getElementById("modules_tspan3").textContent = "\xa0\xa0MariaDB, MySQL.It additionally";
+        document.getElementById("modules_tspan4").textContent = "\xa0\xa0supports AWS database such  ";
+        document.getElementById("modules_tspan5").textContent = "\xa0\xa0as AWS Aurora DB and RDS. ";
+        document.getElementById("modules_tspan6").textContent = "";
         // document.getElementById("tspan7").textContent = "";
     }
 
@@ -746,10 +746,10 @@ function changeModuleText(e)
         document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 Cloud " ;
         document.getElementById("modules_tspan1").textContent = "\xa0  A breeze via native support  ";
         document.getElementById("modules_tspan2").textContent = "\xa0  to integrate with cloud providers";
-        document.getElementById("modules_tspan3").textContent = " \xa0 its advanced features like";
-        document.getElementById("modules_tspan4").textContent = " \xa0 autoscaling, containerization , ";
-        document.getElementById("modules_tspan5").textContent = " \xa0 orchestration infrastructure   ";
-        document.getElementById("modules_tspan6").textContent = " \xa0\xa0\xa0 provisioning and so on.";
+        document.getElementById("modules_tspan3").textContent = "\xa0 its advanced features like";
+        document.getElementById("modules_tspan4").textContent = "\xa0 autoscaling, containerization , ";
+        document.getElementById("modules_tspan5").textContent = "\xa0 orchestration infrastructure   ";
+        document.getElementById("modules_tspan6").textContent = "\xa0\xa0\xa0\xa0\xa0 provisioning and so on.";
 //         document.getElementById("tspan7").textContent = "";
     }
 
