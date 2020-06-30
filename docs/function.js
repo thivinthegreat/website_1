@@ -600,7 +600,7 @@ function changeModuleText(e)
     if (id_name === "modules_WebUI")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0        WebUI   ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0        WebUI   ";
         document.getElementById("modules_tspan1").textContent = "  Developed with a view   ";
         document.getElementById("modules_tspan2").textContent = "  to support all kinds of web ";
         document.getElementById("modules_tspan3").textContent = "  applications across various ";
@@ -665,13 +665,13 @@ function changeModuleText(e)
     if (id_name === "modules_Batch")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0        Batch/SSH    ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0     Batch/SSH    ";
         document.getElementById("modules_tspan1").textContent = " Focuses automation of";
         document.getElementById("modules_tspan2").textContent = " multi-machines, cross-platform";
         document.getElementById("modules_tspan3").textContent = " batch processes in distributed";
         document.getElementById("modules_tspan4").textContent = " networks and the most efficient";
         document.getElementById("modules_tspan5").textContent = " and simple module that heavily";
-        document.getElementById("modules_tspan6").textContent = "  relies on shell commands.";
+        document.getElementById("modules_tspan6").textContent = "  \xa0   relies on shell commands.";
 //         document.getElementById("tspan7").textContent = "        ";
     }
     if (id_name === "modules_integration")
@@ -915,7 +915,7 @@ function moduleCenterButton(e)
         if(id_name === "modules_Batch" )
         {
             document.getElementById("modulesPopUp-heading").innerHTML = "BATCH/SSH Module";
-            document.getElementById("modulesPopup-content").innerHTML = "The batch & SSH automation accelerator module focuses on the automation of multi-machines and cross-platform batch processes in distributed networks. The module enables sophisticated automation development, without the need for writing and managing code. This substantially reduces development costs and timelines thus ensuring easy maintenance and management of automated tasks. The batch & SSH automation accelerator module is highly efficient simple and inordinately rely upon shell commands. A set of shell commands are executed as shell scripts to run batch automation process and thus results in saving a lot of time.";
+            document.getElementById("modulesPopup-content").innerHTML = "The batch & SSH automation accelerator module focuses on the automation of multi-machines and cross-platform batch processes in distributed networks. The module enables sophisticated automation development, without the need for writing and managing code. This substantially reduces development costs and timelines thus ensuring easy maintenance and management of automated tasks. A set of shell commands are executed as shell scripts to run batch automation process and thus results in saving a lot of time.";
         }
         
 
