@@ -417,6 +417,7 @@ body .spinner-wrapper img {
 #main-container .section3 .sec3-backimg2 {
   width: 100%;
   max-height: 125vh;
+  min-height: 125vh;
   position: absolute;
 }
 
