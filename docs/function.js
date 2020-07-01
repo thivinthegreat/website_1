@@ -586,7 +586,7 @@ function changeModuleText(e)
 
     if (id_name === "modules_API")
     {
-        document.getElementById("modules_tspan_head1").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0API &";
+        document.getElementById("modules_tspan_head1").textContent = "API &";
         document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0 Microservices  ";
         document.getElementById("modules_tspan1").textContent = "\xa0\xa0 This supports all types  ";
         document.getElementById("modules_tspan2").textContent = "\xa0\xa0 of APIs such as SOAP, REST,";
