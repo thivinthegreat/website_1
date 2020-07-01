@@ -65,8 +65,8 @@ function orientationDetectFunction()
     {
         // alert("Device is in Potrait mode, Please change it to landscape mode");
         isMobile  = true;
-        document.getElementById("modules_tspan_head2").setAttribute('x',265);
-        document.getElementById("modules_tspan_head1").setAttribute('x',289);
+        document.getElementById("modules_tspan_head2").setAttribute('x',260);
+        // document.getElementById("modules_tspan_head1").setAttribute('x',289);
         
     }   
 
@@ -626,7 +626,7 @@ function changeModuleText(e)
     if (id_name === "modules_Companion")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0 Companion   ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0\xa0Companion   ";
         document.getElementById("modules_tspan1").textContent = "\xa0\xa0 Individuals can carry out all";
         document.getElementById("modules_tspan2").textContent = "\xa0\xa0 required actions to script,";
         document.getElementById("modules_tspan3").textContent = "\xa0\xa0 maintain and execute test cases";
@@ -652,7 +652,7 @@ function changeModuleText(e)
     if (id_name === "modules_Security")
     {
         document.getElementById("modules_tspan_head1").textContent = "  ";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0\xa0\xa0Security ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0Security ";
         document.getElementById("modules_tspan1").textContent = "\xa0 Detection of security risks";
         document.getElementById("modules_tspan2").textContent = "\xa0 in the system which allows";
         document.getElementById("modules_tspan3").textContent = "\xa0 developers to address these";
@@ -665,7 +665,7 @@ function changeModuleText(e)
     if (id_name === "modules_Batch")
     {
         document.getElementById("modules_tspan_head1").textContent = "";
-        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0 Batch/SSH    ";
+        document.getElementById("modules_tspan_head2").textContent = " \xa0\xa0\xa0\xa0\xa0\xa0Batch/SSH    ";
         document.getElementById("modules_tspan1").textContent = "\xa0 Focuses automation of";
         document.getElementById("modules_tspan2").textContent = "\xa0 multi-machines, cross-platform";
         document.getElementById("modules_tspan3").textContent = "\xa0 batch processes in distributed";
