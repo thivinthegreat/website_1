@@ -613,7 +613,7 @@ function changeModuleText(e)
     if (id_name === "modules_Desktop")
     {   
         document.getElementById("modules_tspan_head1").textContent = " ";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0 Desktop  ";
+        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0   Desktop  ";
         document.getElementById("modules_tspan1").textContent = "\xa0  Nurtures the development ";
         document.getElementById("modules_tspan2").textContent = "\xa0  of desktop applications";
         document.getElementById("modules_tspan3").textContent = "\xa0  by supporting Microsoft  ";
@@ -704,7 +704,7 @@ function changeModuleText(e)
     if (id_name === "modules_AI")
     {
         document.getElementById("modules_tspan_head1").textContent = " ";
-        document.getElementById("modules_tspan_head2").textContent = "  \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0AI ";
+        document.getElementById("modules_tspan_head2").textContent = "  \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0AI ";
         document.getElementById("modules_tspan1").textContent = "\xa0  Provides integration to AI ";
         document.getElementById("modules_tspan2").textContent = "\xa0  and ML algorithms empowering ";
         document.getElementById("modules_tspan3").textContent = "\xa0  users with  tools to get value";
