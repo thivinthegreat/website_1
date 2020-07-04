@@ -1013,8 +1013,12 @@ function hamburger() {
 $(function(){
     console.log(" Comes hereeee");
     function rescaleCaptcha(){
-      var width = $('.g-recaptcha').parent().width();
+      var width = $('.captcha').parent().width();
+      var height = $('.captcha').parent().height();
+
       var scale;
+      console.log (" WIDTH : " , width);
+      console.log (" Height : " , height);
       if (width < 302) {
         scale = width / 302;
       } else{
