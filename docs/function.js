@@ -587,7 +587,11 @@ function changeModuleText(e)
     if (id_name === "modules_API")
     {
         document.getElementById("modules_tspan_head1").textContent = "API &";
-        document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0 Microservices  ";
+        if(isMobile)
+            document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0\xa0 Microservices  ";
+        else
+            document.getElementById("modules_tspan_head2").textContent = "\xa0\xa0\xa0\xa0 Microservices  ";
+
         document.getElementById("modules_tspan1").textContent = "\xa0\xa0 This supports all types  ";
         document.getElementById("modules_tspan2").textContent = "\xa0\xa0 of APIs such as SOAP, REST,";
         document.getElementById("modules_tspan3").textContent = "\xa0\xa0 XML, JSON and Response ";
@@ -1000,3 +1004,30 @@ function hamburger() {
         document.getElementById("hamburgerList").style.display = "flex";
     }
 }
+
+
+
+
+
+// Recaptcha Resizing
+$(function(){
+    console.log(" Comes hereeee");
+    function rescaleCaptcha(){
+      var width = $('.g-recaptcha').parent().width();
+      var scale;
+      if (width < 302) {
+        scale = width / 302;
+      } else{
+        scale = 1.0; 
+      }
+  
+      $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+      $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+      $('.g-recaptcha').css('transform-origin', '0 0');
+      $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+    }
+  
+    rescaleCaptcha();
+    $( window ).resize(function() { rescaleCaptcha(); });
+  
+  });
