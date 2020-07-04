@@ -1010,28 +1010,28 @@ function hamburger() {
 
 
 // Recaptcha Resizing
-$(function(){
-    console.log(" Comes hereeee");
-    function rescaleCaptcha(){
-      var width = $('.captcha').parent().width();
-      var height = $('.captcha').parent().height();
+// $(function(){
+//     console.log(" Comes hereeee");
+//     function rescaleCaptcha(){
+//       var width = $('.captcha').parent().width();
+//       var height = $('.captcha').parent().height();
 
-      var scale;
-      console.log (" WIDTH : " , width);
-      console.log (" Height : " , height);
-      if (width < 302) {
-        scale = width / 302;
-      } else{
-        scale = 1.0; 
-      }
+//       var scale;
+//       console.log (" WIDTH : " , width);
+//       console.log (" Height : " , height);
+//       if (width < 302) {
+//         scale = width / 302;
+//       } else{
+//         scale = 1.0; 
+//       }
   
-      $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
-      $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
-      $('.g-recaptcha').css('transform-origin', '0 0');
-      $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
-    }
+//       $('.g-recaptcha').css('transform', 'scale(' + scale + ')');
+//       $('.g-recaptcha').css('-webkit-transform', 'scale(' + scale + ')');
+//       $('.g-recaptcha').css('transform-origin', '0 0');
+//       $('.g-recaptcha').css('-webkit-transform-origin', '0 0');
+//     }
   
-    rescaleCaptcha();
-    $( window ).resize(function() { rescaleCaptcha(); });
+//     rescaleCaptcha();
+//     $( window ).resize(function() { rescaleCaptcha(); });
   
-  });
+//   });
